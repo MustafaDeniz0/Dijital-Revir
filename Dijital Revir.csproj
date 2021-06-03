@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9084DBB-B5F2-4CBA-BAF4-6C7A26BB831B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Dijital_Revir</RootNamespace>
+    <AssemblyName>Dijital Revir</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaSayfa.Designer.cs">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsiEklemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsiEklemeEkrani.Designer.cs">
+      <DependentUpon>AsiEklemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CovidListelemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CovidListelemeEkrani.Designer.cs">
+      <DependentUpon>CovidListelemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CovidTakipEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CovidTakipEkrani.Designer.cs">
+      <DependentUpon>CovidTakipEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GebelikDegerleriEklemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GebelikDegerleriEklemeEkrani.Designer.cs">
+      <DependentUpon>GebelikDegerleriEklemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GebelikListelemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GebelikListelemeEkrani.Designer.cs">
+      <DependentUpon>GebelikListelemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GebelikTakipEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GebelikTakipEkrani.Designer.cs">
+      <DependentUpon>GebelikTakipEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsbMuayeneEklemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsbMuayeneEklemeEkrani.Designer.cs">
+      <DependentUpon>IsbMuayeneEklemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsKazasiEklemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsKazasiEklemeEkrani.Designer.cs">
+      <DependentUpon>IsKazasiEklemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsKazasiGoruntulemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsKazasiGoruntulemeEkrani.Designer.cs">
+      <DependentUpon>IsKazasiGoruntulemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsKazasiListelemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsKazasiListelemeEkrani.Designer.cs">
+      <DependentUpon>IsKazasiListelemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuayeneEklemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuayeneEklemeEkrani.Designer.cs">
+      <DependentUpon>MuayeneEklemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelBilgileriGoruntulemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelBilgileriGoruntulemeEkrani.Designer.cs">
+      <DependentUpon>PersonelBilgileriGoruntulemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelListelemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelListelemeEkrani.Designer.cs">
+      <DependentUpon>PersonelListelemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PoliklinikDefteriEklemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PoliklinikDefteriEklemeEkrani.Designer.cs">
+      <DependentUpon>PoliklinikDefteriEklemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PoliklinikDefteriGoruntulemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PoliklinikDefteriGoruntulemeEkrani.Designer.cs">
+      <DependentUpon>PoliklinikDefteriGoruntulemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PoliklinikDefteriListelemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PoliklinikDefteriListelemeEkrani.Designer.cs">
+      <DependentUpon>PoliklinikDefteriListelemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SevkEtmeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SevkEtmeEkrani.Designer.cs">
+      <DependentUpon>SevkEtmeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlOps.cs" />
+    <EmbeddedResource Include="AnaSayfa.resx">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsiEklemeEkrani.resx">
+      <DependentUpon>AsiEklemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CovidListelemeEkrani.resx">
+      <DependentUpon>CovidListelemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CovidTakipEkrani.resx">
+      <DependentUpon>CovidTakipEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GebelikDegerleriEklemeEkrani.resx">
+      <DependentUpon>GebelikDegerleriEklemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GebelikListelemeEkrani.resx">
+      <DependentUpon>GebelikListelemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GebelikTakipEkrani.resx">
+      <DependentUpon>GebelikTakipEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsbMuayeneEklemeEkrani.resx">
+      <DependentUpon>IsbMuayeneEklemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsKazasiEklemeEkrani.resx">
+      <DependentUpon>IsKazasiEklemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsKazasiGoruntulemeEkrani.resx">
+      <DependentUpon>IsKazasiGoruntulemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsKazasiListelemeEkrani.resx">
+      <DependentUpon>IsKazasiListelemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuayeneEklemeEkrani.resx">
+      <DependentUpon>MuayeneEklemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelBilgileriGoruntulemeEkrani.resx">
+      <DependentUpon>PersonelBilgileriGoruntulemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelListelemeEkrani.resx">
+      <DependentUpon>PersonelListelemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PoliklinikDefteriEklemeEkrani.resx">
+      <DependentUpon>PoliklinikDefteriEklemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PoliklinikDefteriGoruntulemeEkrani.resx">
+      <DependentUpon>PoliklinikDefteriGoruntulemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PoliklinikDefteriListelemeEkrani.resx">
+      <DependentUpon>PoliklinikDefteriListelemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SevkEtmeEkrani.resx">
+      <DependentUpon>SevkEtmeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
