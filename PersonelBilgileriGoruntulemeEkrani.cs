@@ -59,10 +59,13 @@ namespace Dijital_Revir
 
             String sqlText = "Select * from Personel where Personel.id = " + index + ";";
             DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+
             String sqlText2 = "Select * From OzlukBilgileri inner join Personel on Personel.id ="+ index+" and Personel.ozlukId = OzlukBilgileri.id ;";
             DataTable dt2 = SqlOps.CreateDataTableBySqlQuery(sqlText2);
+
             String sqlText3 = "Select Departman.departmanAdi,Sirket.sirketAdi from ((Personel inner join Departman on Personel.departmanId = departmanId and Personel.id = "+index+") inner Join Sirket on Departman.sirketId = Sirket.id and Departman.id=Personel.departmanId);";
             DataTable dt3 = SqlOps.CreateDataTableBySqlQuery(sqlText3);
+
             string cinsiyet;
             if ((Boolean)dt2.Rows[0]["cinsiyet"] == true) { cinsiyet = "Erkek"; }
             else { cinsiyet = "Kadın"; }
@@ -98,6 +101,11 @@ namespace Dijital_Revir
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
