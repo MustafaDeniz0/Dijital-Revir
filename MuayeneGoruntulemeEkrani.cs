@@ -30,7 +30,7 @@ namespace Dijital_Revir
             String id = dt1.Rows[index]["muayeneId"].ToString();
             sqlText = "Select*From Muayene Where Muayene.id = " + id + ";";
             DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
-            tbx_MuayeneGoruntulemeEkrani.Text = "\r\n \r\n \r\n Tarih : " + dt.Rows[0]["tarih"]. + "\r\n Şikayet : " + dt.Rows[0]["sikayet"] + "\r\n Tanı : " + dt.Rows[0]["tanı"] + "\r\n Tedavi : " + dt.Rows[0]["tedavi"] + "\r\n Doktor : " + dt.Rows[0]["doktor"];
+            tbx_MuayeneGoruntulemeEkrani.Text = "\r\n \r\n \r\n Tarih : " + dt.Rows[0]["tarih"] + "\r\n Şikayet : " + dt.Rows[0]["sikayet"] + "\r\n Tanı : " + dt.Rows[0]["tanı"] + "\r\n Tedavi : " + dt.Rows[0]["tedavi"] + "\r\n Doktor : " + dt.Rows[0]["doktor"];
 
         }
     }
