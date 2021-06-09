@@ -76,7 +76,7 @@ namespace Dijital_Revir
 
         private void btn_ISBMuayene_Click(object sender, EventArgs e)
         {
-            Form form = new ekran_IsbMuayeneEkleme();
+            Form form = new ekran_IsbMuayeneEkleme(sicil);
             form.ShowDialog();
         }
 

@@ -118,6 +118,12 @@
     <Compile Include="MuayeneEklemeEkrani.Designer.cs">
       <DependentUpon>MuayeneEklemeEkrani.cs</DependentUpon>
     </Compile>
+    <Compile Include="MuayeneGoruntulemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuayeneGoruntulemeEkrani.Designer.cs">
+      <DependentUpon>MuayeneGoruntulemeEkrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonelBilgileriGoruntulemeEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MuayeneEklemeEkrani.resx">
       <DependentUpon>MuayeneEklemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuayeneGoruntulemeEkrani.resx">
+      <DependentUpon>MuayeneGoruntulemeEkrani.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelBilgileriGoruntulemeEkrani.resx">
       <DependentUpon>PersonelBilgileriGoruntulemeEkrani.cs</DependentUpon>

@@ -32,11 +32,11 @@ namespace Dijital_Revir
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.btn_AraButonu = new System.Windows.Forms.Button();
+            this.btn_MuayeneEkle = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbx_doktor = new System.Windows.Forms.TextBox();
+            this.tbx_tedavi = new System.Windows.Forms.TextBox();
+            this.tbx_tani = new System.Windows.Forms.TextBox();
             this.tbx_sikayet = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,56 +51,52 @@ namespace Dijital_Revir
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(258, 673);
+            this.panel1.Size = new System.Drawing.Size(258, 538);
             this.panel1.TabIndex = 6;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.btn_AraButonu);
+            this.panel2.Controls.Add(this.btn_MuayeneEkle);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1004, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(258, 673);
+            this.panel2.Size = new System.Drawing.Size(258, 538);
             this.panel2.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.AutoEllipsis = true;
             this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(74, 591);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(74, 473);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 65);
+            this.button1.Size = new System.Drawing.Size(139, 52);
             this.button1.TabIndex = 7;
             this.button1.Text = "Sevk Et";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btn_AraButonu
+            // btn_MuayeneEkle
             // 
-            this.btn_AraButonu.AutoEllipsis = true;
-            this.btn_AraButonu.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_AraButonu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_AraButonu.Location = new System.Drawing.Point(74, 426);
-            this.btn_AraButonu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_AraButonu.Name = "btn_AraButonu";
-            this.btn_AraButonu.Size = new System.Drawing.Size(139, 65);
-            this.btn_AraButonu.TabIndex = 6;
-            this.btn_AraButonu.Text = "Muayene Ekle";
-            this.btn_AraButonu.UseVisualStyleBackColor = false;
-            this.btn_AraButonu.Click += new System.EventHandler(this.btn_AraButonu_Click);
+            this.btn_MuayeneEkle.AutoEllipsis = true;
+            this.btn_MuayeneEkle.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_MuayeneEkle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_MuayeneEkle.Location = new System.Drawing.Point(74, 391);
+            this.btn_MuayeneEkle.Name = "btn_MuayeneEkle";
+            this.btn_MuayeneEkle.Size = new System.Drawing.Size(139, 52);
+            this.btn_MuayeneEkle.TabIndex = 6;
+            this.btn_MuayeneEkle.Text = "Muayene Ekle";
+            this.btn_MuayeneEkle.UseVisualStyleBackColor = false;
+            this.btn_MuayeneEkle.Click += new System.EventHandler(this.btn_MuayeneEkleme_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.tbx_doktor);
+            this.panel3.Controls.Add(this.tbx_tedavi);
+            this.panel3.Controls.Add(this.tbx_tani);
             this.panel3.Controls.Add(this.tbx_sikayet);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
@@ -108,44 +104,49 @@ namespace Dijital_Revir
             this.panel3.Controls.Add(this.lbl_Sikayet);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(258, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(746, 673);
+            this.panel3.Size = new System.Drawing.Size(746, 538);
             this.panel3.TabIndex = 7;
             // 
-            // textBox4
+            // tbx_doktor
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox4.Location = new System.Drawing.Point(49, 556);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(650, 100);
-            this.textBox4.TabIndex = 22;
+            this.tbx_doktor.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_doktor.Location = new System.Drawing.Point(49, 445);
+            this.tbx_doktor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_doktor.Multiline = true;
+            this.tbx_doktor.Name = "tbx_doktor";
+            this.tbx_doktor.Size = new System.Drawing.Size(650, 81);
+            this.tbx_doktor.TabIndex = 22;
             // 
-            // textBox3
+            // tbx_tedavi
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.Location = new System.Drawing.Point(49, 391);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(650, 100);
-            this.textBox3.TabIndex = 21;
+            this.tbx_tedavi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_tedavi.Location = new System.Drawing.Point(49, 313);
+            this.tbx_tedavi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_tedavi.Multiline = true;
+            this.tbx_tedavi.Name = "tbx_tedavi";
+            this.tbx_tedavi.Size = new System.Drawing.Size(650, 81);
+            this.tbx_tedavi.TabIndex = 21;
             // 
-            // textBox2
+            // tbx_tani
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.Location = new System.Drawing.Point(50, 229);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(650, 100);
-            this.textBox2.TabIndex = 20;
+            this.tbx_tani.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_tani.Location = new System.Drawing.Point(50, 183);
+            this.tbx_tani.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_tani.Multiline = true;
+            this.tbx_tani.Name = "tbx_tani";
+            this.tbx_tani.Size = new System.Drawing.Size(650, 81);
+            this.tbx_tani.TabIndex = 20;
             // 
             // tbx_sikayet
             // 
             this.tbx_sikayet.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbx_sikayet.Location = new System.Drawing.Point(50, 64);
+            this.tbx_sikayet.Location = new System.Drawing.Point(50, 51);
+            this.tbx_sikayet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_sikayet.Multiline = true;
             this.tbx_sikayet.Name = "tbx_sikayet";
-            this.tbx_sikayet.Size = new System.Drawing.Size(650, 100);
+            this.tbx_sikayet.Size = new System.Drawing.Size(650, 81);
             this.tbx_sikayet.TabIndex = 19;
             // 
             // label3
@@ -153,9 +154,9 @@ namespace Dijital_Revir
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.LightSalmon;
-            this.label3.Location = new System.Drawing.Point(50, 533);
+            this.label3.Location = new System.Drawing.Point(50, 426);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 20);
+            this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 18;
             this.label3.Text = "Doktor";
             // 
@@ -164,9 +165,9 @@ namespace Dijital_Revir
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.LightSalmon;
-            this.label2.Location = new System.Drawing.Point(50, 368);
+            this.label2.Location = new System.Drawing.Point(50, 294);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 20);
+            this.label2.Size = new System.Drawing.Size(51, 17);
             this.label2.TabIndex = 17;
             this.label2.Text = "Tedavi";
             // 
@@ -175,9 +176,9 @@ namespace Dijital_Revir
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.LightSalmon;
-            this.label1.Location = new System.Drawing.Point(50, 206);
+            this.label1.Location = new System.Drawing.Point(50, 165);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 20);
+            this.label1.Size = new System.Drawing.Size(36, 17);
             this.label1.TabIndex = 16;
             this.label1.Text = "Tanı";
             // 
@@ -186,21 +187,22 @@ namespace Dijital_Revir
             this.lbl_Sikayet.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_Sikayet.AutoSize = true;
             this.lbl_Sikayet.BackColor = System.Drawing.Color.LightSalmon;
-            this.lbl_Sikayet.Location = new System.Drawing.Point(49, 41);
+            this.lbl_Sikayet.Location = new System.Drawing.Point(49, 33);
             this.lbl_Sikayet.Name = "lbl_Sikayet";
-            this.lbl_Sikayet.Size = new System.Drawing.Size(56, 20);
+            this.lbl_Sikayet.Size = new System.Drawing.Size(54, 17);
             this.lbl_Sikayet.TabIndex = 15;
             this.lbl_Sikayet.Text = "Şikayet";
             // 
             // ekran_MuayeneEkleme
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1262, 538);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ekran_MuayeneEkleme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Muayene Ekleme";
@@ -216,11 +218,11 @@ namespace Dijital_Revir
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btn_AraButonu;
+        private System.Windows.Forms.Button btn_MuayeneEkle;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbx_doktor;
+        private System.Windows.Forms.TextBox tbx_tedavi;
+        private System.Windows.Forms.TextBox tbx_tani;
         private System.Windows.Forms.TextBox tbx_sikayet;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
