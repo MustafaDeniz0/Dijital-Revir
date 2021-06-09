@@ -12,6 +12,9 @@ namespace Dijital_Revir
 {
     public partial class ekran_CovidListeleme : Form
     {
+        String sicil = "";
+        DataTable dt = new DataTable();
+
         public ekran_CovidListeleme()
         {
             InitializeComponent();
@@ -27,15 +30,12 @@ namespace Dijital_Revir
 
         }
 
-        private void dgv_covidListesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Form form = new ekran_CovidTakipEkrani();
-            form.ShowDialog();
-        }
-
         private void dgv_covidListesi_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            Form form = new ekran_CovidTakipEkrani();
+            int index = SqlOps.GetDataGridViewRowIndex(dgv_covidListesi, "sicilNo");
+            sicil = dt.Rows[index]["sicilNo"].ToString();
+
+            Form form = new ekran_CovidTakipEkrani(sicil);
             form.ShowDialog();
         }
     }

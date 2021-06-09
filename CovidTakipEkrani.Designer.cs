@@ -53,9 +53,9 @@ namespace Dijital_Revir
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(258, 673);
+            this.panel1.Size = new System.Drawing.Size(194, 437);
             this.panel1.TabIndex = 12;
             // 
             // panel2
@@ -64,21 +64,21 @@ namespace Dijital_Revir
             this.panel2.Controls.Add(this.btn_OlcumAtesEkle);
             this.panel2.Controls.Add(this.btn_TestEkle);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1004, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(752, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(258, 673);
+            this.panel2.Size = new System.Drawing.Size(194, 437);
             this.panel2.TabIndex = 11;
             // 
             // btn_OlcumAtesEkle
             // 
             this.btn_OlcumAtesEkle.AutoEllipsis = true;
             this.btn_OlcumAtesEkle.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_OlcumAtesEkle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_OlcumAtesEkle.Location = new System.Drawing.Point(9, 451);
-            this.btn_OlcumAtesEkle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_OlcumAtesEkle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_OlcumAtesEkle.Location = new System.Drawing.Point(7, 293);
+            this.btn_OlcumAtesEkle.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_OlcumAtesEkle.Name = "btn_OlcumAtesEkle";
-            this.btn_OlcumAtesEkle.Size = new System.Drawing.Size(220, 65);
+            this.btn_OlcumAtesEkle.Size = new System.Drawing.Size(165, 42);
             this.btn_OlcumAtesEkle.TabIndex = 9;
             this.btn_OlcumAtesEkle.Text = "Ölçüm Ekle";
             this.btn_OlcumAtesEkle.UseVisualStyleBackColor = false;
@@ -87,11 +87,11 @@ namespace Dijital_Revir
             // 
             this.btn_TestEkle.AutoEllipsis = true;
             this.btn_TestEkle.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_TestEkle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_TestEkle.Location = new System.Drawing.Point(9, 560);
-            this.btn_TestEkle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_TestEkle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_TestEkle.Location = new System.Drawing.Point(7, 364);
+            this.btn_TestEkle.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_TestEkle.Name = "btn_TestEkle";
-            this.btn_TestEkle.Size = new System.Drawing.Size(220, 65);
+            this.btn_TestEkle.Size = new System.Drawing.Size(165, 42);
             this.btn_TestEkle.TabIndex = 8;
             this.btn_TestEkle.Text = "Test Ekle";
             this.btn_TestEkle.UseVisualStyleBackColor = false;
@@ -102,9 +102,10 @@ namespace Dijital_Revir
             this.panel3.Controls.Add(this.dgv_olcum);
             this.panel3.Controls.Add(this.tbx_CovidListeleme);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(258, 0);
+            this.panel3.Location = new System.Drawing.Point(194, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(746, 673);
+            this.panel3.Size = new System.Drawing.Size(558, 437);
             this.panel3.TabIndex = 13;
             // 
             // dgv_test
@@ -116,11 +117,12 @@ namespace Dijital_Revir
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.testSonucu});
-            this.dgv_test.Location = new System.Drawing.Point(8, 565);
+            this.dgv_test.Location = new System.Drawing.Point(5, 367);
+            this.dgv_test.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_test.Name = "dgv_test";
             this.dgv_test.RowHeadersWidth = 51;
             this.dgv_test.RowTemplate.Height = 29;
-            this.dgv_test.Size = new System.Drawing.Size(736, 93);
+            this.dgv_test.Size = new System.Drawing.Size(552, 60);
             this.dgv_test.TabIndex = 42;
             // 
             // dataGridViewTextBoxColumn1
@@ -155,11 +157,12 @@ namespace Dijital_Revir
             this.dgv_olcum.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.olcumTarihi,
             this.olcumDegeri});
-            this.dgv_olcum.Location = new System.Drawing.Point(8, 456);
+            this.dgv_olcum.Location = new System.Drawing.Point(5, 296);
+            this.dgv_olcum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_olcum.Name = "dgv_olcum";
             this.dgv_olcum.RowHeadersWidth = 51;
             this.dgv_olcum.RowTemplate.Height = 29;
-            this.dgv_olcum.Size = new System.Drawing.Size(736, 93);
+            this.dgv_olcum.Size = new System.Drawing.Size(552, 60);
             this.dgv_olcum.TabIndex = 41;
             // 
             // olcumTarihi
@@ -181,22 +184,25 @@ namespace Dijital_Revir
             // tbx_CovidListeleme
             // 
             this.tbx_CovidListeleme.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbx_CovidListeleme.Location = new System.Drawing.Point(8, 20);
+            this.tbx_CovidListeleme.Location = new System.Drawing.Point(5, 13);
+            this.tbx_CovidListeleme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbx_CovidListeleme.Multiline = true;
             this.tbx_CovidListeleme.Name = "tbx_CovidListeleme";
-            this.tbx_CovidListeleme.Size = new System.Drawing.Size(736, 413);
+            this.tbx_CovidListeleme.Size = new System.Drawing.Size(553, 270);
             this.tbx_CovidListeleme.TabIndex = 40;
+            this.tbx_CovidListeleme.TextChanged += new System.EventHandler(this.tbx_CovidListeleme_TextChanged);
             // 
             // ekran_CovidTakipEkrani
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(946, 437);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ekran_CovidTakipEkrani";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Covid Takip Ekran";
