@@ -29,7 +29,7 @@ namespace Dijital_Revir
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form form = new ekran_CovidTakipEkrani();
+            Form form = new ekran_CovidTakipEkrani(sicil);
             form.ShowDialog();
         }
 
