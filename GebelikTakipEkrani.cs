@@ -12,8 +12,10 @@ namespace Dijital_Revir
 {
     public partial class ekran_GebelikTakip : Form
     {
-        public ekran_GebelikTakip()
+        String sicil;
+        public ekran_GebelikTakip(String sicil)
         {
+            this.sicil = sicil;
             InitializeComponent();
         }
 

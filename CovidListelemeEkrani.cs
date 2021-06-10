@@ -13,7 +13,6 @@ namespace Dijital_Revir
     public partial class ekran_CovidListeleme : Form
     {
         int rowIndex;
-        String sicil = "";
         DataTable dt = new DataTable();
 
         public ekran_CovidListeleme()
@@ -33,12 +32,12 @@ namespace Dijital_Revir
 
         private void dgv_covidListesi_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            String sicilNo;
+            
 
-            rowIndex = SqlOps.GetDataGridViewRowIndex(dgv_covidListesi, "sicilNo");     
-            sicilNo = dt.Rows[rowIndex]["sicilNo"].ToString();
+            rowIndex = SqlOps.GetDataGridViewRowIndex(dgv_covidListesi, "sicilNo");
+            int indexId = (int)dt.Rows[rowIndex]["id"];
 
-            Form form = new ekran_CovidTakipEkrani(sicilNo);
+            Form form = new ekran_CovidTakipEkrani(indexId);
             form.ShowDialog();
         }
 
@@ -47,7 +46,7 @@ namespace Dijital_Revir
             String sqlText;
             
 
-            sqlText = "Select Personel.sicilNo,OzlukBilgileri.ad ,OzlukBilgileri.soyAd, Sirket.sirketAdi ,Covid.vakaDurumu  from  " +
+            sqlText = "Select Covid.id , Personel.sicilNo,OzlukBilgileri.ad ,OzlukBilgileri.soyAd, Sirket.sirketAdi ,Covid.vakaDurumu  from  " +
              "((((Personel Inner join OzlukBilgileri On Personel.ozlukId = OzlukBilgileri.id)" +
             "Inner join Departman on Departman.id = Personel.departmanId)" +
             "Inner join Sirket on Sirket.id = Departman.sirketId)" +

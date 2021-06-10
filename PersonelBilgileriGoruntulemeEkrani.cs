@@ -96,7 +96,7 @@ namespace Dijital_Revir
 
         private void btn_Gebelik_Click(object sender, EventArgs e)
         {
-            Form form = new ekran_GebelikTakip();
+            Form form = new ekran_GebelikTakip(sicil);
             form.ShowDialog();
         }
 

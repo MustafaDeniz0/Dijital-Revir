@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace Dijital_Revir
 {
-    
     public partial class ekran_PersonelListeleme : Form
     {
         String arananKelime;
@@ -26,6 +25,7 @@ namespace Dijital_Revir
         {        
             int index = SqlOps.GetDataGridViewRowIndex(dgrid_PersonelBilgileri, "sicilNo");
             sicil = dt.Rows[index]["sicilNo"].ToString();
+
             Form form = new ekran_PersonelBilgileriGoruntuleme(sicil);
             form.ShowDialog();
         }

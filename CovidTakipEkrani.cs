@@ -12,9 +12,15 @@ namespace Dijital_Revir
 {
     public partial class ekran_CovidTakipEkrani : Form
     {
+        int indexCovidId;
         string sicil;
 
-        public ekran_CovidTakipEkrani(string sicil)
+        public ekran_CovidTakipEkrani(int indexCovidId)
+        {
+            InitializeComponent();
+            this.indexCovidId = indexCovidId;
+        }
+        public ekran_CovidTakipEkrani(String sicil)
         {
             InitializeComponent();
             this.sicil = sicil;
@@ -23,33 +29,51 @@ namespace Dijital_Revir
         private void CovidTakipEkrani_Load(object sender, EventArgs e)
         {
             String sqlText;
-            int indexId;
             DataTable dt;
 
-            sqlText= "Select Personel.id from Personel where Personel.sicilNo = " + sicil;
+            
+
+            sqlText = "Select * from Covid where Covid.id = " + indexCovidId;
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
-            indexId = (int)dt.Rows[0]["id"];
+            
+            if (dt.Rows.Count != 0)
+            {
+                this.tbx_CovidListeleme.Text = "Kayıt Durumu : "    + dt.Rows[0]["kayitDurumu"].ToString()  + Environment.NewLine +
+                                               "Statü Durumu : "    + dt.Rows[0]["statu"].ToString()        + Environment.NewLine +
+                                               "Şirket Formülü : "  + dt.Rows[0]["sirketFormul"].ToString() + Environment.NewLine +
+                                               "Kod : "             + dt.Rows[0]["kod"].ToString()          + Environment.NewLine +
+                                               "Vaka Durumu : "     + dt.Rows[0]["vakaDurumu"].ToString()   + Environment.NewLine +
+                                               "Bulgu : "           + dt.Rows[0]["bulgu"].ToString()        + Environment.NewLine +
+                                               "İlaç : "            + dt.Rows[0]["ilac"].ToString()         + Environment.NewLine +
+                                               "Rapor Süresi : "    + dt.Rows[0]["raporSuresi"].ToString()  + Environment.NewLine +
+                                               "Rapor Tarihi : "    + dt.Rows[0]["raporTarihi"].ToString()  + Environment.NewLine +
+                                               "İşbaşı Tarihi : "   + dt.Rows[0]["isBasiTarihi"].ToString() + Environment.NewLine +
+                                               "İletişim Durumu : " + dt.Rows[0]["iletisimDurumu"].ToString();
+            }
 
-            sqlText = "Select * from Covid where Covid.personelId = " + indexId + ";";
+            sqlText = "SELECT TOP 5 * FROM Ates LEFT JOIN Covid INNER JOIN Personel on Covid.id = " + indexCovidId + "ON Covid.id = Ates.covidId ORDER BY olcumTarihi DESC";
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            this.dgv_olcum.DataSource = dt;
 
-            this.tbx_CovidListeleme.Text = "Kayıt Durumu : "    + dt.Rows[0]["kayitDurumu"].ToString() + Environment.NewLine +
-                                           "Statü Durumu : "    + dt.Rows[0]["statu"].ToString() + Environment.NewLine +
-                                           "Şirket Formülü : "   + dt.Rows[0]["sirketFormul"].ToString();   
-        
-
-            sqlText = "Select top 5 * from Ates left join Covid on Covid.personelId = " + indexId + " and Covid.id = Ates.covidId " + "order by olcumTarihi desc "+";";
-            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
-            this.dgv_olcum.DataSource = dt;  
-
-            sqlText = "Select top 5 * from Test left join Covid on Covid.personelId = " + indexId + " and Covid.id = Test.covidId " + "order by testTarihi desc "+";";
+            
+            sqlText = "Select top 5 * from Test Left join Covid on Covid.id = " + indexCovidId + " and Covid.id = Test.covidId " + "order by testTarihi desc " + ";";
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
             this.dgv_test.DataSource = dt;
+            
         }
 
-        private void tbx_CovidListeleme_TextChanged(object sender, EventArgs e)
+        private void btn_OlcumAtesEkle_Click(object sender, EventArgs e)
         {
+            /*
+             * Kullanıcıdan Messagebox ile ateş değeri alınacak.
+             * MessageBox.Show("Test AteşDeğeri String");
+             */
+        }
 
+        private void btn_TestEkle_Click(object sender, EventArgs e)
+        {
+            // Kullanıcıdan Messagebox ile test değeri alınacak.
+            // MessageBox.Show("Test TestDeğeri String");
         }
     }
 }

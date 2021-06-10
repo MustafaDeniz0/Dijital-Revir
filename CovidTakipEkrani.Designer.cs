@@ -190,7 +190,6 @@ namespace Dijital_Revir
             this.tbx_CovidListeleme.Name = "tbx_CovidListeleme";
             this.tbx_CovidListeleme.Size = new System.Drawing.Size(553, 270);
             this.tbx_CovidListeleme.TabIndex = 40;
-            this.tbx_CovidListeleme.TextChanged += new System.EventHandler(this.tbx_CovidListeleme_TextChanged);
             // 
             // ekran_CovidTakipEkrani
             // 

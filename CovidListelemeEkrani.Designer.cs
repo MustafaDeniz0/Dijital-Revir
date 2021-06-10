@@ -160,6 +160,7 @@ namespace Dijital_Revir
             this.dgv_covidListesi.Name = "dgv_covidListesi";
             this.dgv_covidListesi.RowHeadersWidth = 51;
             this.dgv_covidListesi.RowTemplate.Height = 29;
+            this.dgv_covidListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_covidListesi.Size = new System.Drawing.Size(746, 538);
             this.dgv_covidListesi.TabIndex = 11;
             this.dgv_covidListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_covidListesi_CellContentClick_1);
