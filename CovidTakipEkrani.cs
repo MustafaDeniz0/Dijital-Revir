@@ -36,7 +36,7 @@ namespace Dijital_Revir
             this.tbx_CovidListeleme.Text = "Kayıt Durumu : "    + dt.Rows[0]["kayitDurumu"].ToString() + Environment.NewLine +
                                            "Statü Durumu : "    + dt.Rows[0]["statu"].ToString() + Environment.NewLine +
                                            "Şirket Formülü : "   + dt.Rows[0]["sirketFormul"].ToString();   
-        }
+        
 
             sqlText = "Select top 5 * from Ates left join Covid on Covid.personelId = " + indexId + " and Covid.id = Ates.covidId " + "order by olcumTarihi desc "+";";
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
