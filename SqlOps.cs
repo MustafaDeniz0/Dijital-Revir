@@ -118,5 +118,24 @@ namespace Dijital_Revir
             }
             return currentRowIndex;
         }
+        public static String SqlDateInsert(DateTime Date , String Time )
+        {
+            String S;
+            S = Date.ToString("yyyy.MM.dd") + " " + Time;
+
+            /*
+            String sqlText = "Declare @A Varchar(10) = Convert(Varchar,'"+Date.ToString()+"', 102) " +
+                "Declare @B Varchar(5) = '" + Time + "'" +
+                "Declare @C Varchar(20) = @A + ' ' + @B " +
+                "Set @XYZ = Convert(DateTime, @C)";
+
+            String a = SqlExecute(sqlText, "XYZ", GetSqlConnection()).Value.ToString();
+            return a;
+            */
+
+            return S;
+        }
+
+
     }
 }

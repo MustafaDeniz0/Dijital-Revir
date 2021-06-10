@@ -12,6 +12,7 @@ namespace Dijital_Revir
 {
     public partial class ekran_IsKazasiListeleme : Form
     {
+        string sicil;
         public ekran_IsKazasiListeleme()
         {
             InitializeComponent();
@@ -40,7 +41,7 @@ namespace Dijital_Revir
 
         private void btn_aktar_Click(object sender, EventArgs e)
         {
-            Form form = new ekran_IsKazasıEkleme();
+            Form form = new ekran_IsKazasıEkleme(sicil);
             form.ShowDialog();
         }
     }

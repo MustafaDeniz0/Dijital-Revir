@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Dijital_Revir
 {
     public partial class ekran_IsKazasıEkleme : Form
     {
-        public ekran_IsKazasıEkleme()
+        String sicil;
+        public ekran_IsKazasıEkleme(String sicil)
         {
             InitializeComponent();
+            this.sicil = sicil;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -45,13 +48,18 @@ namespace Dijital_Revir
 
         private void btn_Ekle_Click(object sender, EventArgs e)
         {
-            DateTime date = dtp_kazaZamani.Value;
-
-
-
-            //String sqlText = "Insert Into IsKazası(amirId, kazaZamanı, kazaninAnlatımı, personelId) " +
-            //"Values('" +  + "','" + tbx_sikayet.Text + "','" + tbx_tani.Text + "','" + tbx_tedavi.Text + "','" + tbx_doktor.Text + "');";
-            //SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+            int indexId;
+            String sqlText;
+            sqlText = "Select Personel.id From Personel where Personel.sicilNo =  '" + sicil+ "';";
+            DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            indexId = (int)dt.Rows[0]["id"];
+            int index = (int)cmb_VardiyaAmiri.SelectedValue;
+            
+           
+            sqlText = "Insert Into IsKazası(amirId, calismaSuresi, kazaZamanı, kazaninAnlatımı, personelId) " +
+            "Values("+index+",'"+ tbx_calismaSuresi.Text+ "','" + SqlOps.SqlDateInsert(dtp_kazaZamani.Value.Date,tbx_saat.Text) + "','" + tbx_kazaAnlatimi.Text + "',"+indexId +");";
+            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+            this.Close();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,19 +70,21 @@ namespace Dijital_Revir
         private void ekran_IsKazasıEkleme_Load(object sender, EventArgs e)
         {
             cmb_VardiyaAmiri.Items.Clear();
-            String sqlText = "Select Distinct OzlukBilgileri.ad,OzlukBilgileri.soyAd From Personel P1 , Personel P2 left Join OzlukBilgileri on OzlukBilgileri.id = P2.ozlukId where P1.amir = P2.id";
+            String sqlText = "Select Distinct OzlukBilgileri.ad,OzlukBilgileri.soyAd , P2.id From Personel P1 , Personel P2 left Join OzlukBilgileri on OzlukBilgileri.id = P2.ozlukId where P1.amir = P2.id;";
             DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
             
 
             foreach (DataRow dr in dt.Rows)
             {
                 String obj = dr["ad"] + " " + dr["soyAd"];
-                cmb_VardiyaAmiri.Items.Add(new System.Collections.DictionaryEntry(obj, dr["soyAd"].ToString()));
+                cmb_VardiyaAmiri.Items.Add(new System.Collections.DictionaryEntry(obj, dr["id"]));
             }
 
             cmb_VardiyaAmiri.DisplayMember = "Key";
             cmb_VardiyaAmiri.ValueMember = "Value";
             cmb_VardiyaAmiri.DataSource = cmb_VardiyaAmiri.Items;
+
+
         }
     }
 }

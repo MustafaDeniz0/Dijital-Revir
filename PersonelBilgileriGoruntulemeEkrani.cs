@@ -90,7 +90,7 @@ namespace Dijital_Revir
 
         private void btn_IsKazası_Click(object sender, EventArgs e)
         {
-            Form form = new ekran_IsKazasıEkleme();
+            Form form = new ekran_IsKazasıEkleme(sicil);
             form.ShowDialog();
         }
 

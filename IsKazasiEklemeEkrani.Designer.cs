@@ -31,9 +31,11 @@ namespace Dijital_Revir
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Ekle = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_aktar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmb_VardiyaAmiri = new System.Windows.Forms.ComboBox();
             this.tbx_kazaAnlatimi = new System.Windows.Forms.TextBox();
             this.tbx_saat = new System.Windows.Forms.TextBox();
             this.dtp_kazaZamani = new System.Windows.Forms.DateTimePicker();
@@ -42,8 +44,6 @@ namespace Dijital_Revir
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_Ekle = new System.Windows.Forms.Button();
-            this.cmb_VardiyaAmiri = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +68,19 @@ namespace Dijital_Revir
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(258, 538);
             this.panel2.TabIndex = 5;
+            // 
+            // btn_Ekle
+            // 
+            this.btn_Ekle.AutoEllipsis = true;
+            this.btn_Ekle.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_Ekle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_Ekle.Location = new System.Drawing.Point(39, 327);
+            this.btn_Ekle.Name = "btn_Ekle";
+            this.btn_Ekle.Size = new System.Drawing.Size(177, 52);
+            this.btn_Ekle.TabIndex = 8;
+            this.btn_Ekle.Text = "Ekle";
+            this.btn_Ekle.UseVisualStyleBackColor = false;
+            this.btn_Ekle.Click += new System.EventHandler(this.btn_Ekle_Click);
             // 
             // button1
             // 
@@ -113,6 +126,16 @@ namespace Dijital_Revir
             this.panel3.Size = new System.Drawing.Size(746, 538);
             this.panel3.TabIndex = 7;
             // 
+            // cmb_VardiyaAmiri
+            // 
+            this.cmb_VardiyaAmiri.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmb_VardiyaAmiri.FormattingEnabled = true;
+            this.cmb_VardiyaAmiri.Location = new System.Drawing.Point(266, 93);
+            this.cmb_VardiyaAmiri.Name = "cmb_VardiyaAmiri";
+            this.cmb_VardiyaAmiri.Size = new System.Drawing.Size(408, 24);
+            this.cmb_VardiyaAmiri.TabIndex = 25;
+            this.cmb_VardiyaAmiri.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // tbx_kazaAnlatimi
             // 
             this.tbx_kazaAnlatimi.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -128,6 +151,7 @@ namespace Dijital_Revir
             this.tbx_saat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbx_saat.Location = new System.Drawing.Point(516, 202);
             this.tbx_saat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_saat.MaxLength = 5;
             this.tbx_saat.Multiline = true;
             this.tbx_saat.Name = "tbx_saat";
             this.tbx_saat.Size = new System.Drawing.Size(59, 23);
@@ -137,6 +161,8 @@ namespace Dijital_Revir
             // dtp_kazaZamani
             // 
             this.dtp_kazaZamani.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtp_kazaZamani.CustomFormat = "";
+            this.dtp_kazaZamani.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_kazaZamani.Location = new System.Drawing.Point(266, 203);
             this.dtp_kazaZamani.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtp_kazaZamani.Name = "dtp_kazaZamani";
@@ -200,29 +226,6 @@ namespace Dijital_Revir
             this.label1.Size = new System.Drawing.Size(132, 28);
             this.label1.TabIndex = 16;
             this.label1.Text = "Vardiya Amiri";
-            // 
-            // btn_Ekle
-            // 
-            this.btn_Ekle.AutoEllipsis = true;
-            this.btn_Ekle.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_Ekle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_Ekle.Location = new System.Drawing.Point(39, 327);
-            this.btn_Ekle.Name = "btn_Ekle";
-            this.btn_Ekle.Size = new System.Drawing.Size(177, 52);
-            this.btn_Ekle.TabIndex = 8;
-            this.btn_Ekle.Text = "Ekle";
-            this.btn_Ekle.UseVisualStyleBackColor = false;
-            this.btn_Ekle.Click += new System.EventHandler(this.btn_Ekle_Click);
-            // 
-            // cmb_VardiyaAmiri
-            // 
-            this.cmb_VardiyaAmiri.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmb_VardiyaAmiri.FormattingEnabled = true;
-            this.cmb_VardiyaAmiri.Location = new System.Drawing.Point(266, 93);
-            this.cmb_VardiyaAmiri.Name = "cmb_VardiyaAmiri";
-            this.cmb_VardiyaAmiri.Size = new System.Drawing.Size(408, 24);
-            this.cmb_VardiyaAmiri.TabIndex = 25;
-            this.cmb_VardiyaAmiri.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // ekran_IsKazasıEkleme
             // 
