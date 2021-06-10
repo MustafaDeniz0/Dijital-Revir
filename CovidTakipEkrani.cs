@@ -38,9 +38,13 @@ namespace Dijital_Revir
                                            "Şirket Formülü : "   + dt.Rows[0]["sirketFormul"].ToString();   
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
+            sqlText = "Select top 5 * from Ates left join Covid on Covid.personelId = " + indexId + " and Covid.id = Ates.covidId " + "order by olcumTarihi desc "+";";
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            this.dgv_olcum.DataSource = dt;  
 
+            sqlText = "Select top 5 * from Test left join Covid on Covid.personelId = " + indexId + " and Covid.id = Test.covidId " + "order by testTarihi desc "+";";
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            this.dgv_test.DataSource = dt;
         }
 
         private void tbx_CovidListeleme_TextChanged(object sender, EventArgs e)
