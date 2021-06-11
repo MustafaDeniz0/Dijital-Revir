@@ -79,5 +79,11 @@ namespace Dijital_Revir
             Form form = new ekran_AtesDegerleriEklemeEkrani(indexCovidId);
             form.ShowDialog();
         }
+
+        private void btn_TestEkle_Click_1(object sender, EventArgs e)
+        {
+            Form form = new ekran_TestEklemeEkrani(indexCovidId);
+            form.ShowDialog();
+        }
     }
 }

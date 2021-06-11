@@ -169,6 +169,12 @@
       <DependentUpon>SevkEtmeEkrani.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlOps.cs" />
+    <Compile Include="TestEklemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestEklemeEkrani.Designer.cs">
+      <DependentUpon>TestEklemeEkrani.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AnaSayfa.resx">
       <DependentUpon>AnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +243,9 @@
     </Compile>
     <EmbeddedResource Include="SevkEtmeEkrani.resx">
       <DependentUpon>SevkEtmeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestEklemeEkrani.resx">
+      <DependentUpon>TestEklemeEkrani.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
