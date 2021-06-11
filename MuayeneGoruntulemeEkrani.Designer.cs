@@ -67,8 +67,11 @@ namespace Dijital_Revir
             this.tbx_MuayeneGoruntulemeEkrani.Location = new System.Drawing.Point(100, 40);
             this.tbx_MuayeneGoruntulemeEkrani.Multiline = true;
             this.tbx_MuayeneGoruntulemeEkrani.Name = "tbx_MuayeneGoruntulemeEkrani";
+            this.tbx_MuayeneGoruntulemeEkrani.ReadOnly = true;
             this.tbx_MuayeneGoruntulemeEkrani.Size = new System.Drawing.Size(548, 594);
             this.tbx_MuayeneGoruntulemeEkrani.TabIndex = 0;
+            this.tbx_MuayeneGoruntulemeEkrani.TabStop = false;
+            this.tbx_MuayeneGoruntulemeEkrani.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
             // 

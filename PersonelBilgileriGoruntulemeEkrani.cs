@@ -27,7 +27,7 @@ namespace Dijital_Revir
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btn_CovidFormu_Click(object sender, EventArgs e)
         {
             Form form = new ekran_CovidTakipEkrani(sicil);
             form.ShowDialog();
@@ -54,38 +54,48 @@ namespace Dijital_Revir
 
         public void ekran_PersonelSayfasi_Load(object sender, EventArgs e)
         {
-            String sqlT = "Select Personel.id from Personel where Personel.sicilNo = " + sicil;
-            int index = (int)SqlOps.CreateDataTableBySqlQuery(sqlT).Rows[0]["id"];
+            String sqlText;
+            int indexId;
+            DataTable dt;
+            DataTable dt2;
+            DataTable dt3;
+            String cinsiyet;
 
-            String sqlText = "Select * from Personel where Personel.id = " + index + ";";
-            DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            sqlText = "SELECT Personel.id FROM Personel WHERE Personel.sicilNo = " + sicil;
+            indexId = (int)SqlOps.CreateDataTableBySqlQuery(sqlText).Rows[0]["id"];
 
-            String sqlText2 = "Select * From OzlukBilgileri inner join Personel on Personel.id ="+ index+" and Personel.ozlukId = OzlukBilgileri.id ;";
-            DataTable dt2 = SqlOps.CreateDataTableBySqlQuery(sqlText2);
+            sqlText = "SELECT * FROM Personel WHERE Personel.id = " + indexId;
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
-            String sqlText3 = "Select Departman.departmanAdi,Sirket.sirketAdi from ((Personel inner join Departman on Personel.departmanId = departmanId and Personel.id = "+index+") inner Join Sirket on Departman.sirketId = Sirket.id and Departman.id=Personel.departmanId);";
-            DataTable dt3 = SqlOps.CreateDataTableBySqlQuery(sqlText3);
+            sqlText = "SELECT * FROM OzlukBilgileri INNER JOIN Personel ON Personel.id = " + indexId + " AND Personel.ozlukId = OzlukBilgileri.id";
+            dt2 = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
-            string cinsiyet;
-            if ((Boolean)dt2.Rows[0]["cinsiyet"] == true) { cinsiyet = "Erkek"; }
-            else { cinsiyet = "Kadın"; }
-                this.textBox1.Text = "Sicil No : "+dt.Rows[0]["sicilNo"].ToString() 
-                + Environment.NewLine +dt2.Rows[0]["ad"]+" "+ dt2.Rows[0]["soyAd"]+
-                Environment.NewLine +"Departman Adı : "+ dt3.Rows[0]["departmanAdi"]
-                + Environment.NewLine +"Şirket Adı :  " + dt3.Rows[0]["sirketAdi"]
-                + Environment.NewLine+"Cinsiyet : "+cinsiyet;
-            if ((Boolean)dt2.Rows[0]["cinsiyet"] == true) { btn_Gebelik.Hide(); }
+            sqlText = "SELECT Departman.departmanAdi, Sirket.sirketAdi FROM ((Personel INNER JOIN Departman ON Personel.departmanId = departmanId and Personel.id = " + indexId + ") INNER JOIN Sirket ON Departman.sirketId = Sirket.id AND Departman.id=Personel.departmanId)";
+            dt3 = SqlOps.CreateDataTableBySqlQuery(sqlText);
+
+            if ((Boolean)dt2.Rows[0]["cinsiyet"] == true)
+            { 
+                cinsiyet = "Erkek";
+                btn_Gebelik.Hide();
+            }
+            else 
+            { 
+                cinsiyet = "Kadın";
+                
+            }
+
+
+            this.textBox1.Text =    "Sicil No : "       + dt.Rows[0]["sicilNo"].ToString()                  + Environment.NewLine +
+                                    "Personel Adı : "   + dt2.Rows[0]["ad"] + " " + dt2.Rows[0]["soyAd"]    + Environment.NewLine +
+                                    "Departman Adı : "  + dt3.Rows[0]["departmanAdi"]                       + Environment.NewLine +
+                                    "Şirket Adı :  "    + dt3.Rows[0]["sirketAdi"]                          + Environment.NewLine +
+                                    "Cinsiyet : "       + cinsiyet;
         }
 
         private void btn_ISBMuayene_Click(object sender, EventArgs e)
         {
             Form form = new ekran_IsbMuayeneEkleme(sicil);
             form.ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void btn_IsKazası_Click(object sender, EventArgs e)

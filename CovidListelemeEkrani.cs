@@ -32,8 +32,6 @@ namespace Dijital_Revir
 
         private void dgv_covidListesi_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            
-
             rowIndex = SqlOps.GetDataGridViewRowIndex(dgv_covidListesi, "sicilNo");
             int indexId = (int)dt.Rows[rowIndex]["id"];
 

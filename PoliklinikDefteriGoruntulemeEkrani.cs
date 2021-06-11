@@ -12,29 +12,35 @@ namespace Dijital_Revir
 {
     public partial class ekran_PoliklinikDefteriGoruntuleme : Form
     {
-        public ekran_PoliklinikDefteriGoruntuleme()
+        int sıraNo;
+        public ekran_PoliklinikDefteriGoruntuleme(int sıraNo)
         {
             InitializeComponent();
+            this.sıraNo = sıraNo;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void ekran_PoliklinikDefteriGoruntuleme_Load(object sender, EventArgs e)
         {
 
-        }
+            String sqlText;
+            DataTable dt;
 
-        private void label5_Click(object sender, EventArgs e)
-        {
+            sqlText = "Select Poliklinik.id ,Personel.sicilNo,OzlukBilgileri.ad ,OzlukBilgileri.soyAd,Departman.departmanAdi, Sirket.sirketAdi ,Poliklinik.tarih ,Poliklinik.acıklama,Poliklinik.sonuc,Poliklinik.tanı,Poliklinik.tanıGrubu from  " +
+             "((((Personel Inner join OzlukBilgileri On Personel.ozlukId = OzlukBilgileri.id)" +
+            "Inner join Departman on Departman.id = Personel.departmanId)" +
+            "Inner join Sirket on Sirket.id = Departman.sirketId)" +
+            "Inner join Poliklinik on Poliklinik.personelId = Personel.id) where Poliklinik.sıraNo = "+sıraNo;
 
-        }
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            tbx_PoliklinikGoruntuleme.Text = "Sicil Numarası : " + dt.Rows[0]["sicilNo"].ToString() +
+                                        "\r\n İsim Soyisim : " + dt.Rows[0]["ad"].ToString() + " " + dt.Rows[0]["soyAd"].ToString() +
+                                              "\r\n Şirket-Bölüm : " + dt.Rows[0]["sirketAdi"].ToString() + dt.Rows[0]["departmanAdi"].ToString() +
 
-        private void label5_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
+                                              "\r\n Tarih : " + dt.Rows[0]["tarih"].ToString() +
+                                              "\r\n Açıklama : " + dt.Rows[0]["acıklama"].ToString()+
+                                              "\r\n Sonuç : "+ dt.Rows[0]["sonuc"].ToString()+
+                                              "\r\n Tanı : "+ dt.Rows[0]["tanı"].ToString()+
+                                              "\r\n Tanı Grubu : "+ dt.Rows[0]["tanıGrubu"].ToString();
         }
     }
 }

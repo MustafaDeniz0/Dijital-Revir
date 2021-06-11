@@ -80,7 +80,7 @@ namespace Dijital_Revir
             this.btn_IsKazasiEkle.TabIndex = 8;
             this.btn_IsKazasiEkle.Text = "Ekle";
             this.btn_IsKazasiEkle.UseVisualStyleBackColor = false;
-            this.btn_IsKazasiEkle.Click += new System.EventHandler(this.btn_aktar_Click);
+            
             // 
             // tbx_sirket
             // 

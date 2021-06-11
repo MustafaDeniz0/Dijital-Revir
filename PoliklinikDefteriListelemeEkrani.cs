@@ -12,6 +12,7 @@ namespace Dijital_Revir
 {
     public partial class ekran_PoliklinikDefteriListeleme : Form
     {
+        DataTable dt;
         public ekran_PoliklinikDefteriListeleme()
         {
             InitializeComponent();
@@ -30,8 +31,26 @@ namespace Dijital_Revir
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Form form = new ekran_PoliklinikDefteriGoruntuleme();
+            int sıraId, index;
+            index = SqlOps.GetDataGridViewRowIndex(dgv_PoliklinikListeleme, "sıraNo");
+            sıraId = (int)dt.Rows[index]["sıraNo"];
+            Form form = new ekran_PoliklinikDefteriGoruntuleme(sıraId);
             form.ShowDialog();
+        }
+
+        private void ekran_PoliklinikDefteriListeleme_Load(object sender, EventArgs e)
+        {
+            String sqlText;
+
+
+            sqlText = "Select Poliklinik.sıraNo , Personel.sicilNo , OzlukBilgileri.ad , OzlukBilgileri.soyAd, Sirket.sirketAdi ,Poliklinik.acıklama  from  " +
+             "((((Personel Inner join OzlukBilgileri On Personel.ozlukId = OzlukBilgileri.id) " +
+            "Inner join Departman on Departman.id = Personel.departmanId) " +
+            "Inner join Sirket on Sirket.id = Departman.sirketId)" +
+            "Inner join Poliklinik on Poliklinik.personelId = Personel.id) ";
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+
+            dgv_PoliklinikListeleme.DataSource = dt;
         }
     }
 }

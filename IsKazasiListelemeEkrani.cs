@@ -43,13 +43,7 @@ namespace Dijital_Revir
             form.ShowDialog();
         }
 
-        private void btn_aktar_Click(object sender, EventArgs e)
-        {
-
-             
-            Form form = new ekran_IsKazasıEkleme(sicil);
-            form.ShowDialog();
-        }
+        
 
         private void ekran_IsKazasiListeleme_Load(object sender, EventArgs e)
         {

@@ -94,7 +94,7 @@ namespace Dijital_Revir
             this.btn_CovidFormu.TabIndex = 7;
             this.btn_CovidFormu.Text = "Covid";
             this.btn_CovidFormu.UseVisualStyleBackColor = false;
-            this.btn_CovidFormu.Click += new System.EventHandler(this.button3_Click);
+            this.btn_CovidFormu.Click += new System.EventHandler(this.btn_CovidFormu_Click);
             // 
             // btn_IsKazası
             // 

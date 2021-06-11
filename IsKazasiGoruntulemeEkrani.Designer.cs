@@ -75,6 +75,8 @@ namespace Dijital_Revir
             this.tbx_IsKazasıGoruntuleme.ReadOnly = true;
             this.tbx_IsKazasıGoruntuleme.Size = new System.Drawing.Size(550, 380);
             this.tbx_IsKazasıGoruntuleme.TabIndex = 0;
+            this.tbx_IsKazasıGoruntuleme.TabStop = false;
+            this.tbx_IsKazasıGoruntuleme.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ekran_IsKazasiGoruntuleme
             // 
