@@ -43,7 +43,6 @@ namespace Dijital_Revir
         {
             String sqlText;
             
-
             sqlText = "Select Covid.id , Personel.sicilNo,OzlukBilgileri.ad ,OzlukBilgileri.soyAd, Sirket.sirketAdi ,Covid.vakaDurumu  from  " +
              "((((Personel Inner join OzlukBilgileri On Personel.ozlukId = OzlukBilgileri.id)" +
             "Inner join Departman on Departman.id = Personel.departmanId)" +

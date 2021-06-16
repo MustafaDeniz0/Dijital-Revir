@@ -38,6 +38,7 @@ namespace Dijital_Revir
             this.btn_Ek2Ekle = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_asiEkleme = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +48,7 @@ namespace Dijital_Revir
             this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(752, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(194, 437);
             this.panel2.TabIndex = 2;
@@ -56,6 +57,7 @@ namespace Dijital_Revir
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.Controls.Add(this.btn_asiEkleme);
             this.panel1.Controls.Add(this.btn_Gebelik);
             this.panel1.Controls.Add(this.btn_CovidFormu);
             this.panel1.Controls.Add(this.btn_IsKazası);
@@ -63,7 +65,7 @@ namespace Dijital_Revir
             this.panel1.Controls.Add(this.btn_Ek2Ekle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(194, 437);
             this.panel1.TabIndex = 3;
@@ -74,7 +76,7 @@ namespace Dijital_Revir
             this.btn_Gebelik.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_Gebelik.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_Gebelik.Location = new System.Drawing.Point(0, 283);
-            this.btn_Gebelik.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Gebelik.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Gebelik.Name = "btn_Gebelik";
             this.btn_Gebelik.Size = new System.Drawing.Size(194, 72);
             this.btn_Gebelik.TabIndex = 7;
@@ -88,7 +90,7 @@ namespace Dijital_Revir
             this.btn_CovidFormu.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_CovidFormu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_CovidFormu.Location = new System.Drawing.Point(0, 214);
-            this.btn_CovidFormu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_CovidFormu.Margin = new System.Windows.Forms.Padding(2);
             this.btn_CovidFormu.Name = "btn_CovidFormu";
             this.btn_CovidFormu.Size = new System.Drawing.Size(194, 72);
             this.btn_CovidFormu.TabIndex = 7;
@@ -102,7 +104,7 @@ namespace Dijital_Revir
             this.btn_IsKazası.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_IsKazası.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_IsKazası.Location = new System.Drawing.Point(0, 142);
-            this.btn_IsKazası.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_IsKazası.Margin = new System.Windows.Forms.Padding(2);
             this.btn_IsKazası.Name = "btn_IsKazası";
             this.btn_IsKazası.Size = new System.Drawing.Size(194, 72);
             this.btn_IsKazası.TabIndex = 7;
@@ -116,7 +118,7 @@ namespace Dijital_Revir
             this.btn_ISBMuayene.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_ISBMuayene.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_ISBMuayene.Location = new System.Drawing.Point(0, 71);
-            this.btn_ISBMuayene.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_ISBMuayene.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ISBMuayene.Name = "btn_ISBMuayene";
             this.btn_ISBMuayene.Size = new System.Drawing.Size(194, 72);
             this.btn_ISBMuayene.TabIndex = 7;
@@ -130,7 +132,7 @@ namespace Dijital_Revir
             this.btn_Ek2Ekle.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_Ek2Ekle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_Ek2Ekle.Location = new System.Drawing.Point(0, 0);
-            this.btn_Ek2Ekle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Ek2Ekle.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ek2Ekle.Name = "btn_Ek2Ekle";
             this.btn_Ek2Ekle.Size = new System.Drawing.Size(194, 72);
             this.btn_Ek2Ekle.TabIndex = 6;
@@ -143,7 +145,7 @@ namespace Dijital_Revir
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(194, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(558, 437);
             this.panel3.TabIndex = 4;
@@ -154,12 +156,26 @@ namespace Dijital_Revir
             this.textBox1.BackColor = System.Drawing.Color.LightSalmon;
             this.textBox1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox1.Location = new System.Drawing.Point(92, 22);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(402, 154);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // btn_asiEkleme
+            // 
+            this.btn_asiEkleme.AutoEllipsis = true;
+            this.btn_asiEkleme.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_asiEkleme.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_asiEkleme.Location = new System.Drawing.Point(0, 354);
+            this.btn_asiEkleme.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_asiEkleme.Name = "btn_asiEkleme";
+            this.btn_asiEkleme.Size = new System.Drawing.Size(194, 72);
+            this.btn_asiEkleme.TabIndex = 8;
+            this.btn_asiEkleme.Text = "Aşı Ekleme";
+            this.btn_asiEkleme.UseVisualStyleBackColor = false;
+            this.btn_asiEkleme.Click += new System.EventHandler(this.btn_asiEkleme_Click);
             // 
             // ekran_PersonelBilgileriGoruntuleme
             // 
@@ -171,7 +187,7 @@ namespace Dijital_Revir
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ekran_PersonelBilgileriGoruntuleme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personel Bilgileri Görüntüleme";
@@ -195,5 +211,6 @@ namespace Dijital_Revir
         private System.Windows.Forms.Button btn_Ek2Ekle;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_asiEkleme;
     }
 }

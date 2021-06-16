@@ -119,5 +119,11 @@ namespace Dijital_Revir
         {
 
         }
+
+        private void btn_asiEkleme_Click(object sender, EventArgs e)
+        {
+            Form form = new ekran_AsiEkleme(sicil);
+            form.ShowDialog();  
+        }
     }
 }
