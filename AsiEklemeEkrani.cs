@@ -27,7 +27,7 @@ namespace Dijital_Revir
             sqlText = "SELECT Personel.id FROM Personel WHERE Personel.sicilNo = " + sicil;
             indexId = (int)SqlOps.CreateDataTableBySqlQuery(sqlText).Rows[0]["id"];
 
-            sqlText = "Insert Into Asi(personelId, asiAdi, kullanimPeriyodu, uygulamaTarihi) values (" + indexId + ",'"+ tbx_asiAdi.Text + ",'" + tbx_kullanimPeriyodu.Text + ",'" + tbx_uygulamaTarihi.Text + ")";
+            sqlText = "Insert Into Asi(personelId, ad, kullanımPeriyodu, uygulanmaTarihi) values (" + indexId + ",'"+ tbx_asiAdi.Text + "','" + tbx_kullanimPeriyodu.Text + "','" + tbx_uygulamaTarihi.Text + "')";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
 
             tbx_asiAdi.Clear();
@@ -45,8 +45,8 @@ namespace Dijital_Revir
             sqlText = "SELECT Personel.id FROM Personel WHERE Personel.sicilNo = " + sicil;
             indexId = (int)SqlOps.CreateDataTableBySqlQuery(sqlText).Rows[0]["id"];
 
-            sqlText = "SELECT Personel.sicilNo, OzlukBilgileri.ad ,OzlukBilgileri.soyAd, Asi.asiAdi, Asi.kullanimPeriyodu, Asi.uygulamaTarihi" +
-                      "FROM ((((Personel INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id)" +
+            sqlText = "SELECT Personel.sicilNo, OzlukBilgileri.ad ,OzlukBilgileri.soyAd, Asi.ad, Asi.kullanımPeriyodu, Asi.uygulanmaTarihi " +
+                      "FROM ((Personel INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id) " +
                       "INNER JOIN Asi ON Personel.id = Asi.personelId)";
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
