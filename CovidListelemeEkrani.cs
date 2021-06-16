@@ -32,11 +32,12 @@ namespace Dijital_Revir
 
         private void dgv_covidListesi_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            rowIndex = SqlOps.GetDataGridViewRowIndex(dgv_covidListesi, "sicilNo");
-            int indexId = (int)dt.Rows[rowIndex]["id"];
+            int index = SqlOps.GetDataGridViewRowIndex(dgv_covidListesi, "sicilNo");
+            sicil = dt.Rows[index]["sicilNo"].ToString();
 
-            Form form = new ekran_CovidTakipEkrani(indexId);
+            Form form = new ekran_CovidTakipEkrani(sicil);
             form.ShowDialog();
+
         }
 
         private void ekran_CovidListeleme_Load(object sender, EventArgs e)
@@ -44,7 +45,7 @@ namespace Dijital_Revir
             String sqlText;
             
 
-            sqlText = "Select Covid.id , Personel.sicilNo,OzlukBilgileri.ad ,OzlukBilgileri.soyAd, Sirket.sirketAdi ,Covid.vakaDurumu  from  " +
+            sqlText = "Select Personel.sicilNo,OzlukBilgileri.ad ,OzlukBilgileri.soyAd, Sirket.sirketAdi ,Covid.vakaDurumu  from  " +
              "((((Personel Inner join OzlukBilgileri On Personel.ozlukId = OzlukBilgileri.id)" +
             "Inner join Departman on Departman.id = Personel.departmanId)" +
             "Inner join Sirket on Sirket.id = Departman.sirketId)" +
@@ -52,13 +53,6 @@ namespace Dijital_Revir
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
             dgv_covidListesi.DataSource = dt;
-        }
-
-        private void btn_covidEkle_Click(object sender, EventArgs e)
-        {
-            Form form = new ekran_CovidEkleme();
-            form.ShowDialog();
-
         }
     }
 }

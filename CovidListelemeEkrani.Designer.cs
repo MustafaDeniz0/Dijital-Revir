@@ -174,19 +174,6 @@ namespace Dijital_Revir
             this.button.MinimumWidth = 6;
             this.button.Name = "button";
             this.button.ReadOnly = true;
-            this.button.Width = 187;
-            // 
-            // btn_covidEkle
-            // 
-            this.btn_covidEkle.AutoEllipsis = true;
-            this.btn_covidEkle.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_covidEkle.Location = new System.Drawing.Point(25, 360);
-            this.btn_covidEkle.Name = "btn_covidEkle";
-            this.btn_covidEkle.Size = new System.Drawing.Size(220, 52);
-            this.btn_covidEkle.TabIndex = 9;
-            this.btn_covidEkle.Text = "Ekle";
-            this.btn_covidEkle.UseVisualStyleBackColor = false;
-            this.btn_covidEkle.Click += new System.EventHandler(this.btn_covidEkle_Click);
             // 
             // ekran_CovidListeleme
             // 
