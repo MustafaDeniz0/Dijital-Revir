@@ -58,5 +58,10 @@ namespace Dijital_Revir
             this.Close();
             Form.ActiveForm.Update();
         }
+
+        private void ekran_CovidEkleme_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
