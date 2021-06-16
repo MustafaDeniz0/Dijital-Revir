@@ -147,7 +147,7 @@ namespace Dijital_Revir
             this.btn_AraButonu.Name = "btn_AraButonu";
             this.btn_AraButonu.Size = new System.Drawing.Size(139, 52);
             this.btn_AraButonu.TabIndex = 8;
-            this.btn_AraButonu.Text = "Personel Ara";
+            this.btn_AraButonu.Text = "Peronel Ara";
             this.btn_AraButonu.UseVisualStyleBackColor = false;
             this.btn_AraButonu.Click += new System.EventHandler(this.btn_AraButonu_Click_1);
             // 

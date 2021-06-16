@@ -91,7 +91,6 @@ namespace Dijital_Revir
             this.btn_TestEkle.TabIndex = 8;
             this.btn_TestEkle.Text = "Test Ekle";
             this.btn_TestEkle.UseVisualStyleBackColor = false;
-            this.btn_TestEkle.Click += new System.EventHandler(this.btn_TestEkle_Click_1);
             // 
             // panel3
             // 
