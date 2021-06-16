@@ -33,5 +33,10 @@ namespace Dijital_Revir
             tbx_MuayeneGoruntulemeEkrani.Text = "\r\n \r\n \r\n Tarih : " + dt.Rows[0]["tarih"] + "\r\n Şikayet : " + dt.Rows[0]["sikayet"] + "\r\n Tanı : " + dt.Rows[0]["tanı"] + "\r\n Tedavi : " + dt.Rows[0]["tedavi"] + "\r\n Doktor : " + dt.Rows[0]["doktor"];
 
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
