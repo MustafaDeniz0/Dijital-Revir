@@ -52,5 +52,10 @@ namespace Dijital_Revir
 
             dgv_asi.DataSource = dt;
         }
+
+        private void ekran_AsiEkleme_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
