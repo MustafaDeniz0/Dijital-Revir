@@ -62,7 +62,8 @@ namespace Dijital_Revir
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
             this.dgv_olcum.DataSource = dt;
 
-            sqlText = "Select top 5 * from Test where Covid.personelId = " + indexId + " and Covid.id = Test.covidId " + "order by testTarihi desc "+";";
+            
+            sqlText = "SELECT TOP 5 Test.testTuru, Test.testTarihi, Test.testSonucu FROM Test LEFT JOIN Covid ON Covid.id = " + indexCovidId + " AND Covid.id = Test.covidId" + " ORDER BY testTarihi DESC";
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
             this.dgv_test.DataSource = dt;
             
