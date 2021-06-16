@@ -51,48 +51,47 @@ namespace Dijital_Revir
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1187, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(258, 908);
+            this.panel2.Size = new System.Drawing.Size(258, 726);
             this.panel2.TabIndex = 7;
             this.panel2.UseWaitCursor = true;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(258, 908);
+            this.panel1.Size = new System.Drawing.Size(258, 726);
             this.panel1.TabIndex = 7;
             this.panel1.UseWaitCursor = true;
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Controls.Add(this.btn_degerEkle);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.dgv_gebelikTablosu);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(258, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(929, 908);
+            this.panel3.Size = new System.Drawing.Size(929, 726);
             this.panel3.TabIndex = 8;
             this.panel3.UseWaitCursor = true;
             // 
             // btn_degerEkle
             // 
             this.btn_degerEkle.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_degerEkle.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_degerEkle.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_degerEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_degerEkle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_degerEkle.Location = new System.Drawing.Point(6, 104);
-            this.btn_degerEkle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_degerEkle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_degerEkle.Location = new System.Drawing.Point(6, 83);
             this.btn_degerEkle.Name = "btn_degerEkle";
-            this.btn_degerEkle.Size = new System.Drawing.Size(179, 72);
+            this.btn_degerEkle.Size = new System.Drawing.Size(179, 58);
             this.btn_degerEkle.TabIndex = 21;
             this.btn_degerEkle.Text = "Değer Ekle";
             this.btn_degerEkle.UseVisualStyleBackColor = false;
@@ -103,8 +102,8 @@ namespace Dijital_Revir
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(6, 49);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(6, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 28);
             this.label2.TabIndex = 20;
@@ -127,12 +126,11 @@ namespace Dijital_Revir
             this.AşıDeğeri,
             this.EkTetkikDeğeri,
             this.Verilenİlaç});
-            this.dgv_gebelikTablosu.Location = new System.Drawing.Point(6, 200);
-            this.dgv_gebelikTablosu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgv_gebelikTablosu.Location = new System.Drawing.Point(6, 160);
             this.dgv_gebelikTablosu.Name = "dgv_gebelikTablosu";
             this.dgv_gebelikTablosu.RowHeadersWidth = 35;
             this.dgv_gebelikTablosu.RowTemplate.Height = 25;
-            this.dgv_gebelikTablosu.Size = new System.Drawing.Size(913, 200);
+            this.dgv_gebelikTablosu.Size = new System.Drawing.Size(913, 160);
             this.dgv_gebelikTablosu.TabIndex = 19;
             this.dgv_gebelikTablosu.UseWaitCursor = true;
             // 
@@ -218,15 +216,14 @@ namespace Dijital_Revir
             // 
             // ekran_GebelikTakip
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1445, 908);
+            this.ClientSize = new System.Drawing.Size(1445, 726);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ekran_GebelikTakip";
             this.Text = "Gebelik Takibi";
             this.UseWaitCursor = true;

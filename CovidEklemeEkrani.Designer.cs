@@ -71,7 +71,7 @@ namespace Dijital_Revir
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -80,7 +80,7 @@ namespace Dijital_Revir
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btn_covidEkle);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1147, 0);
@@ -91,7 +91,7 @@ namespace Dijital_Revir
             // btn_covidEkle
             // 
             this.btn_covidEkle.AutoEllipsis = true;
-            this.btn_covidEkle.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_covidEkle.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_covidEkle.Location = new System.Drawing.Point(26, 716);
             this.btn_covidEkle.Name = "btn_covidEkle";
             this.btn_covidEkle.Size = new System.Drawing.Size(220, 52);
@@ -115,6 +115,7 @@ namespace Dijital_Revir
             // panel5
             // 
             this.panel5.AutoScroll = true;
+            this.panel5.BackColor = System.Drawing.Color.LightGray;
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.tbx_atesDurumu);
             this.panel5.Controls.Add(this.label12);
@@ -436,6 +437,7 @@ namespace Dijital_Revir
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.lbl_Sorgula);
             this.panel4.Controls.Add(this.btn_Sorgula);
             this.panel4.Controls.Add(this.label1);

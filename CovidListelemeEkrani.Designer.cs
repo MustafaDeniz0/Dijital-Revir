@@ -31,6 +31,7 @@ namespace Dijital_Revir
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_covidEkle = new System.Windows.Forms.Button();
             this.txb_covidDurumu = new System.Windows.Forms.TextBox();
             this.txb_sirket = new System.Windows.Forms.TextBox();
             this.btn_covidListele = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@ namespace Dijital_Revir
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_covidListesi = new System.Windows.Forms.DataGridView();
             this.button = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btn_covidEkle = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_covidListesi)).BeginInit();
@@ -48,7 +48,7 @@ namespace Dijital_Revir
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -57,7 +57,7 @@ namespace Dijital_Revir
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btn_covidEkle);
             this.panel2.Controls.Add(this.txb_covidDurumu);
             this.panel2.Controls.Add(this.txb_sirket);
@@ -70,6 +70,18 @@ namespace Dijital_Revir
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(258, 538);
             this.panel2.TabIndex = 8;
+            // 
+            // btn_covidEkle
+            // 
+            this.btn_covidEkle.AutoEllipsis = true;
+            this.btn_covidEkle.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_covidEkle.Location = new System.Drawing.Point(25, 360);
+            this.btn_covidEkle.Name = "btn_covidEkle";
+            this.btn_covidEkle.Size = new System.Drawing.Size(220, 52);
+            this.btn_covidEkle.TabIndex = 9;
+            this.btn_covidEkle.Text = "Ekle";
+            this.btn_covidEkle.UseVisualStyleBackColor = false;
+            this.btn_covidEkle.Click += new System.EventHandler(this.btn_covidEkle_Click);
             // 
             // txb_covidDurumu
             // 
@@ -98,7 +110,7 @@ namespace Dijital_Revir
             // btn_covidListele
             // 
             this.btn_covidListele.AutoEllipsis = true;
-            this.btn_covidListele.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_covidListele.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_covidListele.Location = new System.Drawing.Point(25, 285);
             this.btn_covidListele.Name = "btn_covidListele";
             this.btn_covidListele.Size = new System.Drawing.Size(220, 52);
@@ -151,7 +163,7 @@ namespace Dijital_Revir
             // 
             // dgv_covidListesi
             // 
-            this.dgv_covidListesi.BackgroundColor = System.Drawing.Color.LightSalmon;
+            this.dgv_covidListesi.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_covidListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_covidListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.button});
@@ -175,18 +187,6 @@ namespace Dijital_Revir
             this.button.Name = "button";
             this.button.ReadOnly = true;
             this.button.Width = 187;
-            // 
-            // btn_covidEkle
-            // 
-            this.btn_covidEkle.AutoEllipsis = true;
-            this.btn_covidEkle.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_covidEkle.Location = new System.Drawing.Point(25, 360);
-            this.btn_covidEkle.Name = "btn_covidEkle";
-            this.btn_covidEkle.Size = new System.Drawing.Size(220, 52);
-            this.btn_covidEkle.TabIndex = 9;
-            this.btn_covidEkle.Text = "Ekle";
-            this.btn_covidEkle.UseVisualStyleBackColor = false;
-            this.btn_covidEkle.Click += new System.EventHandler(this.btn_covidEkle_Click);
             // 
             // ekran_CovidListeleme
             // 

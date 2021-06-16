@@ -45,7 +45,7 @@ namespace Dijital_Revir
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -55,7 +55,7 @@ namespace Dijital_Revir
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btn_OlcumAtesEkle);
             this.panel2.Controls.Add(this.btn_TestEkle);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -68,7 +68,7 @@ namespace Dijital_Revir
             // btn_OlcumAtesEkle
             // 
             this.btn_OlcumAtesEkle.AutoEllipsis = true;
-            this.btn_OlcumAtesEkle.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_OlcumAtesEkle.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_OlcumAtesEkle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_OlcumAtesEkle.Location = new System.Drawing.Point(9, 361);
             this.btn_OlcumAtesEkle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -82,7 +82,7 @@ namespace Dijital_Revir
             // btn_TestEkle
             // 
             this.btn_TestEkle.AutoEllipsis = true;
-            this.btn_TestEkle.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_TestEkle.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_TestEkle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_TestEkle.Location = new System.Drawing.Point(9, 448);
             this.btn_TestEkle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -107,7 +107,7 @@ namespace Dijital_Revir
             // 
             // dgv_test
             // 
-            this.dgv_test.BackgroundColor = System.Drawing.Color.LightSalmon;
+            this.dgv_test.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_test.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_test.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgv_test.Location = new System.Drawing.Point(0, 479);
@@ -120,7 +120,7 @@ namespace Dijital_Revir
             // 
             // dgv_olcum
             // 
-            this.dgv_olcum.BackgroundColor = System.Drawing.Color.LightSalmon;
+            this.dgv_olcum.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_olcum.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_olcum.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgv_olcum.Location = new System.Drawing.Point(0, 279);
