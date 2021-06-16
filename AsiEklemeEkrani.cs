@@ -15,6 +15,12 @@ namespace Dijital_Revir
         public ekran_AsiEkleme()
         {
             InitializeComponent();
+            
+        }
+
+        private void btn_asiEkle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

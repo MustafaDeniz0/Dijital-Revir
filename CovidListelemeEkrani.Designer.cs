@@ -40,6 +40,7 @@ namespace Dijital_Revir
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_covidListesi = new System.Windows.Forms.DataGridView();
             this.button = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btn_covidEkle = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_covidListesi)).BeginInit();
@@ -57,6 +58,7 @@ namespace Dijital_Revir
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.Controls.Add(this.btn_covidEkle);
             this.panel2.Controls.Add(this.txb_covidDurumu);
             this.panel2.Controls.Add(this.txb_sirket);
             this.panel2.Controls.Add(this.btn_covidListele);
@@ -174,6 +176,18 @@ namespace Dijital_Revir
             this.button.ReadOnly = true;
             this.button.Width = 187;
             // 
+            // btn_covidEkle
+            // 
+            this.btn_covidEkle.AutoEllipsis = true;
+            this.btn_covidEkle.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_covidEkle.Location = new System.Drawing.Point(25, 360);
+            this.btn_covidEkle.Name = "btn_covidEkle";
+            this.btn_covidEkle.Size = new System.Drawing.Size(220, 52);
+            this.btn_covidEkle.TabIndex = 9;
+            this.btn_covidEkle.Text = "Ekle";
+            this.btn_covidEkle.UseVisualStyleBackColor = false;
+            this.btn_covidEkle.Click += new System.EventHandler(this.btn_covidEkle_Click);
+            // 
             // ekran_CovidListeleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -211,5 +225,6 @@ namespace Dijital_Revir
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgv_covidListesi;
         private System.Windows.Forms.DataGridViewButtonColumn button;
+        private System.Windows.Forms.Button btn_covidEkle;
     }
 }

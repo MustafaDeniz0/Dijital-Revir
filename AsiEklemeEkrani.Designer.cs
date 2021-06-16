@@ -50,9 +50,8 @@ namespace Dijital_Revir
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(258, 908);
+            this.panel1.Size = new System.Drawing.Size(258, 726);
             this.panel1.TabIndex = 6;
             // 
             // panel2
@@ -60,9 +59,8 @@ namespace Dijital_Revir
             this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1187, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(258, 908);
+            this.panel2.Size = new System.Drawing.Size(258, 726);
             this.panel2.TabIndex = 7;
             // 
             // panel3
@@ -75,8 +73,9 @@ namespace Dijital_Revir
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(258, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(929, 908);
+            this.panel3.Size = new System.Drawing.Size(929, 726);
             this.panel3.TabIndex = 8;
             // 
             // dgv_asi
@@ -88,12 +87,11 @@ namespace Dijital_Revir
             this.AşıAdı,
             this.KullanımPeriyodu,
             this.UygulamaTarihi});
-            this.dgv_asi.Location = new System.Drawing.Point(353, 504);
-            this.dgv_asi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgv_asi.Location = new System.Drawing.Point(353, 403);
             this.dgv_asi.Name = "dgv_asi";
             this.dgv_asi.RowHeadersWidth = 51;
             this.dgv_asi.RowTemplate.Height = 25;
-            this.dgv_asi.Size = new System.Drawing.Size(403, 245);
+            this.dgv_asi.Size = new System.Drawing.Size(403, 196);
             this.dgv_asi.TabIndex = 24;
             // 
             // AşıAdı
@@ -125,39 +123,37 @@ namespace Dijital_Revir
             this.btn_asiEkle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_asiEkle.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_asiEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_asiEkle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_asiEkle.Location = new System.Drawing.Point(465, 278);
-            this.btn_asiEkle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_asiEkle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_asiEkle.Location = new System.Drawing.Point(465, 222);
             this.btn_asiEkle.Name = "btn_asiEkle";
-            this.btn_asiEkle.Size = new System.Drawing.Size(179, 72);
+            this.btn_asiEkle.Size = new System.Drawing.Size(179, 58);
             this.btn_asiEkle.TabIndex = 23;
             this.btn_asiEkle.Text = "Aşı Ekle";
             this.btn_asiEkle.UseVisualStyleBackColor = false;
+            this.btn_asiEkle.Click += new System.EventHandler(this.btn_asiEkle_Click);
             // 
             // txb_kullanimPeriyodu
             // 
             this.txb_kullanimPeriyodu.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txb_kullanimPeriyodu.Location = new System.Drawing.Point(353, 204);
-            this.txb_kullanimPeriyodu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_kullanimPeriyodu.Location = new System.Drawing.Point(353, 163);
             this.txb_kullanimPeriyodu.Name = "txb_kullanimPeriyodu";
-            this.txb_kullanimPeriyodu.Size = new System.Drawing.Size(403, 27);
+            this.txb_kullanimPeriyodu.Size = new System.Drawing.Size(403, 22);
             this.txb_kullanimPeriyodu.TabIndex = 22;
             // 
             // txb_asiAdi
             // 
             this.txb_asiAdi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txb_asiAdi.Location = new System.Drawing.Point(353, 158);
-            this.txb_asiAdi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_asiAdi.Location = new System.Drawing.Point(353, 126);
             this.txb_asiAdi.Name = "txb_asiAdi";
-            this.txb_asiAdi.Size = new System.Drawing.Size(403, 27);
+            this.txb_asiAdi.Size = new System.Drawing.Size(403, 22);
             this.txb_asiAdi.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(177, 204);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(177, 163);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 28);
             this.label1.TabIndex = 20;
@@ -167,8 +163,8 @@ namespace Dijital_Revir
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(270, 160);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(270, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 28);
             this.label2.TabIndex = 19;
@@ -176,15 +172,14 @@ namespace Dijital_Revir
             // 
             // ekran_AsiEkleme
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1445, 908);
+            this.ClientSize = new System.Drawing.Size(1445, 726);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ekran_AsiEkleme";
             this.Text = "Aşı Ekleme";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

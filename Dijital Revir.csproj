@@ -64,6 +64,12 @@
     <Compile Include="AtesDegerleriEklemeEkrani.Designer.cs">
       <DependentUpon>AtesDegerleriEklemeEkrani.cs</DependentUpon>
     </Compile>
+    <Compile Include="CovidEklemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CovidEklemeEkrani.Designer.cs">
+      <DependentUpon>CovidEklemeEkrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="CovidListelemeEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AtesDegerleriEklemeEkrani.resx">
       <DependentUpon>AtesDegerleriEklemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CovidEklemeEkrani.resx">
+      <DependentUpon>CovidEklemeEkrani.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CovidListelemeEkrani.resx">
       <DependentUpon>CovidListelemeEkrani.cs</DependentUpon>

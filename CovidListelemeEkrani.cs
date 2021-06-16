@@ -53,5 +53,12 @@ namespace Dijital_Revir
 
             dgv_covidListesi.DataSource = dt;
         }
+
+        private void btn_covidEkle_Click(object sender, EventArgs e)
+        {
+            Form form = new ekran_CovidEkleme();
+            form.ShowDialog();
+
+        }
     }
 }
