@@ -42,69 +42,70 @@ namespace Dijital_Revir
             // 
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(194, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(259, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(564, 583);
+            this.panel3.Size = new System.Drawing.Size(751, 718);
             this.panel3.TabIndex = 7;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.LightSalmon;
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Controls.Add(this.tbx_MuayeneGoruntulemeEkrani);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(564, 583);
+            this.panel4.Size = new System.Drawing.Size(751, 718);
             this.panel4.TabIndex = 0;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // tbx_MuayeneGoruntulemeEkrani
             // 
             this.tbx_MuayeneGoruntulemeEkrani.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbx_MuayeneGoruntulemeEkrani.BackColor = System.Drawing.Color.LightSalmon;
+            this.tbx_MuayeneGoruntulemeEkrani.BackColor = System.Drawing.Color.LightGray;
             this.tbx_MuayeneGoruntulemeEkrani.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbx_MuayeneGoruntulemeEkrani.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbx_MuayeneGoruntulemeEkrani.Location = new System.Drawing.Point(75, 32);
-            this.tbx_MuayeneGoruntulemeEkrani.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbx_MuayeneGoruntulemeEkrani.Location = new System.Drawing.Point(103, 38);
+            this.tbx_MuayeneGoruntulemeEkrani.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_MuayeneGoruntulemeEkrani.Multiline = true;
             this.tbx_MuayeneGoruntulemeEkrani.Name = "tbx_MuayeneGoruntulemeEkrani";
             this.tbx_MuayeneGoruntulemeEkrani.ReadOnly = true;
-            this.tbx_MuayeneGoruntulemeEkrani.Size = new System.Drawing.Size(411, 483);
+            this.tbx_MuayeneGoruntulemeEkrani.Size = new System.Drawing.Size(548, 594);
             this.tbx_MuayeneGoruntulemeEkrani.TabIndex = 0;
             this.tbx_MuayeneGoruntulemeEkrani.TabStop = false;
             this.tbx_MuayeneGoruntulemeEkrani.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(194, 583);
+            this.panel1.Size = new System.Drawing.Size(259, 718);
             this.panel1.TabIndex = 6;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(758, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(1010, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(194, 583);
+            this.panel2.Size = new System.Drawing.Size(259, 718);
             this.panel2.TabIndex = 5;
             // 
             // MuayeneGoruntulemeEkrani
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 583);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1269, 718);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MuayeneGoruntulemeEkrani";
             this.Text = "MuayeneGoruntulemeEkrani";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

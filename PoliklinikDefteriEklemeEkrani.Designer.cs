@@ -38,12 +38,12 @@ namespace Dijital_Revir
             this.tbx_Tanı = new System.Windows.Forms.TextBox();
             this.tbx_tanıGrubu = new System.Windows.Forms.TextBox();
             this.tbx_sicilNo = new System.Windows.Forms.TextBox();
+            this.tbx_siraNo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbx_siraNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -51,7 +51,7 @@ namespace Dijital_Revir
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -60,7 +60,7 @@ namespace Dijital_Revir
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btn_AraButonu);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1003, 0);
@@ -71,7 +71,7 @@ namespace Dijital_Revir
             // btn_AraButonu
             // 
             this.btn_AraButonu.AutoEllipsis = true;
-            this.btn_AraButonu.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_AraButonu.BackColor = System.Drawing.Color.LightGray;
             this.btn_AraButonu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_AraButonu.Location = new System.Drawing.Point(24, 458);
             this.btn_AraButonu.Name = "btn_AraButonu";
@@ -83,6 +83,7 @@ namespace Dijital_Revir
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.tbx_Acıklama);
             this.panel3.Controls.Add(this.tbx_sonuc);
             this.panel3.Controls.Add(this.tbx_Tanı);
@@ -152,11 +153,21 @@ namespace Dijital_Revir
             this.tbx_sicilNo.Size = new System.Drawing.Size(319, 31);
             this.tbx_sicilNo.TabIndex = 56;
             // 
+            // tbx_siraNo
+            // 
+            this.tbx_siraNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_siraNo.Location = new System.Drawing.Point(332, 40);
+            this.tbx_siraNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_siraNo.Multiline = true;
+            this.tbx_siraNo.Name = "tbx_siraNo";
+            this.tbx_siraNo.Size = new System.Drawing.Size(319, 31);
+            this.tbx_siraNo.TabIndex = 55;
+            // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.LightSalmon;
+            this.label9.BackColor = System.Drawing.Color.LightGray;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(93, 411);
             this.label9.Name = "label9";
@@ -168,7 +179,7 @@ namespace Dijital_Revir
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.LightSalmon;
+            this.label8.BackColor = System.Drawing.Color.LightGray;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label8.Location = new System.Drawing.Point(93, 152);
             this.label8.Name = "label8";
@@ -180,7 +191,7 @@ namespace Dijital_Revir
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.LightSalmon;
+            this.label7.BackColor = System.Drawing.Color.LightGray;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(93, 294);
             this.label7.Name = "label7";
@@ -192,7 +203,7 @@ namespace Dijital_Revir
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.LightSalmon;
+            this.label6.BackColor = System.Drawing.Color.LightGray;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(93, 214);
             this.label6.Name = "label6";
@@ -204,7 +215,7 @@ namespace Dijital_Revir
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightSalmon;
+            this.label2.BackColor = System.Drawing.Color.LightGray;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(93, 92);
             this.label2.Name = "label2";
@@ -212,21 +223,11 @@ namespace Dijital_Revir
             this.label2.TabIndex = 48;
             this.label2.Text = "Sicil Numarası";
             // 
-            // tbx_siraNo
-            // 
-            this.tbx_siraNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbx_siraNo.Location = new System.Drawing.Point(332, 40);
-            this.tbx_siraNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbx_siraNo.Multiline = true;
-            this.tbx_siraNo.Name = "tbx_siraNo";
-            this.tbx_siraNo.Size = new System.Drawing.Size(319, 31);
-            this.tbx_siraNo.TabIndex = 55;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightSalmon;
+            this.label1.BackColor = System.Drawing.Color.LightGray;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(93, 40);
             this.label1.Name = "label1";
@@ -238,7 +239,7 @@ namespace Dijital_Revir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSalmon;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1261, 538);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

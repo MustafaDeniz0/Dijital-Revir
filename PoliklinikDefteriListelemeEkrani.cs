@@ -18,15 +18,11 @@ namespace Dijital_Revir
             InitializeComponent();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_ekle_Click(object sender, EventArgs e)
         {
             Form form = new ekran_PoliklinikEklemeEkranı();
             form.ShowDialog();
+            SqlDgridUpdate();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -39,6 +35,10 @@ namespace Dijital_Revir
         }
 
         private void ekran_PoliklinikDefteriListeleme_Load(object sender, EventArgs e)
+        {
+            SqlDgridUpdate();
+        }
+        private void SqlDgridUpdate()
         {
             String sqlText;
 

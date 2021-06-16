@@ -39,18 +39,19 @@ namespace Dijital_Revir
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Controls.Add(this.tbx_PoliklinikGoruntuleme);
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
@@ -58,6 +59,7 @@ namespace Dijital_Revir
             // tbx_PoliklinikGoruntuleme
             // 
             resources.ApplyResources(this.tbx_PoliklinikGoruntuleme, "tbx_PoliklinikGoruntuleme");
+            this.tbx_PoliklinikGoruntuleme.BackColor = System.Drawing.Color.LightGray;
             this.tbx_PoliklinikGoruntuleme.Name = "tbx_PoliklinikGoruntuleme";
             this.tbx_PoliklinikGoruntuleme.ReadOnly = true;
             this.tbx_PoliklinikGoruntuleme.TabStop = false;
@@ -66,7 +68,7 @@ namespace Dijital_Revir
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSalmon;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);

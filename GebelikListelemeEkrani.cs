@@ -12,7 +12,7 @@ namespace Dijital_Revir
 {
     public partial class ekran_GebelikListeleme : Form
     {
-        String sicil;
+        String sicilNo;
         DataTable dt;
         public ekran_GebelikListeleme()
         {
@@ -26,23 +26,37 @@ namespace Dijital_Revir
 
         private void dgv_gebelikListesi_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            int index;
+            Form form;
 
-            int index = SqlOps.GetDataGridViewRowIndex(dgv_gebelikListesi, "sicilNo");
-            sicil = dt.Rows[index]["sicilNo"].ToString();
-            Form form = new ekran_GebelikTakip(sicil);
+            index = SqlOps.GetDataGridViewRowIndex(dgv_gebelikListesi, "sicilNo");
+            sicilNo = dt.Rows[index]["sicilNo"].ToString();
+
+            form = new ekran_GebelikTakip(sicilNo);
             form.ShowDialog();
         }
 
         private void ekran_GebelikListeleme_Load(object sender, EventArgs e)
         {
+            SqlDgvUpdate();
+        }
+
+        private void btn_GebelikEkle_Click(object sender, EventArgs e)
+        {
+            Form form = new ekran_GebelikEklemeEkrani();
+            form.ShowDialog();
+
+            SqlDgvUpdate();
+        }
+
+        private void SqlDgvUpdate()
+        {
             String sqlText;
-            
-            sqlText = "SELECT Personel.sicilNo ,OzlukBilgileri.ad,OzlukBilgileri.soyAd, Gebelik.sonAdetTarihi  FROM Gebelik LEFT JOIN Personel ON Gebelik.personelId = Personel.id Left join OzlukBilgileri on OzlukBilgileri.id =Personel.ozlukId";
+
+            sqlText = "SELECT Personel.sicilNo ,OzlukBilgileri.ad,OzlukBilgileri.soyAd, Gebelik.sonAdetTarihi  FROM Gebelik LEFT JOIN Personel ON Gebelik.personelId = Personel.id Left join OzlukBilgileri on OzlukBilgileri.id = Personel.ozlukId ORDER BY OzlukBilgileri.ad, OzlukBilgileri.soyAd DESC";
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
             dgv_gebelikListesi.DataSource = dt;
         }
     }
-
-    
 }

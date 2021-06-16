@@ -31,7 +31,6 @@ namespace Dijital_Revir
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_IsKazasiEkle = new System.Windows.Forms.Button();
             this.tbx_sirket = new System.Windows.Forms.TextBox();
             this.btn_listele = new System.Windows.Forms.Button();
             this.dtp_isKazasi = new System.Windows.Forms.DateTimePicker();
@@ -46,7 +45,7 @@ namespace Dijital_Revir
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -55,8 +54,7 @@ namespace Dijital_Revir
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.panel2.Controls.Add(this.btn_IsKazasiEkle);
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.tbx_sirket);
             this.panel2.Controls.Add(this.btn_listele);
             this.panel2.Controls.Add(this.dtp_isKazasi);
@@ -69,19 +67,6 @@ namespace Dijital_Revir
             this.panel2.Size = new System.Drawing.Size(258, 538);
             this.panel2.TabIndex = 5;
             // 
-            // btn_IsKazasiEkle
-            // 
-            this.btn_IsKazasiEkle.AutoEllipsis = true;
-            this.btn_IsKazasiEkle.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_IsKazasiEkle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_IsKazasiEkle.Location = new System.Drawing.Point(25, 374);
-            this.btn_IsKazasiEkle.Name = "btn_IsKazasiEkle";
-            this.btn_IsKazasiEkle.Size = new System.Drawing.Size(220, 52);
-            this.btn_IsKazasiEkle.TabIndex = 8;
-            this.btn_IsKazasiEkle.Text = "Ekle";
-            this.btn_IsKazasiEkle.UseVisualStyleBackColor = false;
-            
-            // 
             // tbx_sirket
             // 
             this.tbx_sirket.Location = new System.Drawing.Point(25, 190);
@@ -92,12 +77,11 @@ namespace Dijital_Revir
             this.tbx_sirket.TabIndex = 7;
             this.tbx_sirket.Text = "Şirket";
             this.tbx_sirket.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbx_sirket.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // btn_listele
             // 
             this.btn_listele.AutoEllipsis = true;
-            this.btn_listele.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_listele.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_listele.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_listele.Location = new System.Drawing.Point(25, 292);
             this.btn_listele.Name = "btn_listele";
@@ -105,7 +89,6 @@ namespace Dijital_Revir
             this.btn_listele.TabIndex = 6;
             this.btn_listele.Text = "Listele";
             this.btn_listele.UseVisualStyleBackColor = false;
-            this.btn_listele.Click += new System.EventHandler(this.btn_AraButonu_Click);
             // 
             // dtp_isKazasi
             // 
@@ -114,7 +97,6 @@ namespace Dijital_Revir
             this.dtp_isKazasi.Name = "dtp_isKazasi";
             this.dtp_isKazasi.Size = new System.Drawing.Size(220, 22);
             this.dtp_isKazasi.TabIndex = 3;
-            this.dtp_isKazasi.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // tbx_soyad
             // 
@@ -151,7 +133,7 @@ namespace Dijital_Revir
             // 
             // dgv_isKazaListesi
             // 
-            this.dgv_isKazaListesi.BackgroundColor = System.Drawing.Color.LightSalmon;
+            this.dgv_isKazaListesi.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_isKazaListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_isKazaListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.button});
@@ -211,7 +193,6 @@ namespace Dijital_Revir
         private System.Windows.Forms.TextBox tbx_ad;
         private System.Windows.Forms.Button btn_listele;
         private System.Windows.Forms.TextBox tbx_sirket;
-        private System.Windows.Forms.Button btn_IsKazasiEkle;
         private System.Windows.Forms.DataGridViewButtonColumn button;
     }
 }

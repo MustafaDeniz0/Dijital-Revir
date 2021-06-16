@@ -45,7 +45,7 @@ namespace Dijital_Revir
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1004, 0);
             this.panel2.Name = "panel2";
@@ -55,7 +55,7 @@ namespace Dijital_Revir
             // btn_PoliklinikDefteri
             // 
             this.btn_PoliklinikDefteri.AutoEllipsis = true;
-            this.btn_PoliklinikDefteri.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_PoliklinikDefteri.BackColor = System.Drawing.Color.LightGray;
             this.btn_PoliklinikDefteri.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_PoliklinikDefteri.Location = new System.Drawing.Point(0, 0);
             this.btn_PoliklinikDefteri.Name = "btn_PoliklinikDefteri";
@@ -67,7 +67,7 @@ namespace Dijital_Revir
             // 
             // btn_Covid
             // 
-            this.btn_Covid.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_Covid.BackColor = System.Drawing.Color.LightGray;
             this.btn_Covid.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_Covid.Location = new System.Drawing.Point(0, 69);
             this.btn_Covid.Name = "btn_Covid";
@@ -79,7 +79,7 @@ namespace Dijital_Revir
             // 
             // btn_IsKazasi
             // 
-            this.btn_IsKazasi.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_IsKazasi.BackColor = System.Drawing.Color.LightGray;
             this.btn_IsKazasi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_IsKazasi.Location = new System.Drawing.Point(0, 138);
             this.btn_IsKazasi.Name = "btn_IsKazasi";
@@ -91,7 +91,7 @@ namespace Dijital_Revir
             // 
             // btn_Gebelik
             // 
-            this.btn_Gebelik.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_Gebelik.BackColor = System.Drawing.Color.LightGray;
             this.btn_Gebelik.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_Gebelik.Location = new System.Drawing.Point(0, 207);
             this.btn_Gebelik.Name = "btn_Gebelik";
@@ -103,7 +103,7 @@ namespace Dijital_Revir
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Controls.Add(this.btn_PoliklinikDefteri);
             this.panel4.Controls.Add(this.btn_Covid);
             this.panel4.Controls.Add(this.btn_Gebelik);
@@ -141,7 +141,7 @@ namespace Dijital_Revir
             // 
             this.btn_AraButonu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_AraButonu.AutoEllipsis = true;
-            this.btn_AraButonu.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_AraButonu.BackColor = System.Drawing.Color.White;
             this.btn_AraButonu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_AraButonu.Location = new System.Drawing.Point(592, 30);
             this.btn_AraButonu.Name = "btn_AraButonu";
@@ -168,7 +168,7 @@ namespace Dijital_Revir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSalmon;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1262, 538);
             this.Controls.Add(this.panel1);

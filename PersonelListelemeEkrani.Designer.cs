@@ -38,7 +38,7 @@ namespace Dijital_Revir
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1004, 0);
             this.panel2.Name = "panel2";
@@ -47,7 +47,7 @@ namespace Dijital_Revir
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -57,7 +57,7 @@ namespace Dijital_Revir
             // dgrid_PersonelBilgileri
             // 
             this.dgrid_PersonelBilgileri.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgrid_PersonelBilgileri.BackgroundColor = System.Drawing.Color.LightSalmon;
+            this.dgrid_PersonelBilgileri.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgrid_PersonelBilgileri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrid_PersonelBilgileri.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgbtn_Sec});
@@ -87,7 +87,7 @@ namespace Dijital_Revir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSalmon;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1262, 538);
             this.Controls.Add(this.dgrid_PersonelBilgileri);
             this.Controls.Add(this.panel1);

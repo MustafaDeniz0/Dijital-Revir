@@ -38,8 +38,8 @@ namespace Dijital_Revir
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgv_PoliklinikListeleme = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.button = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PoliklinikListeleme)).BeginInit();
             this.panel3.SuspendLayout();
@@ -47,7 +47,7 @@ namespace Dijital_Revir
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -56,7 +56,7 @@ namespace Dijital_Revir
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btn_ekle);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.btn_Filtrele);
@@ -72,7 +72,7 @@ namespace Dijital_Revir
             // btn_ekle
             // 
             this.btn_ekle.AutoEllipsis = true;
-            this.btn_ekle.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_ekle.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_ekle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_ekle.Location = new System.Drawing.Point(25, 331);
             this.btn_ekle.Name = "btn_ekle";
@@ -96,7 +96,7 @@ namespace Dijital_Revir
             // btn_Filtrele
             // 
             this.btn_Filtrele.AutoEllipsis = true;
-            this.btn_Filtrele.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_Filtrele.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_Filtrele.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_Filtrele.Location = new System.Drawing.Point(25, 250);
             this.btn_Filtrele.Name = "btn_Filtrele";
@@ -115,7 +115,6 @@ namespace Dijital_Revir
             this.textBox3.TabIndex = 2;
             this.textBox3.Text = "Sicil No";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2
             // 
@@ -141,7 +140,7 @@ namespace Dijital_Revir
             // 
             // dgv_PoliklinikListeleme
             // 
-            this.dgv_PoliklinikListeleme.BackgroundColor = System.Drawing.Color.LightSalmon;
+            this.dgv_PoliklinikListeleme.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_PoliklinikListeleme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_PoliklinikListeleme.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.button});
@@ -157,6 +156,15 @@ namespace Dijital_Revir
             this.dgv_PoliklinikListeleme.TabIndex = 13;
             this.dgv_PoliklinikListeleme.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // button
+            // 
+            this.button.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.button.HeaderText = "";
+            this.button.MinimumWidth = 6;
+            this.button.Name = "button";
+            this.button.ReadOnly = true;
+            this.button.Width = 125;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dgv_PoliklinikListeleme);
@@ -166,15 +174,6 @@ namespace Dijital_Revir
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(746, 538);
             this.panel3.TabIndex = 14;
-            // 
-            // button
-            // 
-            this.button.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.button.HeaderText = "";
-            this.button.MinimumWidth = 6;
-            this.button.Name = "button";
-            this.button.ReadOnly = true;
-            this.button.Width = 125;
             // 
             // ekran_PoliklinikDefteriListeleme
             // 

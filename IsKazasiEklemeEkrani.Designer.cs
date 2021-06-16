@@ -50,7 +50,7 @@ namespace Dijital_Revir
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -59,7 +59,7 @@ namespace Dijital_Revir
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btn_Ekle);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btn_aktar);
@@ -72,7 +72,7 @@ namespace Dijital_Revir
             // btn_Ekle
             // 
             this.btn_Ekle.AutoEllipsis = true;
-            this.btn_Ekle.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_Ekle.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_Ekle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_Ekle.Location = new System.Drawing.Point(39, 327);
             this.btn_Ekle.Name = "btn_Ekle";
@@ -85,7 +85,7 @@ namespace Dijital_Revir
             // button1
             // 
             this.button1.AutoEllipsis = true;
-            this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(39, 398);
             this.button1.Name = "button1";
@@ -98,7 +98,7 @@ namespace Dijital_Revir
             // btn_aktar
             // 
             this.btn_aktar.AutoEllipsis = true;
-            this.btn_aktar.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_aktar.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_aktar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_aktar.Location = new System.Drawing.Point(39, 464);
             this.btn_aktar.Name = "btn_aktar";
@@ -110,6 +110,7 @@ namespace Dijital_Revir
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.cmb_VardiyaAmiri);
             this.panel3.Controls.Add(this.tbx_kazaAnlatimi);
             this.panel3.Controls.Add(this.tbx_saat);
@@ -183,7 +184,7 @@ namespace Dijital_Revir
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.LightSalmon;
+            this.label4.BackColor = System.Drawing.Color.LightGray;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(72, 280);
             this.label4.Name = "label4";
@@ -195,7 +196,7 @@ namespace Dijital_Revir
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LightSalmon;
+            this.label3.BackColor = System.Drawing.Color.LightGray;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(72, 203);
             this.label3.Name = "label3";
@@ -207,7 +208,7 @@ namespace Dijital_Revir
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightSalmon;
+            this.label2.BackColor = System.Drawing.Color.LightGray;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(72, 150);
             this.label2.Name = "label2";
@@ -219,7 +220,7 @@ namespace Dijital_Revir
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightSalmon;
+            this.label1.BackColor = System.Drawing.Color.LightGray;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(72, 89);
             this.label1.Name = "label1";
@@ -231,7 +232,7 @@ namespace Dijital_Revir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSalmon;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1262, 538);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

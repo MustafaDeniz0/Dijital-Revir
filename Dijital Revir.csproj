@@ -82,6 +82,12 @@
     <Compile Include="CovidTakipEkrani.Designer.cs">
       <DependentUpon>CovidTakipEkrani.cs</DependentUpon>
     </Compile>
+    <Compile Include="GebelikEklemeEKrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GebelikEklemeEKrani.Designer.cs">
+      <DependentUpon>GebelikEklemeEKrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="GebelikDegerleriEklemeEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GebelikDegerleriEklemeEkrani.resx">
       <DependentUpon>GebelikDegerleriEklemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GebelikEklemeEKrani.resx">
+      <DependentUpon>GebelikEklemeEKrani.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GebelikListelemeEkrani.resx">
       <DependentUpon>GebelikListelemeEkrani.cs</DependentUpon>

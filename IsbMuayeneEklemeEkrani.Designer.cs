@@ -42,7 +42,7 @@ namespace Dijital_Revir
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -51,7 +51,7 @@ namespace Dijital_Revir
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btn_Muayene);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1004, 0);
@@ -63,7 +63,7 @@ namespace Dijital_Revir
             // 
             this.btn_Muayene.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_Muayene.AutoEllipsis = true;
-            this.btn_Muayene.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_Muayene.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_Muayene.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Muayene.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_Muayene.ForeColor = System.Drawing.Color.Black;
@@ -88,7 +88,7 @@ namespace Dijital_Revir
             // dgrid_ISBMuayeneEkleme
             // 
             this.dgrid_ISBMuayeneEkleme.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgrid_ISBMuayeneEkleme.BackgroundColor = System.Drawing.Color.LightSalmon;
+            this.dgrid_ISBMuayeneEkleme.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgrid_ISBMuayeneEkleme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrid_ISBMuayeneEkleme.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgbtn_Sec});

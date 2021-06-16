@@ -38,7 +38,7 @@ namespace Dijital_Revir
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -47,7 +47,7 @@ namespace Dijital_Revir
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1004, 0);
             this.panel2.Name = "panel2";
@@ -56,7 +56,7 @@ namespace Dijital_Revir
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.LightSalmon;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.tbx_IsKazasıGoruntuleme);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(258, 0);
@@ -82,6 +82,7 @@ namespace Dijital_Revir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1262, 538);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

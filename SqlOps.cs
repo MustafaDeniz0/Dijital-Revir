@@ -118,7 +118,7 @@ namespace Dijital_Revir
             }
             return currentRowIndex;
         }
-        public static String SqlDateInsert(DateTime Date , String Time )
+        public static String SqlDateInsert(DateTime Date, String Time)
         {
             String S;
             S = Date.ToString("yyyy.MM.dd") + " " + Time;
@@ -136,6 +136,12 @@ namespace Dijital_Revir
             return S;
         }
 
+        public static void SqlDatagridUpdate(String sqlText, DataGridView dgv)
+        {
+            DataTable dt;
 
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            dgv.DataSource = dt;
+        }
     }
 }

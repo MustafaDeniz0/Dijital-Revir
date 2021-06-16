@@ -31,6 +31,7 @@ namespace Dijital_Revir
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_GebelikEkle = new System.Windows.Forms.Button();
             this.tbx_sirket = new System.Windows.Forms.TextBox();
             this.btn_listele = new System.Windows.Forms.Button();
             this.tbx_soyad = new System.Windows.Forms.TextBox();
@@ -46,7 +47,7 @@ namespace Dijital_Revir
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -55,7 +56,8 @@ namespace Dijital_Revir
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Controls.Add(this.btn_GebelikEkle);
             this.panel2.Controls.Add(this.tbx_sirket);
             this.panel2.Controls.Add(this.btn_listele);
             this.panel2.Controls.Add(this.tbx_soyad);
@@ -66,6 +68,19 @@ namespace Dijital_Revir
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(258, 538);
             this.panel2.TabIndex = 8;
+            // 
+            // btn_GebelikEkle
+            // 
+            this.btn_GebelikEkle.AutoEllipsis = true;
+            this.btn_GebelikEkle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_GebelikEkle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_GebelikEkle.Location = new System.Drawing.Point(25, 343);
+            this.btn_GebelikEkle.Name = "btn_GebelikEkle";
+            this.btn_GebelikEkle.Size = new System.Drawing.Size(220, 52);
+            this.btn_GebelikEkle.TabIndex = 10;
+            this.btn_GebelikEkle.Text = "Ekle";
+            this.btn_GebelikEkle.UseVisualStyleBackColor = false;
+            this.btn_GebelikEkle.Click += new System.EventHandler(this.btn_GebelikEkle_Click);
             // 
             // tbx_sirket
             // 
@@ -81,7 +96,7 @@ namespace Dijital_Revir
             // btn_listele
             // 
             this.btn_listele.AutoEllipsis = true;
-            this.btn_listele.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_listele.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_listele.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_listele.Location = new System.Drawing.Point(25, 250);
             this.btn_listele.Name = "btn_listele";
@@ -136,7 +151,7 @@ namespace Dijital_Revir
             // 
             // dgv_gebelikListesi
             // 
-            this.dgv_gebelikListesi.BackgroundColor = System.Drawing.Color.LightSalmon;
+            this.dgv_gebelikListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_gebelikListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_gebelikListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.button});
@@ -197,5 +212,6 @@ namespace Dijital_Revir
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgv_gebelikListesi;
         private System.Windows.Forms.DataGridViewButtonColumn button;
+        private System.Windows.Forms.Button btn_GebelikEkle;
     }
 }
