@@ -24,9 +24,14 @@ namespace Dijital_Revir
         {
             String sqlText;
 
-            sqlText = "Insert Into Ates(covidId, olcumDegeri, olcumTarihi) values(" + indexCovidId + "," + tbx_InputAtesOlcumDegeri.Text + ", getDate())";
+            sqlText = "Insert Into Ates(covidId, olcumDegeri, olcumTarihi) values(" + indexCovidId + ",'" + tbx_InputAtesOlcumDegeri.Text + "', getDate())";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
             this.Close();
+        }
+
+        private void ekran_AtesDegerleriEklemeEkrani_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
