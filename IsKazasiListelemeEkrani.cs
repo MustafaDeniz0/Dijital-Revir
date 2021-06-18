@@ -12,8 +12,8 @@ namespace Dijital_Revir
 {
     public partial class ekran_IsKazasiListeleme : Form
     {
-        string sicil;
         DataTable dt;
+
         public ekran_IsKazasiListeleme()
         {
             InitializeComponent();
@@ -21,33 +21,72 @@ namespace Dijital_Revir
 
         private void dgv_isKazaListesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int kazaId , index;
-            index=SqlOps.GetDataGridViewRowIndex(dgv_isKazaListesi, "sicilNo");
+            int kazaId;
+            int index;
+            Form form;
+
+            index = SqlOps.GetDataGridViewRowIndex(dgv_isKazaListesi, "sicilNo");
             kazaId = (int)dt.Rows[index]["id"];
-            Form form = new ekran_IsKazasiGoruntuleme(kazaId);
+
+            form = new ekran_IsKazasiGoruntuleme(kazaId);
             form.ShowDialog();
+
             SqlDgridUpdate();
         }
-
-        
 
         private void ekran_IsKazasiListeleme_Load(object sender, EventArgs e)
         {
             SqlDgridUpdate();
         }
+
         private void SqlDgridUpdate()
         {
             String sqlText;
 
+            sqlText = "SELECT IsKazası.id, Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Sirket.sirketAdi, IsKazası.kazaZamanı " +
+            "FROM Personel INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id " +
+            "INNER JOIN Departman ON Departman.id = Personel.departmanId " +
+            "INNER JOIN Sirket ON Sirket.id = Departman.sirketId " +
+            "INNER JOIN IsKazası ON IsKazası.personelId = Personel.id";
 
-            sqlText = "Select IsKazası.id , Personel.sicilNo , OzlukBilgileri.ad , OzlukBilgileri.soyAd, Sirket.sirketAdi ,IsKazası.kazaZamanı  from  " +
-             "((((Personel Inner join OzlukBilgileri On Personel.ozlukId = OzlukBilgileri.id)" +
-            "Inner join Departman on Departman.id = Personel.departmanId)" +
-            "Inner join Sirket on Sirket.id = Departman.sirketId)" +
-            "Inner join IsKazası on IsKazası.personelId = Personel.id)";
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            dgv_isKazaListesi.DataSource = dt;    
+        }
+
+        private void btn_listele_Click(object sender, EventArgs e)
+        {
+            String sqlText;
+
+            sqlText = "SELECT IsKazası.id, Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Sirket.sirketAdi, IsKazası.kazaZamanı " +
+            "FROM ((((Personel INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id) " +
+            "INNER JOIN Departman ON Departman.id = Personel.departmanId) " +
+            "INNER JOIN Sirket ON Sirket.id = Departman.sirketId) " +
+            "INNER JOIN IsKazası ON IsKazası.personelId = Personel.id AND (Personel.sicilNo ='" + tbx_sicilNo.Text + "' OR OzlukBilgileri.ad = '" + tbx_ad.Text + "' OR OzlukBilgileri.soyAd = '" + tbx_soyad.Text + "' OR Sirket.sirketAdi = '" + tbx_sirket.Text + "' OR IsKazası.kazaZamanı = '" + SqlOps.SqlDateInsert(dtp_isKazasi.Value.Date, tbx_KazaSaati.Text) + "'))";
+
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
             dgv_isKazaListesi.DataSource = dt;
-            
+
+            this.Update();
+        }
+
+        private void tbx_sicilNo_MouseClick(object sender, MouseEventArgs e)
+        {
+            tbx_sicilNo.Clear();
+        }
+
+        private void tbx_ad_MouseClick(object sender, MouseEventArgs e)
+        {
+            tbx_ad.Clear();
+        }
+
+        private void tbx_soyad_MouseClick(object sender, MouseEventArgs e)
+        {
+            tbx_soyad.Clear();
+        }
+
+        private void tbx_sirket_MouseClick(object sender, MouseEventArgs e)
+        {
+            tbx_sirket.Clear();
         }
     }
 }

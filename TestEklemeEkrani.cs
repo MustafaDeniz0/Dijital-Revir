@@ -18,19 +18,12 @@ namespace Dijital_Revir
             InitializeComponent();
             this.indexCovidId = indexCovidId;
         }
-
-       
-
-        private void TestEklemeEkrani_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Ekle_Click(object sender, EventArgs e)
         {
             String sqlText;
 
-            sqlText = "Insert Into Test(covidId, testTuru, testTarihi , testSonucu) values(" + indexCovidId + ",'" + tbx_TestTuru.Text + "', getDate(),' "+ tbx_TestSonucu.Text +"')";
+            sqlText = "Insert Into Test(covidId, testTuru, testTarihi , testSonucu) "+
+                     " Values(" + indexCovidId + ",'" + tbx_TestTuru.Text + "', getDate(),' "+ tbx_TestSonucu.Text +"')";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
             this.Close();
         }

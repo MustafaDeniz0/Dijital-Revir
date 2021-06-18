@@ -17,11 +17,10 @@ namespace Dijital_Revir
         
         public ekran_GebelikListeleme()
         {
-            InitializeComponent();
-           
+            InitializeComponent(); 
         }
 
-        private void dgv_gebelikListesi_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dgv_gebelikListesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int index;
             Form form;
@@ -52,16 +51,18 @@ namespace Dijital_Revir
             {
                 String sqlText;
 
-                sqlText = "SELECT Personel.sicilNo ,OzlukBilgileri.ad,OzlukBilgileri.soyAd, Gebelik.sonAdetTarihi  FROM Gebelik LEFT JOIN Personel ON Gebelik.personelId = Personel.id Left join OzlukBilgileri on OzlukBilgileri.id = Personel.ozlukId ORDER BY OzlukBilgileri.ad, OzlukBilgileri.soyAd DESC";
+                sqlText = "SELECT Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Gebelik.sonAdetTarihi " +
+                "FROM Gebelik LEFT JOIN Personel ON Gebelik.personelId = Personel.id LEFT JOIN OzlukBilgileri ON OzlukBilgileri.id = Personel.ozlukId " +
+                "ORDER BY Gebelik.id DESC";
+                
                 dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
-
                 dgv_gebelikListesi.DataSource = dt;
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show("Listelenecek Personel Bulunamadı.");
                 this.Close();
             }
-
         }
     }
 }

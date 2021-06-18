@@ -32,7 +32,7 @@ namespace Dijital_Revir
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Ekle = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_SevkEt = new System.Windows.Forms.Button();
             this.btn_aktar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cmb_VardiyaAmiri = new System.Windows.Forms.ComboBox();
@@ -61,7 +61,7 @@ namespace Dijital_Revir
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btn_Ekle);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btn_SevkEt);
             this.panel2.Controls.Add(this.btn_aktar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1004, 0);
@@ -82,18 +82,18 @@ namespace Dijital_Revir
             this.btn_Ekle.UseVisualStyleBackColor = false;
             this.btn_Ekle.Click += new System.EventHandler(this.btn_Ekle_Click);
             // 
-            // button1
+            // btn_SevkEt
             // 
-            this.button1.AutoEllipsis = true;
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(39, 398);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 52);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Sevk Et";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_SevkEt.AutoEllipsis = true;
+            this.btn_SevkEt.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_SevkEt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_SevkEt.Location = new System.Drawing.Point(39, 398);
+            this.btn_SevkEt.Name = "btn_SevkEt";
+            this.btn_SevkEt.Size = new System.Drawing.Size(177, 52);
+            this.btn_SevkEt.TabIndex = 7;
+            this.btn_SevkEt.Text = "Sevk Et";
+            this.btn_SevkEt.UseVisualStyleBackColor = false;
+            this.btn_SevkEt.Click += new System.EventHandler(this.btn_SevkEt_Click);
             // 
             // btn_aktar
             // 
@@ -106,7 +106,6 @@ namespace Dijital_Revir
             this.btn_aktar.TabIndex = 6;
             this.btn_aktar.Text = "Excel\'e Aktar";
             this.btn_aktar.UseVisualStyleBackColor = false;
-            this.btn_aktar.Click += new System.EventHandler(this.btn_aktar_Click);
             // 
             // panel3
             // 
@@ -135,7 +134,6 @@ namespace Dijital_Revir
             this.cmb_VardiyaAmiri.Name = "cmb_VardiyaAmiri";
             this.cmb_VardiyaAmiri.Size = new System.Drawing.Size(408, 24);
             this.cmb_VardiyaAmiri.TabIndex = 25;
-            this.cmb_VardiyaAmiri.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // tbx_kazaAnlatimi
             // 
@@ -265,7 +263,7 @@ namespace Dijital_Revir
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_SevkEt;
         private System.Windows.Forms.Button btn_Ekle;
         private System.Windows.Forms.ComboBox cmb_VardiyaAmiri;
     }

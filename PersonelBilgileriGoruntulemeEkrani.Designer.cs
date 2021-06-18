@@ -38,7 +38,7 @@ namespace Dijital_Revir
             this.btn_ISBMuayene = new System.Windows.Forms.Button();
             this.btn_Ek2Ekle = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbx_PersonelBilgileriGoruntuleme = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +52,6 @@ namespace Dijital_Revir
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(259, 662);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel1
             // 
@@ -152,12 +151,11 @@ namespace Dijital_Revir
             this.btn_Ek2Ekle.TabIndex = 6;
             this.btn_Ek2Ekle.Text = "Ek2";
             this.btn_Ek2Ekle.UseVisualStyleBackColor = false;
-            this.btn_Ek2Ekle.Click += new System.EventHandler(this.btn_AraButonu_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.tbx_PersonelBilgileriGoruntuleme);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(259, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -165,18 +163,17 @@ namespace Dijital_Revir
             this.panel3.Size = new System.Drawing.Size(743, 662);
             this.panel3.TabIndex = 4;
             // 
-            // textBox1
+            // tbx_PersonelBilgileriGoruntuleme
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(122, 27);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(535, 189);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbx_PersonelBilgileriGoruntuleme.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_PersonelBilgileriGoruntuleme.BackColor = System.Drawing.Color.Gainsboro;
+            this.tbx_PersonelBilgileriGoruntuleme.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbx_PersonelBilgileriGoruntuleme.Location = new System.Drawing.Point(122, 27);
+            this.tbx_PersonelBilgileriGoruntuleme.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_PersonelBilgileriGoruntuleme.Multiline = true;
+            this.tbx_PersonelBilgileriGoruntuleme.Name = "tbx_PersonelBilgileriGoruntuleme";
+            this.tbx_PersonelBilgileriGoruntuleme.Size = new System.Drawing.Size(535, 189);
+            this.tbx_PersonelBilgileriGoruntuleme.TabIndex = 0;
             // 
             // ekran_PersonelBilgileriGoruntuleme
             // 
@@ -211,7 +208,7 @@ namespace Dijital_Revir
         private System.Windows.Forms.Button btn_ISBMuayene;
         private System.Windows.Forms.Button btn_Ek2Ekle;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbx_PersonelBilgileriGoruntuleme;
         private System.Windows.Forms.Button btn_asiEkleme;
     }
 }

@@ -24,7 +24,7 @@ namespace Dijital_Revir
         {
             String sqlText;
 
-            sqlText = "Insert Into Ates(covidId, olcumDegeri, olcumTarihi) values(" + indexCovidId + ",'" + tbx_InputAtesOlcumDegeri.Text + "', getDate())";
+            sqlText = "INSERT INTO Ates(covidId, olcumDegeri, olcumTarihi) VALUES(" + indexCovidId + ",'" + tbx_InputAtesOlcumDegeri.Text + "', getDate())";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
             this.Close();
         }

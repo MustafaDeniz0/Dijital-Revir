@@ -15,11 +15,6 @@ namespace Dijital_Revir
         public ekran_SevkEtme()
         {
             InitializeComponent();
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        }  
     }
 }

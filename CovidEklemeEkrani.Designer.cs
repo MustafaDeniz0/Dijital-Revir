@@ -494,7 +494,6 @@ namespace Dijital_Revir
             this.Name = "ekran_CovidEkleme";
             this.Text = "CovidEklemeEkrani";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.ekran_CovidEkleme_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

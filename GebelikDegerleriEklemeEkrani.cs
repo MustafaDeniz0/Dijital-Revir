@@ -12,21 +12,32 @@ namespace Dijital_Revir
 {
     public partial class ekran_GebelikDegerleriEkleme : Form
     {
-        string sicil;
+        String sicilNo;
         int indexId;
-        public ekran_GebelikDegerleriEkleme(string sicil)
+
+        public ekran_GebelikDegerleriEkleme(string sicilNo)
         {
             InitializeComponent();
-            this.sicil = sicil;
-            string sqltext = "select Gebelik.id from Gebelik left join Personel on Gebelik.personelId = Personel.id  where Personel.sicilNo = " + sicil+ " Order by id Desc ";
+            this.sicilNo = sicilNo;
+
+            String sqltext = "SELECT Gebelik.id FROM Gebelik LEFT JOIN Personel ON Gebelik.personelId = Personel.id WHERE Personel.sicilNo = " + sicilNo + " ORDER BY id DESC";
             DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqltext);
-            indexId = (int)dt.Rows[0]["id"];
-            
+            this.indexId = (int)dt.Rows[0]["id"];    
         }
 
         private void btn_GebelikDegerEkleme_Click(object sender, EventArgs e)
         {
-            string sqlText = "insert into GebelikFormDegeri (gebelikId,tarih, kiloDegeri,taDegeri,nabızDegeri,hmgDegeri,titDegeri,pretibitalOdem,asiDegeri,ekTetkikDegeri,ilac) values (" + indexId + ",GETDATE(),'" + tbx_kilo.Text + "','" + tbx_ta.Text + "','" + tbx_nabız.Text + "','" + tbx_hmg.Text + "','" + tbx_tit.Text + "','" + tbx_odem.Text + "','" + tbx_ekTetkik.Text + "','" + tbx_asi.Text + "','" + tbx_verilenİlac.Text + "')";
+            string sqlText = "INSERT INTO GebelikFormDegeri (gebelikId, tarih, kiloDegeri, taDegeri, nabızDegeri, hmgDegeri, titDegeri, pretibitalOdem, asiDegeri, ekTetkikDegeri, ilac) " +
+            "VALUES (" + indexId + ", GETDATE(),'" +
+            tbx_kilo.Text + "','" +
+            tbx_ta.Text + "','" +
+            tbx_nabız.Text + "','" +
+            tbx_hmg.Text + "','" + 
+            tbx_tit.Text + "','" +
+            tbx_odem.Text + "','" + 
+            tbx_ekTetkik.Text + "','" + 
+            tbx_asi.Text + "','" + 
+            tbx_verilenİlac.Text + "')";
 
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
             MessageBox.Show("Değerler Eklendi.");

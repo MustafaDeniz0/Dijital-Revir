@@ -40,6 +40,7 @@ namespace Dijital_Revir
             this.lbx_Bildirimler = new System.Windows.Forms.ListBox();
             this.btn_AraButonu = new System.Windows.Forms.Button();
             this.tbx_AramaCubugu = new System.Windows.Forms.TextBox();
+            this.btn_Admin = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -105,6 +106,7 @@ namespace Dijital_Revir
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.Controls.Add(this.btn_Admin);
             this.panel4.Controls.Add(this.btn_personelIslemleri);
             this.panel4.Controls.Add(this.btn_PoliklinikDefteri);
             this.panel4.Controls.Add(this.btn_Covid);
@@ -159,11 +161,11 @@ namespace Dijital_Revir
             this.btn_AraButonu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_AraButonu.Location = new System.Drawing.Point(592, 30);
             this.btn_AraButonu.Name = "btn_AraButonu";
-            this.btn_AraButonu.Size = new System.Drawing.Size(139, 52);
+            this.btn_AraButonu.Size = new System.Drawing.Size(139, 40);
             this.btn_AraButonu.TabIndex = 8;
             this.btn_AraButonu.Text = "Personel Ara";
             this.btn_AraButonu.UseVisualStyleBackColor = false;
-            this.btn_AraButonu.Click += new System.EventHandler(this.btn_AraButonu_Click_1);
+            this.btn_AraButonu.Click += new System.EventHandler(this.btn_AraButonu_Click);
             // 
             // tbx_AramaCubugu
             // 
@@ -171,12 +173,23 @@ namespace Dijital_Revir
             this.tbx_AramaCubugu.Location = new System.Drawing.Point(24, 30);
             this.tbx_AramaCubugu.Multiline = true;
             this.tbx_AramaCubugu.Name = "tbx_AramaCubugu";
-            this.tbx_AramaCubugu.Size = new System.Drawing.Size(544, 52);
+            this.tbx_AramaCubugu.Size = new System.Drawing.Size(562, 40);
             this.tbx_AramaCubugu.TabIndex = 7;
             this.tbx_AramaCubugu.Text = "Sicil No ya da İsim Giriniz.";
             this.tbx_AramaCubugu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbx_AramaCubugu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbx_AramaCubugu_MouseClick);
-
+            // 
+            // btn_Admin
+            // 
+            this.btn_Admin.BackColor = System.Drawing.Color.LightGray;
+            this.btn_Admin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_Admin.Location = new System.Drawing.Point(0, 340);
+            this.btn_Admin.Name = "btn_Admin";
+            this.btn_Admin.Size = new System.Drawing.Size(258, 70);
+            this.btn_Admin.TabIndex = 7;
+            this.btn_Admin.Text = "Admin";
+            this.btn_Admin.UseVisualStyleBackColor = false;
+            this.btn_Admin.Click += new System.EventHandler(this.btn_Admin_Click);
             // 
             // ekran_AnaSayfa
             // 
@@ -213,6 +226,7 @@ namespace Dijital_Revir
         private System.Windows.Forms.Button btn_AraButonu;
         private System.Windows.Forms.TextBox tbx_AramaCubugu;
         private System.Windows.Forms.Button btn_personelIslemleri;
+        private System.Windows.Forms.Button btn_Admin;
     }
 }
 

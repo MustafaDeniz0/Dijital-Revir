@@ -95,7 +95,6 @@ namespace Dijital_Revir
             this.Controls.Add(this.lbl_AtesOlcumDegeri);
             this.Name = "ekran_TestEklemeEkrani";
             this.Text = "TestEklemeEkrani";
-            this.Load += new System.EventHandler(this.TestEklemeEkrani_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

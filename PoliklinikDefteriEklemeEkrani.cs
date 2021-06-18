@@ -10,27 +10,28 @@ using System.Windows.Forms;
 
 namespace Dijital_Revir
 {
-    public partial class ekran_PoliklinikEklemeEkranı : Form
+    public partial class ekran_PoliklinikEkleme : Form
     {
-        public ekran_PoliklinikEklemeEkranı()
+        public ekran_PoliklinikEkleme()
         {
             InitializeComponent();
         }
 
-        
-
-        private void PoliklinikEklemeEkranı_Load(object sender, EventArgs e)
+        private void btn_Ekle_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void btn_AraButonu_Click(object sender, EventArgs e)
-        {
-            String sqlText = "Insert into Poliklinik (sıraNo,personelId,tanıGrubu,tanı,tarih,acıklama,sonuc) Values ("+tbx_siraNo.Text+", (Select Personel.id From Personel Where Personel.sicilNo = '"+tbx_sicilNo.Text+"'),'"+tbx_tanıGrubu.Text+"','"+tbx_Tanı.Text+"',getdate(),'"+tbx_Acıklama.Text+"','"+tbx_sonuc.Text+"')";
+            String sqlText = "INSERT INTO Poliklinik (sıraNo, personelId, tanıGrubu, tanı, tarih, acıklama, sonuc) " + 
+            "VALUES (" + 
+            tbx_siraNo.Text + ", " +
+            "SELECT Personel.id FROM Personel WHERE Personel.sicilNo = '" + tbx_sicilNo.Text + "', '" +
+            tbx_tanıGrubu.Text + "', '" +
+            tbx_Tanı.Text + "', " +
+            "getdate(), '" + 
+            tbx_Acıklama.Text + "', '" +
+            tbx_sonuc.Text + "')";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+            
             MessageBox.Show("Ekleme işlemi Başarılı.");
             this.Close();
-
         }
     }
 }

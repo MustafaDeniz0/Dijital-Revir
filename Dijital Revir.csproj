@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEkrani.Designer.cs">
+      <DependentUpon>AdminEkrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="AnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     <Compile Include="TestEklemeEkrani.Designer.cs">
       <DependentUpon>TestEklemeEkrani.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminEkrani.resx">
+      <DependentUpon>AdminEkrani.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AnaSayfa.resx">
       <DependentUpon>AnaSayfa.cs</DependentUpon>
     </EmbeddedResource>

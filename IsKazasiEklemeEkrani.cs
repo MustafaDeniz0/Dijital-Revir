@@ -13,34 +13,15 @@ namespace Dijital_Revir
 {
     public partial class ekran_IsKazasıEkleme : Form
     {
-        String sicil;
-        public ekran_IsKazasıEkleme(String sicil)
+        String sicilNo;
+
+        public ekran_IsKazasıEkleme(String sicilNo)
         {
             InitializeComponent();
-            this.sicil = sicil;
+            this.sicilNo = sicilNo;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_aktar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_SevkEt_Click(object sender, EventArgs e)
         {
             Form form = new ekran_SevkEtme();
             form.ShowDialog();
@@ -50,29 +31,34 @@ namespace Dijital_Revir
         {
             int indexId;
             String sqlText;
-            sqlText = "Select Personel.id From Personel where Personel.sicilNo =  '" + sicil+ "';";
-            DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            DataTable dt;
+            int index;
+
+            sqlText = "SELECT Personel.id FROM Personel WHERE Personel.sicilNo = " + sicilNo;
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+
             indexId = (int)dt.Rows[0]["id"];
-            int index = (int)cmb_VardiyaAmiri.SelectedValue;
+            index = (int)cmb_VardiyaAmiri.SelectedValue;
             
-           
-            sqlText = "Insert Into IsKazası(amirId, calismaSuresi, kazaZamanı, kazaninAnlatımı, personelId) " +
-            "Values("+index+",'"+ tbx_calismaSuresi.Text+ "','" + SqlOps.SqlDateInsert(dtp_kazaZamani.Value.Date,tbx_saat.Text) + "','" + tbx_kazaAnlatimi.Text + "',"+indexId +");";
+            sqlText = "INSERT INTO IsKazası(amirId, calismaSuresi, kazaZamanı, kazaninAnlatımı, personelId) " +
+            "VALUES(" + index  + ",'" + tbx_calismaSuresi.Text + "','" + SqlOps.SqlDateInsert(dtp_kazaZamani.Value.Date,tbx_saat.Text) + "','" + tbx_kazaAnlatimi.Text + "'," + indexId + ")";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+            
             this.Close();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void ekran_IsKazasıEkleme_Load(object sender, EventArgs e)
         {
+            String sqlText;
+            DataTable dt;
+
             cmb_VardiyaAmiri.Items.Clear();
-            String sqlText = "Select Distinct OzlukBilgileri.ad,OzlukBilgileri.soyAd , P2.id From Personel P1 , Personel P2 left Join OzlukBilgileri on OzlukBilgileri.id = P2.ozlukId where P1.amir = P2.id;";
-            DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
-            
+
+            sqlText = "SELECT DISTINCT OzlukBilgileri.ad, OzlukBilgileri.soyAd, P2.id " + 
+            "FROM Personel P1, Personel P2 LEFT JOIN OzlukBilgileri ON OzlukBilgileri.id = P2.ozlukId " + 
+            "WHERE P1.amir = P2.id";
+
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);        
 
             foreach (DataRow dr in dt.Rows)
             {
@@ -83,8 +69,6 @@ namespace Dijital_Revir
             cmb_VardiyaAmiri.DisplayMember = "Key";
             cmb_VardiyaAmiri.ValueMember = "Value";
             cmb_VardiyaAmiri.DataSource = cmb_VardiyaAmiri.Items;
-
-
         }
     }
 }

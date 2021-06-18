@@ -117,11 +117,10 @@ namespace Dijital_Revir
             this.Controls.Add(this.tbx_sicilNo);
             this.Controls.Add(this.lbl_AtesOlcumDegeri);
             this.Name = "ekran_GebelikEklemeEkrani";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gebelik Ekleme Ekranı";
-            this.Load += new System.EventHandler(this.ekran_GebelikEklemeEkrani_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

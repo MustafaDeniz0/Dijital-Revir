@@ -31,6 +31,7 @@ namespace Dijital_Revir
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tbx_KazaSaati = new System.Windows.Forms.TextBox();
             this.tbx_sirket = new System.Windows.Forms.TextBox();
             this.btn_listele = new System.Windows.Forms.Button();
             this.dtp_isKazasi = new System.Windows.Forms.DateTimePicker();
@@ -55,6 +56,7 @@ namespace Dijital_Revir
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.tbx_KazaSaati);
             this.panel2.Controls.Add(this.tbx_sirket);
             this.panel2.Controls.Add(this.btn_listele);
             this.panel2.Controls.Add(this.dtp_isKazasi);
@@ -67,16 +69,31 @@ namespace Dijital_Revir
             this.panel2.Size = new System.Drawing.Size(258, 538);
             this.panel2.TabIndex = 5;
             // 
+            // tbx_KazaSaati
+            // 
+            this.tbx_KazaSaati.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbx_KazaSaati.Location = new System.Drawing.Point(164, 241);
+            this.tbx_KazaSaati.MaxLength = 5;
+            this.tbx_KazaSaati.Name = "tbx_KazaSaati";
+            this.tbx_KazaSaati.Size = new System.Drawing.Size(81, 22);
+            this.tbx_KazaSaati.TabIndex = 8;
+            this.tbx_KazaSaati.TabStop = false;
+            this.tbx_KazaSaati.Text = "00:00";
+            this.tbx_KazaSaati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // tbx_sirket
             // 
+            this.tbx_sirket.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbx_sirket.Location = new System.Drawing.Point(25, 190);
             this.tbx_sirket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_sirket.Multiline = true;
             this.tbx_sirket.Name = "tbx_sirket";
             this.tbx_sirket.Size = new System.Drawing.Size(220, 26);
             this.tbx_sirket.TabIndex = 7;
+            this.tbx_sirket.TabStop = false;
             this.tbx_sirket.Text = "Şirket";
             this.tbx_sirket.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbx_sirket.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbx_sirket_MouseClick);
             // 
             // btn_listele
             // 
@@ -87,52 +104,67 @@ namespace Dijital_Revir
             this.btn_listele.Name = "btn_listele";
             this.btn_listele.Size = new System.Drawing.Size(220, 52);
             this.btn_listele.TabIndex = 6;
+            this.btn_listele.TabStop = false;
             this.btn_listele.Text = "Listele";
             this.btn_listele.UseVisualStyleBackColor = false;
+            this.btn_listele.Click += new System.EventHandler(this.btn_listele_Click);
             // 
             // dtp_isKazasi
             // 
+            this.dtp_isKazasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtp_isKazasi.Location = new System.Drawing.Point(25, 242);
             this.dtp_isKazasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtp_isKazasi.Name = "dtp_isKazasi";
-            this.dtp_isKazasi.Size = new System.Drawing.Size(220, 22);
+            this.dtp_isKazasi.Size = new System.Drawing.Size(133, 22);
             this.dtp_isKazasi.TabIndex = 3;
+            this.dtp_isKazasi.TabStop = false;
             // 
             // tbx_soyad
             // 
+            this.tbx_soyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbx_soyad.Location = new System.Drawing.Point(25, 146);
             this.tbx_soyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_soyad.Multiline = true;
             this.tbx_soyad.Name = "tbx_soyad";
             this.tbx_soyad.Size = new System.Drawing.Size(220, 26);
             this.tbx_soyad.TabIndex = 2;
+            this.tbx_soyad.TabStop = false;
             this.tbx_soyad.Text = "Soyad";
             this.tbx_soyad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbx_soyad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbx_soyad_MouseClick);
             // 
             // tbx_ad
             // 
+            this.tbx_ad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbx_ad.Location = new System.Drawing.Point(25, 95);
             this.tbx_ad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_ad.Multiline = true;
             this.tbx_ad.Name = "tbx_ad";
             this.tbx_ad.Size = new System.Drawing.Size(220, 26);
             this.tbx_ad.TabIndex = 1;
+            this.tbx_ad.TabStop = false;
             this.tbx_ad.Text = "Ad";
             this.tbx_ad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbx_ad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbx_ad_MouseClick);
             // 
             // tbx_sicilNo
             // 
+            this.tbx_sicilNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbx_sicilNo.Location = new System.Drawing.Point(25, 43);
             this.tbx_sicilNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_sicilNo.Multiline = true;
             this.tbx_sicilNo.Name = "tbx_sicilNo";
             this.tbx_sicilNo.Size = new System.Drawing.Size(220, 26);
             this.tbx_sicilNo.TabIndex = 0;
+            this.tbx_sicilNo.TabStop = false;
             this.tbx_sicilNo.Text = "Sicil No";
             this.tbx_sicilNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbx_sicilNo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbx_sicilNo_MouseClick);
             // 
             // dgv_isKazaListesi
             // 
+            this.dgv_isKazaListesi.AllowDrop = true;
+            this.dgv_isKazaListesi.AllowUserToAddRows = false;
             this.dgv_isKazaListesi.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_isKazaListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_isKazaListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -161,8 +193,10 @@ namespace Dijital_Revir
             // 
             // ekran_IsKazasiListeleme
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(1262, 538);
             this.Controls.Add(this.dgv_isKazaListesi);
@@ -194,5 +228,6 @@ namespace Dijital_Revir
         private System.Windows.Forms.Button btn_listele;
         private System.Windows.Forms.TextBox tbx_sirket;
         private System.Windows.Forms.DataGridViewButtonColumn button;
+        private System.Windows.Forms.TextBox tbx_KazaSaati;
     }
 }

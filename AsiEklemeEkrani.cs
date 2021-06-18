@@ -12,11 +12,11 @@ namespace Dijital_Revir
 {
     public partial class ekran_AsiEkleme : Form
     {
-        string sicil; 
-        public ekran_AsiEkleme(string sicil)
+        string sicilNo; 
+        public ekran_AsiEkleme(string sicilNo)
         {
             InitializeComponent();
-            this.sicil = sicil;
+            this.sicilNo = sicilNo;
         }
 
         private void btn_asiEkle_Click(object sender, EventArgs e)
@@ -24,10 +24,10 @@ namespace Dijital_Revir
             string sqlText;
             int indexId;
 
-            sqlText = "SELECT Personel.id FROM Personel WHERE Personel.sicilNo = " + sicil;
+            sqlText = "SELECT Personel.id FROM Personel WHERE Personel.sicilNo = " + sicilNo;
             indexId = (int)SqlOps.CreateDataTableBySqlQuery(sqlText).Rows[0]["id"];
 
-            sqlText = "Insert Into Asi(personelId, ad, kullanımPeriyodu, uygulanmaTarihi) values (" + indexId + ",'"+ tbx_asiAdi.Text + "','" + tbx_kullanimPeriyodu.Text + "','" + tbx_uygulamaTarihi.Text + "')";
+            sqlText = "INSERT INTO Asi(personelId, ad, kullanımPeriyodu, uygulanmaTarihi) VALUES (" + indexId + ",'"+ tbx_asiAdi.Text + "','" + tbx_kullanimPeriyodu.Text + "','" + tbx_uygulamaTarihi.Text + "')";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
 
             tbx_asiAdi.Clear();
@@ -42,14 +42,15 @@ namespace Dijital_Revir
             DataTable dt;
             int indexId;
 
-            sqlText = "SELECT Personel.id FROM Personel WHERE Personel.sicilNo = " + sicil;
+            sqlText = "SELECT Personel.id FROM Personel WHERE Personel.sicilNo = " + sicilNo;
             indexId = (int)SqlOps.CreateDataTableBySqlQuery(sqlText).Rows[0]["id"];
 
-            sqlText = "SELECT Personel.sicilNo, OzlukBilgileri.ad ,OzlukBilgileri.soyAd, Asi.ad, Asi.kullanımPeriyodu, Asi.uygulanmaTarihi " +
-                      "FROM ((Personel INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id) " +
-                      "INNER JOIN Asi ON Personel.id = Asi.personelId)";
-            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            sqlText = "SELECT Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Asi.ad, Asi.kullanımPeriyodu, Asi.uygulanmaTarihi " +
+            "FROM ((Personel INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id) " +
+            "INNER JOIN Asi ON Personel.id = Asi.personelId) " +
+            "ORDER BY OzlukBilgileri.ad, OzlukBilgileri.soyAd, Asi.uygulanmaTarihi DESC";
 
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
             dgv_asi.DataSource = dt;
         }     
     }

@@ -12,31 +12,39 @@ namespace Dijital_Revir
 {
     public partial class MuayeneGoruntulemeEkrani : Form
     {
-        String sicil;
+        String sicilNo;
         int index;
-        public MuayeneGoruntulemeEkrani(String sicil,int index)
+
+        public MuayeneGoruntulemeEkrani(String sicilNo, int index)
         {
             InitializeComponent();
-            this.sicil = sicil;
+            this.sicilNo = sicilNo;
             this.index = index;
         }
 
-        
-
         private void MuayeneGoruntulemeEkrani_Load(object sender, EventArgs e)
         {
-            String sqlText = "Select * From ((ISB inner join Personel on Personel.id = ISB.PersonelId) inner join Muayene on ISB.muayeneId = Muayene.id) Where Personel.sicilNo = '" + sicil + "'; ";
-            DataTable dt1 = SqlOps.CreateDataTableBySqlQuery(sqlText);
-            String id = dt1.Rows[index]["muayeneId"].ToString();
-            sqlText = "Select*From Muayene Where Muayene.id = " + id + ";";
-            DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
-            tbx_MuayeneGoruntulemeEkrani.Text = "\r\n \r\n \r\n Tarih : " + dt.Rows[0]["tarih"] + "\r\n Şikayet : " + dt.Rows[0]["sikayet"] + "\r\n Tanı : " + dt.Rows[0]["tanı"] + "\r\n Tedavi : " + dt.Rows[0]["tedavi"] + "\r\n Doktor : " + dt.Rows[0]["doktor"];
+            String sqlText;
+            String id;
+            DataTable dt;
 
-        }
+            sqlText = "SELECT * " + "FROM ISB " +
+            "INNER JOIN Personel ON Personel.id = ISB.PersonelId " +
+            "INNER JOIN Muayene ON ISB.muayeneId = Muayene.id " + 
+            "WHERE Personel.sicilNo = '" + sicilNo + "'";
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            id = dt.Rows[index]["muayeneId"].ToString();
+            
+            sqlText = "SELECT * " + "FROM Muayene " + 
+            "WHERE Muayene.id = " + id;
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
+            tbx_MuayeneGoruntulemeEkrani.Text = "Tarih : " + dt.Rows[0]["tarih"] + Environment.NewLine +
+            "Şikayet : " + dt.Rows[0]["sikayet"] + Environment.NewLine + 
+            "Tanı : " + dt.Rows[0]["tanı"] + Environment.NewLine + 
+            "Tedavi : " + dt.Rows[0]["tedavi"] + Environment.NewLine + 
+            "Doktor : " + dt.Rows[0]["doktor"];
         }
     }
 }

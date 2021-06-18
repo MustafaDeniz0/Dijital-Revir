@@ -12,14 +12,20 @@ namespace Dijital_Revir
 {
     public partial class ekran_GebelikTakip : Form
     {
-        String sicil;
+        String sicilNo;
         int indexId;
-        public ekran_GebelikTakip(String sicil)
+
+        public ekran_GebelikTakip(String sicilNo)
         {
-            this.sicil = sicil;
             InitializeComponent();
-            
-            string sqltext = "select Gebelik.id from Gebelik left join Personel on Gebelik.personelId = Personel.id  where Personel.sicilNo = " + sicil + " Order by id Desc ";
+
+            this.sicilNo = sicilNo;
+
+            String sqltext = "SELECT Gebelik.id " + 
+            "FROM Gebelik LEFT JOIN Personel ON Gebelik.personelId = Personel.id " +
+            "WHERE Personel.sicilNo = " + sicilNo + " " +
+            "ORDER BY id DESC";
+
             DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqltext);
             indexId = (int)dt.Rows[0]["id"];
         }
@@ -29,16 +35,15 @@ namespace Dijital_Revir
                 DataTable dt;
                 String sqlText;
 
-                sqlText = "Select * From GebelikFormDegeri Where gebelikId = "+ indexId;
+                sqlText = "SELECT * FROM GebelikFormDegeri WHERE gebelikId = " + indexId;
                 dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
-                dgv_gebelikTablosu.DataSource = dt;
-           
+                dgv_gebelikTablosu.DataSource = dt;  
         }
 
         private void btn_degerEkle_Click(object sender, EventArgs e)
         {
-            Form form = new ekran_GebelikDegerleriEkleme(sicil);
+            Form form = new ekran_GebelikDegerleriEkleme(sicilNo);
             form.ShowDialog();
         }
     }

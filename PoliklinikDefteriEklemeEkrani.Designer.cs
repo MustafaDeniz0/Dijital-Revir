@@ -1,7 +1,7 @@
 ﻿
 namespace Dijital_Revir
 {
-    partial class ekran_PoliklinikEklemeEkranı
+    partial class ekran_PoliklinikEkleme
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace Dijital_Revir
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_AraButonu = new System.Windows.Forms.Button();
+            this.btn_Ekle = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tbx_Acıklama = new System.Windows.Forms.TextBox();
             this.tbx_sonuc = new System.Windows.Forms.TextBox();
@@ -61,25 +61,25 @@ namespace Dijital_Revir
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.btn_AraButonu);
+            this.panel2.Controls.Add(this.btn_Ekle);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1003, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(258, 538);
             this.panel2.TabIndex = 28;
             // 
-            // btn_AraButonu
+            // btn_Ekle
             // 
-            this.btn_AraButonu.AutoEllipsis = true;
-            this.btn_AraButonu.BackColor = System.Drawing.Color.LightGray;
-            this.btn_AraButonu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_AraButonu.Location = new System.Drawing.Point(24, 458);
-            this.btn_AraButonu.Name = "btn_AraButonu";
-            this.btn_AraButonu.Size = new System.Drawing.Size(220, 52);
-            this.btn_AraButonu.TabIndex = 7;
-            this.btn_AraButonu.Text = "Ekle";
-            this.btn_AraButonu.UseVisualStyleBackColor = false;
-            this.btn_AraButonu.Click += new System.EventHandler(this.btn_AraButonu_Click);
+            this.btn_Ekle.AutoEllipsis = true;
+            this.btn_Ekle.BackColor = System.Drawing.Color.LightGray;
+            this.btn_Ekle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_Ekle.Location = new System.Drawing.Point(24, 458);
+            this.btn_Ekle.Name = "btn_Ekle";
+            this.btn_Ekle.Size = new System.Drawing.Size(220, 52);
+            this.btn_Ekle.TabIndex = 7;
+            this.btn_Ekle.Text = "Ekle";
+            this.btn_Ekle.UseVisualStyleBackColor = false;
+            this.btn_Ekle.Click += new System.EventHandler(this.btn_Ekle_Click);
             // 
             // panel3
             // 
@@ -235,7 +235,7 @@ namespace Dijital_Revir
             this.label1.TabIndex = 47;
             this.label1.Text = "Sıra No";
             // 
-            // ekran_PoliklinikEklemeEkranı
+            // ekran_PoliklinikEkleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -246,11 +246,10 @@ namespace Dijital_Revir
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "ekran_PoliklinikEklemeEkranı";
+            this.Name = "ekran_PoliklinikEkleme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PoliklinikEklemeEkranı";
+            this.Text = "Poliklinik Defterine Kayıt Ekleme";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.PoliklinikEklemeEkranı_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -261,7 +260,7 @@ namespace Dijital_Revir
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btn_AraButonu;
+        private System.Windows.Forms.Button btn_Ekle;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox tbx_Acıklama;
         private System.Windows.Forms.TextBox tbx_sonuc;

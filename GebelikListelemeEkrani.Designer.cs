@@ -98,7 +98,7 @@ namespace Dijital_Revir
             this.dgv_gebelikListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_gebelikListesi.Size = new System.Drawing.Size(746, 538);
             this.dgv_gebelikListesi.TabIndex = 11;
-            this.dgv_gebelikListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_gebelikListesi_CellContentClick_1);
+            this.dgv_gebelikListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_gebelikListesi_CellContentClick);
             // 
             // button
             // 

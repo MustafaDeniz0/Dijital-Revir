@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Dijital_Revir
 {
     public partial class ekran_PoliklinikDefteriListeleme : Form
     {
         DataTable dt;
+
         public ekran_PoliklinikDefteriListeleme()
         {
             InitializeComponent();
@@ -20,17 +22,23 @@ namespace Dijital_Revir
 
         private void btn_ekle_Click(object sender, EventArgs e)
         {
-            Form form = new ekran_PoliklinikEklemeEkranı();
+            Form form;
+
+            form = new ekran_PoliklinikEkleme();
             form.ShowDialog();
             SqlDgridUpdate();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int sıraId, index;
+            int sıraId;
+            int index;
+            Form form;
+
             index = SqlOps.GetDataGridViewRowIndex(dgv_PoliklinikListeleme, "sıraNo");
             sıraId = (int)dt.Rows[index]["sıraNo"];
-            Form form = new ekran_PoliklinikDefteriGoruntuleme(sıraId);
+
+            form = new ekran_PoliklinikDefteriGoruntuleme(sıraId);
             form.ShowDialog();
         }
 
@@ -42,14 +50,14 @@ namespace Dijital_Revir
         {
             String sqlText;
 
+            sqlText = "SELECT Poliklinik.sıraNo, Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Sirket.sirketAdi, Poliklinik.acıklama " +
+            "FROM ((((Personel INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id) " +
+            "INNER JOIN Departman ON Departman.id = Personel.departmanId) " +
+            "INNER JOIN Sirket ON Sirket.id = Departman.sirketId) " +
+            "INNER JOIN Poliklinik ON Poliklinik.personelId = Personel.id) " +
+            "ORDER BY Poliklinik.sıraNo DESC";
 
-            sqlText = "Select Poliklinik.sıraNo , Personel.sicilNo , OzlukBilgileri.ad , OzlukBilgileri.soyAd, Sirket.sirketAdi ,Poliklinik.acıklama  from  " +
-             "((((Personel Inner join OzlukBilgileri On Personel.ozlukId = OzlukBilgileri.id) " +
-            "Inner join Departman on Departman.id = Personel.departmanId) " +
-            "Inner join Sirket on Sirket.id = Departman.sirketId)" +
-            "Inner join Poliklinik on Poliklinik.personelId = Personel.id) ";
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
-
             dgv_PoliklinikListeleme.DataSource = dt;
         }
     }

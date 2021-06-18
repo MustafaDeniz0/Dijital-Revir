@@ -13,16 +13,12 @@ namespace Dijital_Revir
 {
     public partial class ekran_MuayeneEkleme : Form
     {
-        String sicil;
-        public ekran_MuayeneEkleme(string sicil)
+        String sicilNo;
+
+        public ekran_MuayeneEkleme(string sicilNo)
         {
             InitializeComponent();
-            this.sicil = sicil;
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
+            this.sicilNo = sicilNo;
         }
 
         private void btn_MuayeneEkleme_Click(object sender, EventArgs e)
@@ -30,34 +26,24 @@ namespace Dijital_Revir
             string sqlText;
             DateTime date = DateTime.Today;
 
-            sqlText = "Insert Into Muayene(tarih, sikayet, tanı, tedavi, doktor) " +
-            "Values('" + date.Year + "-" + date.Month + "-" + date.Day + "','" + tbx_sikayet.Text + "','" + tbx_tani.Text + "','" + tbx_tedavi.Text + "','" + tbx_doktor.Text + "');";
+            sqlText = "INSERT INTO Muayene (tarih, sikayet, tanı, tedavi, doktor) " +
+            "VALUES ('" + date.Year + "-" + date.Month + "-" + date.Day + "','" + tbx_sikayet.Text + "','" + tbx_tani.Text + "','" + tbx_tedavi.Text + "','" + tbx_doktor.Text + "')";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
 
-            sqlText = "SELECT Top 1 * FROM Muayene ORDER BY id DESC ;";
+            sqlText = "SELECT TOP 1 * FROM Muayene ORDER BY id DESC";
             DataTable dtMuayene = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
-            sqlText = "SELECT * FROM  Personel WHERE Personel.sicilNo = " + sicil + ";";
+            sqlText = "SELECT * FROM  Personel WHERE Personel.sicilNo = " + sicilNo;
             DataTable dtPersonel = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
-            sqlText = "Insert Into ISB(PersonelId, muayeneId) " +
-            "Values(" + dtPersonel.Rows[0]["id"] + "," + dtMuayene.Rows[0]["id"] + ");";
+            sqlText = "INSERT INTO ISB (PersonelId, muayeneId) " +
+            "VALUES (" + dtPersonel.Rows[0]["id"] + "," + dtMuayene.Rows[0]["id"] + ")";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
 
             this.Close();
         }
 
-        private void lbl_Sikayet_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_SevkEt_Click(object sender, EventArgs e)
         {
             Form form = new ekran_SevkEtme();
             form.ShowDialog();

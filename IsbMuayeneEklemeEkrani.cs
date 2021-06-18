@@ -23,26 +23,37 @@ namespace Dijital_Revir
         {
             Form form = new ekran_MuayeneEkleme(sicil);
             form.ShowDialog();
+
             DgridUpdate();
         }
 
         private void ekran_IsbMuayeneEkleme_Load(object sender, EventArgs e)
         {
-
             DgridUpdate();
         }
 
         private void dgrid_ISBMuayeneEkleme_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {            
-            int index = SqlOps.GetDataGridViewRowIndex(dgrid_ISBMuayeneEkleme, "muayeneId");    
-            Form form = new MuayeneGoruntulemeEkrani(sicil, index);
-            form.ShowDialog();
-            DgridUpdate();
+        {
+            int index;
+            Form form;
 
+            index = SqlOps.GetDataGridViewRowIndex(dgrid_ISBMuayeneEkleme, "muayeneId"); 
+            
+            form = new MuayeneGoruntulemeEkrani(sicil, index);
+            form.ShowDialog();
+
+            DgridUpdate();
         }
+
         private void DgridUpdate()
         {
-            String sqlText = "Select Muayene.tarih, Muayene.tanı,Muayene.doktor From ((ISB inner join Personel on Personel.id = ISB.PersonelId) inner join Muayene on ISB.muayeneId = Muayene.id) Where Personel.sicilNo = '" + sicil + "'; ";
+            String sqlText = "SELECT Muayene.tarih, Muayene.tanı, Muayene.doktor " +
+            "FROM ISB " + 
+            "INNER JOIN Personel ON Personel.id = ISB.PersonelId " + 
+            "INNER JOIN Muayene ON ISB.muayeneId = Muayene.id " + 
+            "WHERE Personel.sicilNo = " + sicil +
+            "ORDER BY Muayene.tarih DESC";
+
             dgrid_ISBMuayeneEkleme.DataSource = SqlOps.CreateDataTableBySqlQuery(sqlText);
         }
     }
