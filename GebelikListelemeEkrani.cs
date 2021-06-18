@@ -12,16 +12,13 @@ namespace Dijital_Revir
 {
     public partial class ekran_GebelikListeleme : Form
     {
-        String sicilNo;
+        String sicil;
         DataTable dt;
+        
         public ekran_GebelikListeleme()
         {
             InitializeComponent();
-        }
-
-        private void btn_AraButonu_Click(object sender, EventArgs e)
-        {
-
+           
         }
 
         private void dgv_gebelikListesi_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -30,9 +27,9 @@ namespace Dijital_Revir
             Form form;
 
             index = SqlOps.GetDataGridViewRowIndex(dgv_gebelikListesi, "sicilNo");
-            sicilNo = dt.Rows[index]["sicilNo"].ToString();
+            sicil = dt.Rows[index]["sicilNo"].ToString();
 
-            form = new ekran_GebelikTakip(sicilNo);
+            form = new ekran_GebelikTakip(sicil);
             form.ShowDialog();
         }
 
@@ -51,12 +48,20 @@ namespace Dijital_Revir
 
         private void SqlDgvUpdate()
         {
-            String sqlText;
+            try
+            {
+                String sqlText;
 
-            sqlText = "SELECT Personel.sicilNo ,OzlukBilgileri.ad,OzlukBilgileri.soyAd, Gebelik.sonAdetTarihi  FROM Gebelik LEFT JOIN Personel ON Gebelik.personelId = Personel.id Left join OzlukBilgileri on OzlukBilgileri.id = Personel.ozlukId ORDER BY OzlukBilgileri.ad, OzlukBilgileri.soyAd DESC";
-            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+                sqlText = "SELECT Personel.sicilNo ,OzlukBilgileri.ad,OzlukBilgileri.soyAd, Gebelik.sonAdetTarihi  FROM Gebelik LEFT JOIN Personel ON Gebelik.personelId = Personel.id Left join OzlukBilgileri on OzlukBilgileri.id = Personel.ozlukId ORDER BY OzlukBilgileri.ad, OzlukBilgileri.soyAd DESC";
+                dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
-            dgv_gebelikListesi.DataSource = dt;
+                dgv_gebelikListesi.DataSource = dt;
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Listelenecek Personel Bulunamadı.");
+                this.Close();
+            }
+
         }
     }
 }

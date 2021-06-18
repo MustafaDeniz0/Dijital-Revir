@@ -148,6 +148,24 @@
     <Compile Include="PersonelBilgileriGoruntulemeEkrani.Designer.cs">
       <DependentUpon>PersonelBilgileriGoruntulemeEkrani.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelCikarmaEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelCikarmaEkrani.Designer.cs">
+      <DependentUpon>PersonelCikarmaEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelEklemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelEklemeEkrani.Designer.cs">
+      <DependentUpon>PersonelEklemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelIslemleri.Designer.cs">
+      <DependentUpon>PersonelIslemleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonelListelemeEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +255,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelBilgileriGoruntulemeEkrani.resx">
       <DependentUpon>PersonelBilgileriGoruntulemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelCikarmaEkrani.resx">
+      <DependentUpon>PersonelCikarmaEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelEklemeEkrani.resx">
+      <DependentUpon>PersonelEklemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelIslemleri.resx">
+      <DependentUpon>PersonelIslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelListelemeEkrani.resx">
       <DependentUpon>PersonelListelemeEkrani.cs</DependentUpon>

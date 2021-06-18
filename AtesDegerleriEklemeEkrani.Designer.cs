@@ -77,7 +77,6 @@ namespace Dijital_Revir
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AtesDegerleriEklemeEkrani";
-            this.Load += new System.EventHandler(this.ekran_AtesDegerleriEklemeEkrani_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -13,31 +13,32 @@ namespace Dijital_Revir
     public partial class ekran_GebelikTakip : Form
     {
         String sicil;
+        int indexId;
         public ekran_GebelikTakip(String sicil)
         {
             this.sicil = sicil;
             InitializeComponent();
+            
+            string sqltext = "select Gebelik.id from Gebelik left join Personel on Gebelik.personelId = Personel.id  where Personel.sicilNo = " + sicil + " Order by id Desc ";
+            DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqltext);
+            indexId = (int)dt.Rows[0]["id"];
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+        private void ekran_GebelikTakip_Load(object sender, EventArgs e)
+        {            
+                DataTable dt;
+                String sqlText;
 
-        }
+                sqlText = "Select * From GebelikFormDegeri Where gebelikId = "+ indexId;
+                dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
-        private void Gebelik_Ekrani_Load(object sender, EventArgs e)
-        {
-
+                dgv_gebelikTablosu.DataSource = dt;
+           
         }
 
         private void btn_degerEkle_Click(object sender, EventArgs e)
         {
-            Form form = new ekran_GebelikDegerleriEkleme();
-            form.ShowDialog();
-        }
-
-        private void btn_degerEkle_Click_1(object sender, EventArgs e)
-        {
-            Form form = new ekran_GebelikDegerleriEkleme();
+            Form form = new ekran_GebelikDegerleriEkleme(sicil);
             form.ShowDialog();
         }
     }

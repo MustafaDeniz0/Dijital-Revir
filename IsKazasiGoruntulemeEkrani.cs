@@ -33,7 +33,7 @@ namespace Dijital_Revir
              "((((Personel Inner join OzlukBilgileri On Personel.ozlukId = OzlukBilgileri.id)" +
             "Inner join Departman on Departman.id = Personel.departmanId)" +
             "Inner join Sirket on Sirket.id = Departman.sirketId)" +
-            "Inner join IsKazası on IsKazası.personelId = Personel.id)";
+            "Inner join IsKazası on IsKazası.personelId = Personel.id) where IsKazası.id = "+ indexIsKazasıId;
             
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
             tbx_IsKazasıGoruntuleme.Text = "Sicil Numarası : " + dt.Rows[0]["sicilNo"].ToString() +

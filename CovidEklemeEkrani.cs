@@ -17,22 +17,6 @@ namespace Dijital_Revir
         {
             InitializeComponent();
         }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Sorgula_Click(object sender, EventArgs e)
         {
             try

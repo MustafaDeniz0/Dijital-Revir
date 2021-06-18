@@ -93,7 +93,7 @@ namespace Dijital_Revir
             this.txb_covidDurumu.TabIndex = 8;
             this.txb_covidDurumu.Text = "Covid Durumu";
             this.txb_covidDurumu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txb_covidDurumu.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.txb_covidDurumu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_covidDurumu_MouseClick);
             // 
             // txb_sirket
             // 
@@ -105,7 +105,7 @@ namespace Dijital_Revir
             this.txb_sirket.TabIndex = 7;
             this.txb_sirket.Text = "Şirket";
             this.txb_sirket.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txb_sirket.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txb_sirket.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_sirket_MouseClick);
             // 
             // btn_covidListele
             // 
@@ -117,6 +117,7 @@ namespace Dijital_Revir
             this.btn_covidListele.TabIndex = 6;
             this.btn_covidListele.Text = "Listele";
             this.btn_covidListele.UseVisualStyleBackColor = false;
+            this.btn_covidListele.Click += new System.EventHandler(this.btn_covidListele_Click);
             // 
             // txb_soyad
             // 
@@ -128,6 +129,7 @@ namespace Dijital_Revir
             this.txb_soyad.TabIndex = 2;
             this.txb_soyad.Text = "Soyad";
             this.txb_soyad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txb_soyad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_soyad_MouseClick);
             // 
             // txb_ad
             // 
@@ -139,6 +141,7 @@ namespace Dijital_Revir
             this.txb_ad.TabIndex = 1;
             this.txb_ad.Text = "Ad";
             this.txb_ad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txb_ad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_ad_MouseClick);
             // 
             // txb_sicilNo
             // 
@@ -150,6 +153,7 @@ namespace Dijital_Revir
             this.txb_sicilNo.TabIndex = 0;
             this.txb_sicilNo.Text = "Sicil No";
             this.txb_sicilNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txb_sicilNo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_sicilNo_MouseClick);
             // 
             // panel3
             // 

@@ -19,13 +19,6 @@ namespace Dijital_Revir
 		{
 			InitializeComponent();
 		}
-
-		private void Form1_Load(object sender, EventArgs e)
-		{
-		
-		}
-
-
         private void btn_PoliklinikDefteri_Click(object sender, EventArgs e)
         {
 			Form form = new ekran_PoliklinikDefteriListeleme();
@@ -56,15 +49,18 @@ namespace Dijital_Revir
 			Form form = new ekran_PersonelListeleme(kelime);
 			form.ShowDialog();
 		}
-        private void tbx_AramaCubugu_TextChanged(object sender, EventArgs e)
-        {
-			
-        }
-
         private void tbx_AramaCubugu_MouseClick(object sender, MouseEventArgs e)
         {
 			this.tbx_AramaCubugu.Clear();
 
 		}
+
+        private void btn_personelIslemleri_Click(object sender, EventArgs e)
+        {
+			Form form = new ekran_PersonelIslemleri();
+			form.ShowDialog();
+		}
+
+        
     }
 }

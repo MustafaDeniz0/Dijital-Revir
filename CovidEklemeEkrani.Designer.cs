@@ -110,7 +110,6 @@ namespace Dijital_Revir
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(889, 790);
             this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel5
             // 
@@ -145,7 +144,6 @@ namespace Dijital_Revir
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(889, 649);
             this.panel5.TabIndex = 1;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label13
             // 
@@ -484,7 +482,6 @@ namespace Dijital_Revir
             this.tbx_SicilNo.Name = "tbx_SicilNo";
             this.tbx_SicilNo.Size = new System.Drawing.Size(367, 34);
             this.tbx_SicilNo.TabIndex = 20;
-            this.tbx_SicilNo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // ekran_CovidEkleme
             // 

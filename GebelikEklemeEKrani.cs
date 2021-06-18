@@ -22,12 +22,6 @@ namespace Dijital_Revir
 
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
         private void btn_Ekle_Click(object sender, EventArgs e)
         {
             String sqlText;
@@ -52,6 +46,11 @@ namespace Dijital_Revir
             {
                 lbl_sicilNo.Text = "Personel Bulunamadı. ";
             }
+        }
+
+        private void ekran_GebelikEklemeEkrani_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -23,13 +23,13 @@ namespace Dijital_Revir
         {
             Form form = new ekran_MuayeneEkleme(sicil);
             form.ShowDialog();
+            DgridUpdate();
         }
 
         private void ekran_IsbMuayeneEkleme_Load(object sender, EventArgs e)
         {
-            String sqlText = "Select Muayene.tarih, Muayene.tanı,Muayene.doktor From ((ISB inner join Personel on Personel.id = ISB.PersonelId) inner join Muayene on ISB.muayeneId = Muayene.id) Where Personel.sicilNo = '" + sicil+"'; ";
-            dgrid_ISBMuayeneEkleme.DataSource = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
+            DgridUpdate();
         }
 
         private void dgrid_ISBMuayeneEkleme_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -37,7 +37,13 @@ namespace Dijital_Revir
             int index = SqlOps.GetDataGridViewRowIndex(dgrid_ISBMuayeneEkleme, "muayeneId");    
             Form form = new MuayeneGoruntulemeEkrani(sicil, index);
             form.ShowDialog();
+            DgridUpdate();
 
+        }
+        private void DgridUpdate()
+        {
+            String sqlText = "Select Muayene.tarih, Muayene.tanı,Muayene.doktor From ((ISB inner join Personel on Personel.id = ISB.PersonelId) inner join Muayene on ISB.muayeneId = Muayene.id) Where Personel.sicilNo = '" + sicil + "'; ";
+            dgrid_ISBMuayeneEkleme.DataSource = SqlOps.CreateDataTableBySqlQuery(sqlText);
         }
     }
 }

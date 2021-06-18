@@ -51,8 +51,6 @@ namespace Dijital_Revir
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
             dgv_asi.DataSource = dt;
-        }
-
-        
+        }     
     }
 }

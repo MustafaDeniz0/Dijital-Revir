@@ -28,10 +28,5 @@ namespace Dijital_Revir
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
             this.Close();
         }
-
-        private void ekran_AtesDegerleriEklemeEkrani_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

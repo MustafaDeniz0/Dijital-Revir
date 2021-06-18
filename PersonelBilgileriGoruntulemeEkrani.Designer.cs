@@ -50,7 +50,7 @@ namespace Dijital_Revir
             this.panel2.Location = new System.Drawing.Point(1002, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(259, 538);
+            this.panel2.Size = new System.Drawing.Size(259, 662);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -67,7 +67,7 @@ namespace Dijital_Revir
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 538);
+            this.panel1.Size = new System.Drawing.Size(259, 662);
             this.panel1.TabIndex = 3;
             // 
             // btn_asiEkleme
@@ -75,7 +75,7 @@ namespace Dijital_Revir
             this.btn_asiEkleme.AutoEllipsis = true;
             this.btn_asiEkleme.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_asiEkleme.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_asiEkleme.Location = new System.Drawing.Point(0, 436);
+            this.btn_asiEkleme.Location = new System.Drawing.Point(0, 347);
             this.btn_asiEkleme.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_asiEkleme.Name = "btn_asiEkleme";
             this.btn_asiEkleme.Size = new System.Drawing.Size(259, 89);
@@ -89,7 +89,7 @@ namespace Dijital_Revir
             this.btn_Gebelik.AutoEllipsis = true;
             this.btn_Gebelik.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_Gebelik.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_Gebelik.Location = new System.Drawing.Point(0, 348);
+            this.btn_Gebelik.Location = new System.Drawing.Point(0, 431);
             this.btn_Gebelik.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Gebelik.Name = "btn_Gebelik";
             this.btn_Gebelik.Size = new System.Drawing.Size(259, 89);
@@ -162,7 +162,7 @@ namespace Dijital_Revir
             this.panel3.Location = new System.Drawing.Point(259, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(743, 538);
+            this.panel3.Size = new System.Drawing.Size(743, 662);
             this.panel3.TabIndex = 4;
             // 
             // textBox1
@@ -183,7 +183,7 @@ namespace Dijital_Revir
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1261, 538);
+            this.ClientSize = new System.Drawing.Size(1261, 662);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);

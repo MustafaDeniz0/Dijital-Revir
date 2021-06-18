@@ -32,11 +32,6 @@ namespace Dijital_Revir
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_GebelikEkle = new System.Windows.Forms.Button();
-            this.tbx_sirket = new System.Windows.Forms.TextBox();
-            this.btn_listele = new System.Windows.Forms.Button();
-            this.tbx_soyad = new System.Windows.Forms.TextBox();
-            this.tbx_ad = new System.Windows.Forms.TextBox();
-            this.txb_sicilNo = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_gebelikListesi = new System.Windows.Forms.DataGridView();
             this.button = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -58,11 +53,6 @@ namespace Dijital_Revir
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.btn_GebelikEkle);
-            this.panel2.Controls.Add(this.tbx_sirket);
-            this.panel2.Controls.Add(this.btn_listele);
-            this.panel2.Controls.Add(this.tbx_soyad);
-            this.panel2.Controls.Add(this.tbx_ad);
-            this.panel2.Controls.Add(this.txb_sicilNo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1004, 0);
             this.panel2.Name = "panel2";
@@ -81,63 +71,6 @@ namespace Dijital_Revir
             this.btn_GebelikEkle.Text = "Ekle";
             this.btn_GebelikEkle.UseVisualStyleBackColor = false;
             this.btn_GebelikEkle.Click += new System.EventHandler(this.btn_GebelikEkle_Click);
-            // 
-            // tbx_sirket
-            // 
-            this.tbx_sirket.Location = new System.Drawing.Point(25, 190);
-            this.tbx_sirket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbx_sirket.Multiline = true;
-            this.tbx_sirket.Name = "tbx_sirket";
-            this.tbx_sirket.Size = new System.Drawing.Size(220, 26);
-            this.tbx_sirket.TabIndex = 7;
-            this.tbx_sirket.Text = "Şirket";
-            this.tbx_sirket.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btn_listele
-            // 
-            this.btn_listele.AutoEllipsis = true;
-            this.btn_listele.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_listele.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_listele.Location = new System.Drawing.Point(25, 250);
-            this.btn_listele.Name = "btn_listele";
-            this.btn_listele.Size = new System.Drawing.Size(220, 52);
-            this.btn_listele.TabIndex = 6;
-            this.btn_listele.Text = "Listele";
-            this.btn_listele.UseVisualStyleBackColor = false;
-            this.btn_listele.Click += new System.EventHandler(this.btn_AraButonu_Click);
-            // 
-            // tbx_soyad
-            // 
-            this.tbx_soyad.Location = new System.Drawing.Point(25, 146);
-            this.tbx_soyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbx_soyad.Multiline = true;
-            this.tbx_soyad.Name = "tbx_soyad";
-            this.tbx_soyad.Size = new System.Drawing.Size(220, 26);
-            this.tbx_soyad.TabIndex = 2;
-            this.tbx_soyad.Text = "Soyad";
-            this.tbx_soyad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbx_ad
-            // 
-            this.tbx_ad.Location = new System.Drawing.Point(25, 95);
-            this.tbx_ad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbx_ad.Multiline = true;
-            this.tbx_ad.Name = "tbx_ad";
-            this.tbx_ad.Size = new System.Drawing.Size(220, 26);
-            this.tbx_ad.TabIndex = 1;
-            this.tbx_ad.Text = "Ad";
-            this.tbx_ad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txb_sicilNo
-            // 
-            this.txb_sicilNo.Location = new System.Drawing.Point(25, 43);
-            this.txb_sicilNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txb_sicilNo.Multiline = true;
-            this.txb_sicilNo.Name = "txb_sicilNo";
-            this.txb_sicilNo.Size = new System.Drawing.Size(220, 26);
-            this.txb_sicilNo.TabIndex = 0;
-            this.txb_sicilNo.Text = "Sicil No";
-            this.txb_sicilNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel3
             // 
@@ -193,7 +126,6 @@ namespace Dijital_Revir
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ekran_GebelikListeleme_Load);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_gebelikListesi)).EndInit();
             this.ResumeLayout(false);
@@ -204,11 +136,6 @@ namespace Dijital_Revir
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox tbx_sirket;
-        private System.Windows.Forms.Button btn_listele;
-        private System.Windows.Forms.TextBox tbx_soyad;
-        private System.Windows.Forms.TextBox tbx_ad;
-        private System.Windows.Forms.TextBox txb_sicilNo;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgv_gebelikListesi;
         private System.Windows.Forms.DataGridViewButtonColumn button;

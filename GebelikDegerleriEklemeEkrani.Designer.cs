@@ -33,15 +33,15 @@ namespace Dijital_Revir
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_GebelikDegerEkleme = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbx_verilenİlac = new System.Windows.Forms.TextBox();
+            this.tbx_ekTetkik = new System.Windows.Forms.TextBox();
+            this.tbx_asi = new System.Windows.Forms.TextBox();
+            this.tbx_odem = new System.Windows.Forms.TextBox();
+            this.tbx_tit = new System.Windows.Forms.TextBox();
+            this.tbx_hmg = new System.Windows.Forms.TextBox();
+            this.tbx_nabız = new System.Windows.Forms.TextBox();
+            this.tbx_ta = new System.Windows.Forms.TextBox();
+            this.tbx_kilo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -88,19 +88,20 @@ namespace Dijital_Revir
             this.btn_GebelikDegerEkleme.Text = "Ekle";
             this.btn_GebelikDegerEkleme.UseVisualStyleBackColor = false;
             this.btn_GebelikDegerEkleme.UseWaitCursor = true;
+            this.btn_GebelikDegerEkleme.Click += new System.EventHandler(this.btn_GebelikDegerEkleme_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightGray;
-            this.panel3.Controls.Add(this.textBox9);
-            this.panel3.Controls.Add(this.textBox8);
-            this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Controls.Add(this.textBox6);
-            this.panel3.Controls.Add(this.textBox5);
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.tbx_verilenİlac);
+            this.panel3.Controls.Add(this.tbx_ekTetkik);
+            this.panel3.Controls.Add(this.tbx_asi);
+            this.panel3.Controls.Add(this.tbx_odem);
+            this.panel3.Controls.Add(this.tbx_tit);
+            this.panel3.Controls.Add(this.tbx_hmg);
+            this.panel3.Controls.Add(this.tbx_nabız);
+            this.panel3.Controls.Add(this.tbx_ta);
+            this.panel3.Controls.Add(this.tbx_kilo);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
@@ -117,77 +118,77 @@ namespace Dijital_Revir
             this.panel3.Size = new System.Drawing.Size(929, 726);
             this.panel3.TabIndex = 10;
             // 
-            // textBox9
+            // tbx_verilenİlac
             // 
-            this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox9.Location = new System.Drawing.Point(452, 461);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(231, 22);
-            this.textBox9.TabIndex = 48;
+            this.tbx_verilenİlac.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_verilenİlac.Location = new System.Drawing.Point(452, 461);
+            this.tbx_verilenİlac.Name = "tbx_verilenİlac";
+            this.tbx_verilenİlac.Size = new System.Drawing.Size(231, 22);
+            this.tbx_verilenİlac.TabIndex = 48;
             // 
-            // textBox8
+            // tbx_ekTetkik
             // 
-            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox8.Location = new System.Drawing.Point(452, 423);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(231, 22);
-            this.textBox8.TabIndex = 47;
+            this.tbx_ekTetkik.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_ekTetkik.Location = new System.Drawing.Point(452, 423);
+            this.tbx_ekTetkik.Name = "tbx_ekTetkik";
+            this.tbx_ekTetkik.Size = new System.Drawing.Size(231, 22);
+            this.tbx_ekTetkik.TabIndex = 47;
             // 
-            // textBox7
+            // tbx_asi
             // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox7.Location = new System.Drawing.Point(452, 380);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(231, 22);
-            this.textBox7.TabIndex = 46;
+            this.tbx_asi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_asi.Location = new System.Drawing.Point(452, 380);
+            this.tbx_asi.Name = "tbx_asi";
+            this.tbx_asi.Size = new System.Drawing.Size(231, 22);
+            this.tbx_asi.TabIndex = 46;
             // 
-            // textBox6
+            // tbx_odem
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox6.Location = new System.Drawing.Point(452, 339);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(231, 22);
-            this.textBox6.TabIndex = 45;
+            this.tbx_odem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_odem.Location = new System.Drawing.Point(452, 339);
+            this.tbx_odem.Name = "tbx_odem";
+            this.tbx_odem.Size = new System.Drawing.Size(231, 22);
+            this.tbx_odem.TabIndex = 45;
             // 
-            // textBox5
+            // tbx_tit
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox5.Location = new System.Drawing.Point(452, 302);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(231, 22);
-            this.textBox5.TabIndex = 44;
+            this.tbx_tit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_tit.Location = new System.Drawing.Point(452, 302);
+            this.tbx_tit.Name = "tbx_tit";
+            this.tbx_tit.Size = new System.Drawing.Size(231, 22);
+            this.tbx_tit.TabIndex = 44;
             // 
-            // textBox4
+            // tbx_hmg
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox4.Location = new System.Drawing.Point(452, 255);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(231, 22);
-            this.textBox4.TabIndex = 43;
+            this.tbx_hmg.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_hmg.Location = new System.Drawing.Point(452, 255);
+            this.tbx_hmg.Name = "tbx_hmg";
+            this.tbx_hmg.Size = new System.Drawing.Size(231, 22);
+            this.tbx_hmg.TabIndex = 43;
             // 
-            // textBox3
+            // tbx_nabız
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.Location = new System.Drawing.Point(452, 209);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(231, 22);
-            this.textBox3.TabIndex = 42;
+            this.tbx_nabız.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_nabız.Location = new System.Drawing.Point(452, 209);
+            this.tbx_nabız.Name = "tbx_nabız";
+            this.tbx_nabız.Size = new System.Drawing.Size(231, 22);
+            this.tbx_nabız.TabIndex = 42;
             // 
-            // textBox1
+            // tbx_ta
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Location = new System.Drawing.Point(452, 163);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 22);
-            this.textBox1.TabIndex = 41;
+            this.tbx_ta.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_ta.Location = new System.Drawing.Point(452, 163);
+            this.tbx_ta.Name = "tbx_ta";
+            this.tbx_ta.Size = new System.Drawing.Size(231, 22);
+            this.tbx_ta.TabIndex = 41;
             // 
-            // textBox2
+            // tbx_kilo
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.Location = new System.Drawing.Point(452, 127);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(231, 22);
-            this.textBox2.TabIndex = 40;
+            this.tbx_kilo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_kilo.Location = new System.Drawing.Point(452, 127);
+            this.tbx_kilo.Name = "tbx_kilo";
+            this.tbx_kilo.Size = new System.Drawing.Size(231, 22);
+            this.tbx_kilo.TabIndex = 40;
             // 
             // label9
             // 
@@ -323,15 +324,15 @@ namespace Dijital_Revir
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_GebelikDegerEkleme;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbx_verilenİlac;
+        private System.Windows.Forms.TextBox tbx_ekTetkik;
+        private System.Windows.Forms.TextBox tbx_asi;
+        private System.Windows.Forms.TextBox tbx_odem;
+        private System.Windows.Forms.TextBox tbx_tit;
+        private System.Windows.Forms.TextBox tbx_hmg;
+        private System.Windows.Forms.TextBox tbx_nabız;
+        private System.Windows.Forms.TextBox tbx_ta;
+        private System.Windows.Forms.TextBox tbx_kilo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;

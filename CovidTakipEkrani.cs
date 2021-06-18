@@ -54,35 +54,42 @@ namespace Dijital_Revir
         }
         private void SqlDgvUpdate()
         {
-            String sqlText;
-            DataTable dt;
-
-            sqlText = "Select * from Covid where Covid.id = " + indexCovidId;
-            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
-
-
-            if (dt.Rows.Count != 0)
+            try
             {
-                this.tbx_CovidListeleme.Text = "Kayıt Durumu : " + dt.Rows[0]["kayitDurumu"].ToString() + Environment.NewLine +
-                                               "Statü Durumu : " + dt.Rows[0]["statu"].ToString() + Environment.NewLine +
-                                               "Şirket Formülü : " + dt.Rows[0]["sirketFormul"].ToString() + Environment.NewLine +
-                                               "Kod : " + dt.Rows[0]["kod"].ToString() + Environment.NewLine +
-                                               "Vaka Durumu : " + dt.Rows[0]["vakaDurumu"].ToString() + Environment.NewLine +
-                                               "Bulgu : " + dt.Rows[0]["bulgu"].ToString() + Environment.NewLine +
-                                               "İlaç : " + dt.Rows[0]["ilac"].ToString() + Environment.NewLine +
-                                               "Rapor Süresi : " + dt.Rows[0]["raporSuresi"].ToString() + Environment.NewLine +
-                                               "Rapor Tarihi : " + dt.Rows[0]["raporTarihi"].ToString() + Environment.NewLine +
-                                               "İşbaşı Tarihi : " + dt.Rows[0]["isBasiTarihi"].ToString() + Environment.NewLine +
-                                               "İletişim Durumu : " + dt.Rows[0]["iletisimDurumu"].ToString();
+                String sqlText;
+                DataTable dt;
+
+                sqlText = "Select * from Covid where Covid.id = " + indexCovidId;
+                dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+
+
+                if (dt.Rows.Count != 0)
+                {
+                    this.tbx_CovidListeleme.Text = "Kayıt Durumu : " + dt.Rows[0]["kayitDurumu"].ToString() + Environment.NewLine +
+                                                   "Statü Durumu : " + dt.Rows[0]["statu"].ToString() + Environment.NewLine +
+                                                   "Şirket Formülü : " + dt.Rows[0]["sirketFormul"].ToString() + Environment.NewLine +
+                                                   "Kod : " + dt.Rows[0]["kod"].ToString() + Environment.NewLine +
+                                                   "Vaka Durumu : " + dt.Rows[0]["vakaDurumu"].ToString() + Environment.NewLine +
+                                                   "Bulgu : " + dt.Rows[0]["bulgu"].ToString() + Environment.NewLine +
+                                                   "İlaç : " + dt.Rows[0]["ilac"].ToString() + Environment.NewLine +
+                                                   "Rapor Süresi : " + dt.Rows[0]["raporSuresi"].ToString() + Environment.NewLine +
+                                                   "Rapor Tarihi : " + dt.Rows[0]["raporTarihi"].ToString() + Environment.NewLine +
+                                                   "İşbaşı Tarihi : " + dt.Rows[0]["isBasiTarihi"].ToString() + Environment.NewLine +
+                                                   "İletişim Durumu : " + dt.Rows[0]["iletisimDurumu"].ToString();
+                }
+
+                sqlText = "SELECT Distinct TOP 5 Ates.olcumDegeri, Ates.olcumTarihi FROM Ates LEFT JOIN Covid INNER JOIN Personel on Covid.id = " + indexCovidId + "ON Covid.id = Ates.covidId ORDER BY olcumTarihi DESC";
+                dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+                this.dgv_olcum.DataSource = dt;
+
+                sqlText = "SELECT Distinct TOP 5 Test.testTuru, Test.testTarihi, Test.testSonucu FROM Test LEFT JOIN Covid ON Covid.id = " + indexCovidId + " AND Covid.id = Test.covidId" + " ORDER BY testTarihi DESC";
+                dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+                this.dgv_test.DataSource = dt;
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Listelenecek Personel Bulunamadı. ");
             }
 
-            sqlText = "SELECT Distinct TOP 5 Ates.olcumDegeri, Ates.olcumTarihi FROM Ates LEFT JOIN Covid INNER JOIN Personel on Covid.id = " + indexCovidId + "ON Covid.id = Ates.covidId ORDER BY olcumTarihi DESC";
-            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
-            this.dgv_olcum.DataSource = dt;
-
-            sqlText = "SELECT Distinct TOP 5 Test.testTuru, Test.testTarihi, Test.testSonucu FROM Test LEFT JOIN Covid ON Covid.id = " + indexCovidId + " AND Covid.id = Test.covidId" + " ORDER BY testTarihi DESC";
-            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
-            this.dgv_test.DataSource = dt;
         }
     }
 }
