@@ -31,10 +31,13 @@ namespace Dijital_Revir
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_Ekle = new System.Windows.Forms.Button();
             this.btn_SevkEt = new System.Windows.Forms.Button();
-            this.btn_aktar = new System.Windows.Forms.Button();
+            this.btn_exceleaktar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tbx_görev = new System.Windows.Forms.TextBox();
+            this.lbl_görev = new System.Windows.Forms.Label();
+            this.tbx_protokolNo = new System.Windows.Forms.TextBox();
+            this.lbl_protokolNo = new System.Windows.Forms.Label();
             this.cmb_VardiyaAmiri = new System.Windows.Forms.ComboBox();
             this.tbx_kazaAnlatimi = new System.Windows.Forms.TextBox();
             this.tbx_saat = new System.Windows.Forms.TextBox();
@@ -44,6 +47,7 @@ namespace Dijital_Revir
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -60,27 +64,13 @@ namespace Dijital_Revir
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.btn_Ekle);
             this.panel2.Controls.Add(this.btn_SevkEt);
-            this.panel2.Controls.Add(this.btn_aktar);
+            this.panel2.Controls.Add(this.btn_exceleaktar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1004, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(258, 538);
             this.panel2.TabIndex = 5;
-            // 
-            // btn_Ekle
-            // 
-            this.btn_Ekle.AutoEllipsis = true;
-            this.btn_Ekle.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_Ekle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_Ekle.Location = new System.Drawing.Point(39, 327);
-            this.btn_Ekle.Name = "btn_Ekle";
-            this.btn_Ekle.Size = new System.Drawing.Size(177, 52);
-            this.btn_Ekle.TabIndex = 8;
-            this.btn_Ekle.Text = "Ekle";
-            this.btn_Ekle.UseVisualStyleBackColor = false;
-            this.btn_Ekle.Click += new System.EventHandler(this.btn_Ekle_Click);
             // 
             // btn_SevkEt
             // 
@@ -95,21 +85,26 @@ namespace Dijital_Revir
             this.btn_SevkEt.UseVisualStyleBackColor = false;
             this.btn_SevkEt.Click += new System.EventHandler(this.btn_SevkEt_Click);
             // 
-            // btn_aktar
+            // btn_exceleaktar
             // 
-            this.btn_aktar.AutoEllipsis = true;
-            this.btn_aktar.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_aktar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_aktar.Location = new System.Drawing.Point(39, 464);
-            this.btn_aktar.Name = "btn_aktar";
-            this.btn_aktar.Size = new System.Drawing.Size(177, 52);
-            this.btn_aktar.TabIndex = 6;
-            this.btn_aktar.Text = "Excel\'e Aktar";
-            this.btn_aktar.UseVisualStyleBackColor = false;
+            this.btn_exceleaktar.AutoEllipsis = true;
+            this.btn_exceleaktar.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_exceleaktar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_exceleaktar.Location = new System.Drawing.Point(39, 464);
+            this.btn_exceleaktar.Name = "btn_exceleaktar";
+            this.btn_exceleaktar.Size = new System.Drawing.Size(177, 52);
+            this.btn_exceleaktar.TabIndex = 6;
+            this.btn_exceleaktar.Text = "Excel\'e Aktar";
+            this.btn_exceleaktar.UseVisualStyleBackColor = false;
+            this.btn_exceleaktar.Click += new System.EventHandler(this.btn_exceleaktar_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Controls.Add(this.tbx_görev);
+            this.panel3.Controls.Add(this.lbl_görev);
+            this.panel3.Controls.Add(this.tbx_protokolNo);
+            this.panel3.Controls.Add(this.lbl_protokolNo);
             this.panel3.Controls.Add(this.cmb_VardiyaAmiri);
             this.panel3.Controls.Add(this.tbx_kazaAnlatimi);
             this.panel3.Controls.Add(this.tbx_saat);
@@ -126,6 +121,50 @@ namespace Dijital_Revir
             this.panel3.Size = new System.Drawing.Size(746, 538);
             this.panel3.TabIndex = 7;
             // 
+            // tbx_görev
+            // 
+            this.tbx_görev.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_görev.Location = new System.Drawing.Point(266, 281);
+            this.tbx_görev.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_görev.Multiline = true;
+            this.tbx_görev.Name = "tbx_görev";
+            this.tbx_görev.Size = new System.Drawing.Size(408, 28);
+            this.tbx_görev.TabIndex = 29;
+            // 
+            // lbl_görev
+            // 
+            this.lbl_görev.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_görev.AutoSize = true;
+            this.lbl_görev.BackColor = System.Drawing.Color.LightGray;
+            this.lbl_görev.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_görev.Location = new System.Drawing.Point(72, 281);
+            this.lbl_görev.Name = "lbl_görev";
+            this.lbl_görev.Size = new System.Drawing.Size(71, 28);
+            this.lbl_görev.TabIndex = 28;
+            this.lbl_görev.Text = "Görevi";
+            // 
+            // tbx_protokolNo
+            // 
+            this.tbx_protokolNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_protokolNo.Location = new System.Drawing.Point(266, 239);
+            this.tbx_protokolNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_protokolNo.Multiline = true;
+            this.tbx_protokolNo.Name = "tbx_protokolNo";
+            this.tbx_protokolNo.Size = new System.Drawing.Size(408, 28);
+            this.tbx_protokolNo.TabIndex = 27;
+            // 
+            // lbl_protokolNo
+            // 
+            this.lbl_protokolNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_protokolNo.AutoSize = true;
+            this.lbl_protokolNo.BackColor = System.Drawing.Color.LightGray;
+            this.lbl_protokolNo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_protokolNo.Location = new System.Drawing.Point(72, 239);
+            this.lbl_protokolNo.Name = "lbl_protokolNo";
+            this.lbl_protokolNo.Size = new System.Drawing.Size(123, 28);
+            this.lbl_protokolNo.TabIndex = 26;
+            this.lbl_protokolNo.Text = "Protokol No";
+            // 
             // cmb_VardiyaAmiri
             // 
             this.cmb_VardiyaAmiri.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -138,7 +177,7 @@ namespace Dijital_Revir
             // tbx_kazaAnlatimi
             // 
             this.tbx_kazaAnlatimi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbx_kazaAnlatimi.Location = new System.Drawing.Point(266, 280);
+            this.tbx_kazaAnlatimi.Location = new System.Drawing.Point(266, 346);
             this.tbx_kazaAnlatimi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbx_kazaAnlatimi.Multiline = true;
             this.tbx_kazaAnlatimi.Name = "tbx_kazaAnlatimi";
@@ -153,9 +192,11 @@ namespace Dijital_Revir
             this.tbx_saat.MaxLength = 5;
             this.tbx_saat.Multiline = true;
             this.tbx_saat.Name = "tbx_saat";
-            this.tbx_saat.Size = new System.Drawing.Size(59, 23);
+            this.tbx_saat.Size = new System.Drawing.Size(48, 23);
             this.tbx_saat.TabIndex = 23;
-            this.tbx_saat.Text = "00 : 00";
+            this.tbx_saat.Text = "00:00";
+            this.tbx_saat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbx_saat.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbx_saat_MouseClick);
             // 
             // dtp_kazaZamani
             // 
@@ -184,7 +225,7 @@ namespace Dijital_Revir
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.LightGray;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(72, 280);
+            this.label4.Location = new System.Drawing.Point(72, 346);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(163, 28);
             this.label4.TabIndex = 19;
@@ -253,7 +294,7 @@ namespace Dijital_Revir
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btn_aktar;
+        private System.Windows.Forms.Button btn_exceleaktar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox tbx_kazaAnlatimi;
         private System.Windows.Forms.TextBox tbx_saat;
@@ -264,7 +305,11 @@ namespace Dijital_Revir
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_SevkEt;
-        private System.Windows.Forms.Button btn_Ekle;
         private System.Windows.Forms.ComboBox cmb_VardiyaAmiri;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.TextBox tbx_protokolNo;
+        private System.Windows.Forms.Label lbl_protokolNo;
+        private System.Windows.Forms.TextBox tbx_görev;
+        private System.Windows.Forms.Label lbl_görev;
     }
 }

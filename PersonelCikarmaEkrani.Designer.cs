@@ -109,7 +109,6 @@ namespace Dijital_Revir
 
         private System.Windows.Forms.TextBox tbx_sicilNo;
         private System.Windows.Forms.Label lbl_sicilNo;
-        private System.Windows.Forms.Button btn_PersonelSorgula;
         private System.Windows.Forms.Label lbl_Sorgula;
         private System.Windows.Forms.Button btn_PersonelSil;
         private System.Windows.Forms.Button btn_Sorgula;

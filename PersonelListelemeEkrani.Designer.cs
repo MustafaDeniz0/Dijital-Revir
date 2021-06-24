@@ -109,7 +109,6 @@ namespace Dijital_Revir
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgrid_PersonelBilgileri;
-        private System.Windows.Forms.Button btn_AraButonu;
         private System.Windows.Forms.DataGridViewButtonColumn dgbtn_Sec;
     }
 }

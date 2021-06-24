@@ -45,7 +45,7 @@ namespace Dijital_Revir
 
         private void btn_SevkEt_Click(object sender, EventArgs e)
         {
-            Form form = new ekran_SevkEtme();
+            Form form = new ekran_SevkEtme(sicilNo);
             form.ShowDialog();
         }
     }
