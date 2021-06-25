@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Dijital_Revir
 {
@@ -142,6 +143,17 @@ namespace Dijital_Revir
 
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
             dgv.DataSource = dt;
+        }
+    
+        public static void SetParam(String sqlText, SqlParameter prm)
+        {
+            SqlCommand cmd = new SqlCommand(sqlText, SqlOps.GetSqlConnection());
+            cmd.Connection.Open();
+
+            cmd.Parameters.Add(prm);
+            cmd.ExecuteReader();
+
+            cmd.Connection.Close();
         }
     }
 }

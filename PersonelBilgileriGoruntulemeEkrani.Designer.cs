@@ -151,6 +151,7 @@ namespace Dijital_Revir
             this.btn_Ek2Ekle.TabIndex = 6;
             this.btn_Ek2Ekle.Text = "Ek2";
             this.btn_Ek2Ekle.UseVisualStyleBackColor = false;
+            this.btn_Ek2Ekle.Click += new System.EventHandler(this.btn_Ek2Ekle_Click);
             // 
             // panel3
             // 

@@ -91,5 +91,12 @@ namespace Dijital_Revir
             Form form = new ekran_AsiEkleme(sicilNo);
             form.ShowDialog();  
         }
+
+        private void btn_Ek2Ekle_Click(object sender, EventArgs e)
+        {
+            Form form = new ekran_Ek2EklemeVeGoruntuleme(sicilNo);
+            form.ShowDialog();
+            
+        }
     }
 }
