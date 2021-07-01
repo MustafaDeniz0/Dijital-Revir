@@ -21,30 +21,49 @@ namespace Dijital_Revir
 
             this.sicilNo = sicilNo;
 
-            String sqltext = "SELECT Gebelik.id " + 
-            "FROM Gebelik LEFT JOIN Personel ON Gebelik.personelId = Personel.id " +
+            String sqltext = "SELECT Gebelik.id, Gebelik.sonAdetTarihi " + 
+            "FROM Gebelik " + 
+            "INNER JOIN Personel ON Gebelik.personelId = Personel.id " +
             "WHERE Personel.sicilNo = " + sicilNo + " " +
             "ORDER BY id DESC";
 
             DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqltext);
-            indexId = (int)dt.Rows[0]["id"];
+
+            try
+            {
+                indexId = (int)dt.Rows[0]["id"];
+                this.lbl_sonAdetTarihi.Text = dt.Rows[0]["sonAdetTarihi"].ToString();
+            }
+            catch (Exception ex)
+            {
+                btn_degerEkle.Enabled = false;
+            }
         }
 
         private void ekran_GebelikTakip_Load(object sender, EventArgs e)
-        {            
-                DataTable dt;
-                String sqlText;
+        {
+            updateDataGridView();
+        }
 
-                sqlText = "SELECT * FROM GebelikFormDegeri WHERE gebelikId = " + indexId;
-                dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+        private void updateDataGridView()
+        {
+            DataTable dt;
+            String sqlText;
 
-                dgv_gebelikTablosu.DataSource = dt;  
+            sqlText = "SELECT tarih, kiloDegeri, taDegeri, nabızDegeri, hmgDegeri, titDegeri, pretibitalOdem, asiDegeri, ekTetkikDegeri, ilac " + 
+            "FROM GebelikFormDegeri " + 
+            "WHERE gebelikId = " + indexId + " " +
+            "ORDER BY id DESC";
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            
+            dgv_gebelikTablosu.DataSource = dt;
         }
 
         private void btn_degerEkle_Click(object sender, EventArgs e)
         {
             Form form = new ekran_GebelikDegerleriEkleme(sicilNo);
             form.ShowDialog();
+            updateDataGridView();
         }
     }
 }

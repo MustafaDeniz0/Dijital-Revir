@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Dijital_Revir
@@ -20,9 +14,13 @@ namespace Dijital_Revir
             InitializeComponent();
             this.sicilNo = sicilNo;
 
-            String sqltext = "SELECT Gebelik.id FROM Gebelik LEFT JOIN Personel ON Gebelik.personelId = Personel.id WHERE Personel.sicilNo = " + sicilNo + " ORDER BY id DESC";
+            String sqltext = "SELECT Gebelik.id FROM Gebelik " + 
+            "INNER JOIN Personel ON Gebelik.personelId = Personel.id " + 
+            "WHERE Personel.sicilNo = " + sicilNo + " " + 
+            "ORDER BY id DESC";
             DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqltext);
-            this.indexId = (int)dt.Rows[0]["id"];    
+            
+            this.indexId = (int)dt.Rows[0]["id"];
         }
 
         private void btn_GebelikDegerEkleme_Click(object sender, EventArgs e)
@@ -38,8 +36,8 @@ namespace Dijital_Revir
             tbx_ekTetkik.Text + "','" + 
             tbx_asi.Text + "','" + 
             tbx_verilenİlac.Text + "')";
-
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+
             MessageBox.Show("Değerler Eklendi.");
             this.Close();
         }

@@ -27,16 +27,23 @@ namespace Dijital_Revir
             sqlText = "SELECT Personel.id FROM Personel WHERE Personel.sicilNo = " + sicilNo;
             indexId = (int)SqlOps.CreateDataTableBySqlQuery(sqlText).Rows[0]["id"];
 
-            sqlText = "INSERT INTO Asi(personelId, ad, kullanımPeriyodu, uygulanmaTarihi) VALUES (" + indexId + ",'"+ tbx_asiAdi.Text + "','" + tbx_kullanimPeriyodu.Text + "','" + tbx_uygulamaTarihi.Text + "')";
+            sqlText = "INSERT INTO Asi(personelId, ad, kullanımPeriyodu, uygulanmaTarihi) " + 
+            "VALUES (" + indexId + ",'"+ tbx_asiAdi.Text + "','" + tbx_kullanimPeriyodu.Text + "','" + tbx_uygulamaTarihi.Text + "')";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
 
             tbx_asiAdi.Clear();
             tbx_kullanimPeriyodu.Clear();
             tbx_uygulamaTarihi.Clear();
-            this.Update();
+
+            updateDataGridView();
         }
 
         private void ekran_AsiEkleme_Load(object sender, EventArgs e)
+        {
+            updateDataGridView();         
+        }
+
+        void updateDataGridView()
         {
             String sqlText;
             DataTable dt;
@@ -45,13 +52,21 @@ namespace Dijital_Revir
             sqlText = "SELECT Personel.id FROM Personel WHERE Personel.sicilNo = " + sicilNo;
             indexId = (int)SqlOps.CreateDataTableBySqlQuery(sqlText).Rows[0]["id"];
 
+            // Asi tablosunda yer alan kayıtları listeler
+            //sqlText = "SELECT Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Asi.ad, Asi.kullanımPeriyodu, Asi.uygulanmaTarihi " +
+            //"FROM ((Personel INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id) " +
+            //"INNER JOIN Asi ON Personel.id = Asi.personelId) " +
+            //"ORDER BY OzlukBilgileri.ad, OzlukBilgileri.soyAd, Asi.uygulanmaTarihi DESC";
+
             sqlText = "SELECT Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Asi.ad, Asi.kullanımPeriyodu, Asi.uygulanmaTarihi " +
-            "FROM ((Personel INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id) " +
-            "INNER JOIN Asi ON Personel.id = Asi.personelId) " +
-            "ORDER BY OzlukBilgileri.ad, OzlukBilgileri.soyAd, Asi.uygulanmaTarihi DESC";
+            "FROM Personel " + 
+            "INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id " +
+            "INNER JOIN Asi ON Personel.id = Asi.personelId " +
+            "WHERE Personel.id = " + indexId +
+            "ORDER BY Asi.uygulanmaTarihi DESC";
 
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
             dgv_asi.DataSource = dt;
-        }     
+        }
     }
 }

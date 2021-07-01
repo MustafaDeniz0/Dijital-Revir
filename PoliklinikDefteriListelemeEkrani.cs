@@ -35,8 +35,8 @@ namespace Dijital_Revir
             int index;
             Form form;
 
-            index = SqlOps.GetDataGridViewRowIndex(dgv_PoliklinikListeleme, "sıraNo");
-            sıraId = (int)dt.Rows[index]["sıraNo"];
+            index = SqlOps.GetDataGridViewRowIndex(dgv_PoliklinikListeleme, "id");
+            sıraId = (int)dt.Rows[index]["id"];
 
             form = new ekran_PoliklinikDefteriGoruntuleme(sıraId);
             form.ShowDialog();
@@ -50,7 +50,7 @@ namespace Dijital_Revir
         {
             String sqlText;
 
-            sqlText = "SELECT Poliklinik.sıraNo, Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Sirket.sirketAdi, Poliklinik.acıklama " +
+            sqlText = "SELECT Poliklinik.id, Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Sirket.sirketAdi, Poliklinik.acıklama " +
             "FROM ((((Personel INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id) " +
             "INNER JOIN Departman ON Departman.id = Personel.departmanId) " +
             "INNER JOIN Sirket ON Sirket.id = Departman.sirketId) " +

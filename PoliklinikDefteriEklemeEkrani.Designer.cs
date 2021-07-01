@@ -38,13 +38,11 @@ namespace Dijital_Revir
             this.tbx_Tanı = new System.Windows.Forms.TextBox();
             this.tbx_tanıGrubu = new System.Windows.Forms.TextBox();
             this.tbx_sicilNo = new System.Windows.Forms.TextBox();
-            this.tbx_siraNo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -89,13 +87,11 @@ namespace Dijital_Revir
             this.panel3.Controls.Add(this.tbx_Tanı);
             this.panel3.Controls.Add(this.tbx_tanıGrubu);
             this.panel3.Controls.Add(this.tbx_sicilNo);
-            this.panel3.Controls.Add(this.tbx_siraNo);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(258, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -152,16 +148,6 @@ namespace Dijital_Revir
             this.tbx_sicilNo.Name = "tbx_sicilNo";
             this.tbx_sicilNo.Size = new System.Drawing.Size(319, 31);
             this.tbx_sicilNo.TabIndex = 56;
-            // 
-            // tbx_siraNo
-            // 
-            this.tbx_siraNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbx_siraNo.Location = new System.Drawing.Point(332, 40);
-            this.tbx_siraNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbx_siraNo.Multiline = true;
-            this.tbx_siraNo.Name = "tbx_siraNo";
-            this.tbx_siraNo.Size = new System.Drawing.Size(319, 31);
-            this.tbx_siraNo.TabIndex = 55;
             // 
             // label9
             // 
@@ -223,18 +209,6 @@ namespace Dijital_Revir
             this.label2.TabIndex = 48;
             this.label2.Text = "Sicil Numarası";
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightGray;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(93, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 28);
-            this.label1.TabIndex = 47;
-            this.label1.Text = "Sıra No";
-            // 
             // ekran_PoliklinikEkleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -272,7 +246,5 @@ namespace Dijital_Revir
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbx_siraNo;
-        private System.Windows.Forms.Label label1;
     }
 }

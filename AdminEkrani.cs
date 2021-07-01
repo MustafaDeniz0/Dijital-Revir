@@ -35,7 +35,7 @@ namespace Dijital_Revir
 
             foreach (DataRow dr in dt.Rows)
             {
-                cbx.Items.Add(new System.Collections.DictionaryEntry(dr["sirketAdi"], dr["id"].ToString()));
+                cbx.Items.Add(new System.Collections.DictionaryEntry(dr["sirketAdi"].ToString(), dr["id"].ToString()));
             }
 
             cbx_sirketAdi1.DisplayMember = "Key";
@@ -53,9 +53,10 @@ namespace Dijital_Revir
 
         private void btn_departmanEkle_Click(object sender, EventArgs e)
         {
-            String sqlText = "Insert into Departman (departmanAdi,sirketId) Values ('"+tbx_eklenecekDepartmanAdi.Text+"',"+cbx_SirketAdi2.SelectedValue+")";
-            SqlOps.SqlExecute(sqlText,null,SqlOps.GetSqlConnection());
+            String sqlText = "Insert into Departman (departmanAdi,sirketId) Values ('" + tbx_eklenecekDepartmanAdi.Text + "', " + cbx_SirketAdi2.SelectedValue + ")";
+            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
             upLoad();
+
             MessageBox.Show("Departman Eklendi. ");
         }
 
@@ -99,7 +100,7 @@ namespace Dijital_Revir
             cbx.Items.Clear();
             foreach (DataRow dr in dt.Rows)
             {
-                cbx.Items.Add(new System.Collections.DictionaryEntry(dr["departmanAdi"], dr["id"].ToString()));
+                cbx.Items.Add(new System.Collections.DictionaryEntry(dr["departmanAdi"].ToString(), dr["id"].ToString()));
             }
 
             cbx_silinecekDepartmanAdi.DisplayMember = "Key";
@@ -115,6 +116,21 @@ namespace Dijital_Revir
         private void tbx_Sirket_MouseClick(object sender, MouseEventArgs e)
         {
             tbx_eklenecekSirketAdi.Clear();
+        }
+
+        private void btn_personelSorgula_Click(object sender, EventArgs e)
+        {
+            String sqlText = "Select OzlukBilgileri.ad , OzlukBilgileri.soyAd From OzlukBilgileri Where OzlukBilgileri.id = (Select Personel.ozlukId From Personel Where Personel.sicilNo = '"+tbx_sicilNo.Text+"')";
+            DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            lbl_personelAdi.Text = dt.Rows[0]["ad"] + " " + dt.Rows[0]["soyAd"];
+        }
+
+        private void btn_amirOlarakAta_Click(object sender, EventArgs e)
+        {
+            String sqlText = "Update Personel Set amir=(Select Personel.id From Personel Where Personel.sicilNo = '"+tbx_sicilNo.Text+"')";
+            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+            MessageBox.Show("Amir olarak eklendi.");
+            
         }
     }
 }

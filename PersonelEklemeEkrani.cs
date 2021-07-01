@@ -34,11 +34,18 @@ namespace Dijital_Revir
             sqlText = "INSERT INTO Personel (sicilNo, ozlukId, departmanId, amir, iseGiris) " + 
             "VALUES ('" +
             tbx_sicil.Text + "', " + 
-            "SELECT TOP 1 OzlukBilgileri.id FROM OzlukBilgileri ORDER BY OzlukBilgileri.id DESC" + ", " +
+            "(SELECT TOP 1 OzlukBilgileri.id FROM OzlukBilgileri ORDER BY OzlukBilgileri.id DESC)" + ", " +
             cbx_departman.SelectedValue + ", " + 
             cbx_amir.SelectedValue + ", '" + 
             SqlOps.SqlDateInsert(dtp_iseGiris.Value.Date, "00:00") + "')";
+            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
 
+            int engellimi = 0;
+            if (rbn_engelli.Checked)
+            { 
+                engellimi = 1; 
+            }
+            sqlText = "Insert into Etiket (engellilik,personalId) Values ("+engellimi+",(Select Top 1 Personel.id From Personel Order by Personel.id DESC)) ";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
 
             MessageBox.Show("Personel Eklendi ");

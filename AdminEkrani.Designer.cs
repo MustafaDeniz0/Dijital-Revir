@@ -29,14 +29,14 @@ namespace Dijital_Revir
         /// </summary>
         private void InitializeComponent()
         {
-            this.tab_eklenecekSirketAdi = new System.Windows.Forms.TabPage();
+            this.tab_sirketIslemleri = new System.Windows.Forms.TabPage();
             this.lbl_silinecekSirketAdi = new System.Windows.Forms.Label();
             this.btn_sirketSil = new System.Windows.Forms.Button();
             this.cbx_silinecekSirketAdi = new System.Windows.Forms.ComboBox();
             this.btn_sirketEkle = new System.Windows.Forms.Button();
             this.tbx_eklenecekSirketAdi = new System.Windows.Forms.TextBox();
             this.lbl_eklenecekSirketAdi = new System.Windows.Forms.Label();
-            this.tab_departman = new System.Windows.Forms.TabPage();
+            this.tab_departmanIslemleri = new System.Windows.Forms.TabPage();
             this.lbl_sirketAdi2 = new System.Windows.Forms.Label();
             this.lbl_departmanAdi2 = new System.Windows.Forms.Label();
             this.lbl_sirketAdi1 = new System.Windows.Forms.Label();
@@ -48,27 +48,34 @@ namespace Dijital_Revir
             this.tbx_eklenecekDepartmanAdi = new System.Windows.Forms.TextBox();
             this.lbl_departmanAdi1 = new System.Windows.Forms.Label();
             this.tbc_admin = new System.Windows.Forms.TabControl();
-            this.tab_eklenecekSirketAdi.SuspendLayout();
-            this.tab_departman.SuspendLayout();
+            this.tab_amirIslemleri = new System.Windows.Forms.TabPage();
+            this.btn_personelSorgula = new System.Windows.Forms.Button();
+            this.lbl_personelAdi = new System.Windows.Forms.Label();
+            this.tbx_sicilNo = new System.Windows.Forms.TextBox();
+            this.lbl_sicilNo = new System.Windows.Forms.Label();
+            this.btn_amirOlarakAta = new System.Windows.Forms.Button();
+            this.tab_sirketIslemleri.SuspendLayout();
+            this.tab_departmanIslemleri.SuspendLayout();
             this.tbc_admin.SuspendLayout();
+            this.tab_amirIslemleri.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tab_eklenecekSirketAdi
+            // tab_sirketIslemleri
             // 
-            this.tab_eklenecekSirketAdi.Controls.Add(this.lbl_silinecekSirketAdi);
-            this.tab_eklenecekSirketAdi.Controls.Add(this.btn_sirketSil);
-            this.tab_eklenecekSirketAdi.Controls.Add(this.cbx_silinecekSirketAdi);
-            this.tab_eklenecekSirketAdi.Controls.Add(this.btn_sirketEkle);
-            this.tab_eklenecekSirketAdi.Controls.Add(this.tbx_eklenecekSirketAdi);
-            this.tab_eklenecekSirketAdi.Controls.Add(this.lbl_eklenecekSirketAdi);
-            this.tab_eklenecekSirketAdi.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tab_eklenecekSirketAdi.Location = new System.Drawing.Point(4, 25);
-            this.tab_eklenecekSirketAdi.Name = "tab_eklenecekSirketAdi";
-            this.tab_eklenecekSirketAdi.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_eklenecekSirketAdi.Size = new System.Drawing.Size(895, 461);
-            this.tab_eklenecekSirketAdi.TabIndex = 1;
-            this.tab_eklenecekSirketAdi.Text = "Şirket";
-            this.tab_eklenecekSirketAdi.UseVisualStyleBackColor = true;
+            this.tab_sirketIslemleri.Controls.Add(this.lbl_silinecekSirketAdi);
+            this.tab_sirketIslemleri.Controls.Add(this.btn_sirketSil);
+            this.tab_sirketIslemleri.Controls.Add(this.cbx_silinecekSirketAdi);
+            this.tab_sirketIslemleri.Controls.Add(this.btn_sirketEkle);
+            this.tab_sirketIslemleri.Controls.Add(this.tbx_eklenecekSirketAdi);
+            this.tab_sirketIslemleri.Controls.Add(this.lbl_eklenecekSirketAdi);
+            this.tab_sirketIslemleri.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tab_sirketIslemleri.Location = new System.Drawing.Point(4, 25);
+            this.tab_sirketIslemleri.Name = "tab_sirketIslemleri";
+            this.tab_sirketIslemleri.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_sirketIslemleri.Size = new System.Drawing.Size(895, 461);
+            this.tab_sirketIslemleri.TabIndex = 1;
+            this.tab_sirketIslemleri.Text = "Şirket İşlemleri";
+            this.tab_sirketIslemleri.UseVisualStyleBackColor = true;
             // 
             // lbl_silinecekSirketAdi
             // 
@@ -130,25 +137,25 @@ namespace Dijital_Revir
             this.lbl_eklenecekSirketAdi.TabIndex = 5;
             this.lbl_eklenecekSirketAdi.Text = "Şirket Adı :";
             // 
-            // tab_departman
+            // tab_departmanIslemleri
             // 
-            this.tab_departman.Controls.Add(this.lbl_sirketAdi2);
-            this.tab_departman.Controls.Add(this.lbl_departmanAdi2);
-            this.tab_departman.Controls.Add(this.lbl_sirketAdi1);
-            this.tab_departman.Controls.Add(this.cbx_silinecekDepartmanAdi);
-            this.tab_departman.Controls.Add(this.cbx_sirketAdi1);
-            this.tab_departman.Controls.Add(this.btn_departmanSil);
-            this.tab_departman.Controls.Add(this.cbx_SirketAdi2);
-            this.tab_departman.Controls.Add(this.btn_departmanEkle);
-            this.tab_departman.Controls.Add(this.tbx_eklenecekDepartmanAdi);
-            this.tab_departman.Controls.Add(this.lbl_departmanAdi1);
-            this.tab_departman.Location = new System.Drawing.Point(4, 25);
-            this.tab_departman.Name = "tab_departman";
-            this.tab_departman.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_departman.Size = new System.Drawing.Size(895, 461);
-            this.tab_departman.TabIndex = 0;
-            this.tab_departman.Text = "Departman";
-            this.tab_departman.UseVisualStyleBackColor = true;
+            this.tab_departmanIslemleri.Controls.Add(this.lbl_sirketAdi2);
+            this.tab_departmanIslemleri.Controls.Add(this.lbl_departmanAdi2);
+            this.tab_departmanIslemleri.Controls.Add(this.lbl_sirketAdi1);
+            this.tab_departmanIslemleri.Controls.Add(this.cbx_silinecekDepartmanAdi);
+            this.tab_departmanIslemleri.Controls.Add(this.cbx_sirketAdi1);
+            this.tab_departmanIslemleri.Controls.Add(this.btn_departmanSil);
+            this.tab_departmanIslemleri.Controls.Add(this.cbx_SirketAdi2);
+            this.tab_departmanIslemleri.Controls.Add(this.btn_departmanEkle);
+            this.tab_departmanIslemleri.Controls.Add(this.tbx_eklenecekDepartmanAdi);
+            this.tab_departmanIslemleri.Controls.Add(this.lbl_departmanAdi1);
+            this.tab_departmanIslemleri.Location = new System.Drawing.Point(4, 25);
+            this.tab_departmanIslemleri.Name = "tab_departmanIslemleri";
+            this.tab_departmanIslemleri.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_departmanIslemleri.Size = new System.Drawing.Size(895, 461);
+            this.tab_departmanIslemleri.TabIndex = 0;
+            this.tab_departmanIslemleri.Text = "Departman İşlemleri";
+            this.tab_departmanIslemleri.UseVisualStyleBackColor = true;
             // 
             // lbl_sirketAdi2
             // 
@@ -251,13 +258,80 @@ namespace Dijital_Revir
             // 
             // tbc_admin
             // 
-            this.tbc_admin.Controls.Add(this.tab_departman);
-            this.tbc_admin.Controls.Add(this.tab_eklenecekSirketAdi);
+            this.tbc_admin.Controls.Add(this.tab_departmanIslemleri);
+            this.tbc_admin.Controls.Add(this.tab_sirketIslemleri);
+            this.tbc_admin.Controls.Add(this.tab_amirIslemleri);
             this.tbc_admin.Location = new System.Drawing.Point(-1, -2);
             this.tbc_admin.Name = "tbc_admin";
             this.tbc_admin.SelectedIndex = 0;
-            this.tbc_admin.Size = new System.Drawing.Size(903, 490);
+            this.tbc_admin.Size = new System.Drawing.Size(843, 436);
             this.tbc_admin.TabIndex = 0;
+            // 
+            // tab_amirIslemleri
+            // 
+            this.tab_amirIslemleri.Controls.Add(this.btn_amirOlarakAta);
+            this.tab_amirIslemleri.Controls.Add(this.btn_personelSorgula);
+            this.tab_amirIslemleri.Controls.Add(this.lbl_personelAdi);
+            this.tab_amirIslemleri.Controls.Add(this.tbx_sicilNo);
+            this.tab_amirIslemleri.Controls.Add(this.lbl_sicilNo);
+            this.tab_amirIslemleri.Location = new System.Drawing.Point(4, 25);
+            this.tab_amirIslemleri.Name = "tab_amirIslemleri";
+            this.tab_amirIslemleri.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_amirIslemleri.Size = new System.Drawing.Size(835, 407);
+            this.tab_amirIslemleri.TabIndex = 2;
+            this.tab_amirIslemleri.Text = "Amir İşlemleri";
+            this.tab_amirIslemleri.UseVisualStyleBackColor = true;
+            // 
+            // btn_personelSorgula
+            // 
+            this.btn_personelSorgula.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_personelSorgula.Location = new System.Drawing.Point(466, 79);
+            this.btn_personelSorgula.Name = "btn_personelSorgula";
+            this.btn_personelSorgula.Size = new System.Drawing.Size(154, 34);
+            this.btn_personelSorgula.TabIndex = 12;
+            this.btn_personelSorgula.Text = "Sorgula";
+            this.btn_personelSorgula.UseVisualStyleBackColor = true;
+            this.btn_personelSorgula.Click += new System.EventHandler(this.btn_personelSorgula_Click);
+            // 
+            // lbl_personelAdi
+            // 
+            this.lbl_personelAdi.AutoSize = true;
+            this.lbl_personelAdi.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_personelAdi.Location = new System.Drawing.Point(189, 125);
+            this.lbl_personelAdi.Name = "lbl_personelAdi";
+            this.lbl_personelAdi.Size = new System.Drawing.Size(0, 27);
+            this.lbl_personelAdi.TabIndex = 10;
+            // 
+            // tbx_sicilNo
+            // 
+            this.tbx_sicilNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_sicilNo.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbx_sicilNo.Location = new System.Drawing.Point(153, 79);
+            this.tbx_sicilNo.Name = "tbx_sicilNo";
+            this.tbx_sicilNo.Size = new System.Drawing.Size(267, 34);
+            this.tbx_sicilNo.TabIndex = 9;
+            // 
+            // lbl_sicilNo
+            // 
+            this.lbl_sicilNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_sicilNo.AutoSize = true;
+            this.lbl_sicilNo.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_sicilNo.Location = new System.Drawing.Point(28, 79);
+            this.lbl_sicilNo.Name = "lbl_sicilNo";
+            this.lbl_sicilNo.Size = new System.Drawing.Size(119, 32);
+            this.lbl_sicilNo.TabIndex = 8;
+            this.lbl_sicilNo.Text = "Sicil No : ";
+            // 
+            // btn_amirOlarakAta
+            // 
+            this.btn_amirOlarakAta.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_amirOlarakAta.Location = new System.Drawing.Point(466, 125);
+            this.btn_amirOlarakAta.Name = "btn_amirOlarakAta";
+            this.btn_amirOlarakAta.Size = new System.Drawing.Size(154, 34);
+            this.btn_amirOlarakAta.TabIndex = 13;
+            this.btn_amirOlarakAta.Text = "Amir Olarak Ata";
+            this.btn_amirOlarakAta.UseVisualStyleBackColor = true;
+            this.btn_amirOlarakAta.Click += new System.EventHandler(this.btn_amirOlarakAta_Click);
             // 
             // ekran_Admin
             // 
@@ -269,24 +343,26 @@ namespace Dijital_Revir
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Ekranı";
             this.Load += new System.EventHandler(this.ekran_Admin_Load);
-            this.tab_eklenecekSirketAdi.ResumeLayout(false);
-            this.tab_eklenecekSirketAdi.PerformLayout();
-            this.tab_departman.ResumeLayout(false);
-            this.tab_departman.PerformLayout();
+            this.tab_sirketIslemleri.ResumeLayout(false);
+            this.tab_sirketIslemleri.PerformLayout();
+            this.tab_departmanIslemleri.ResumeLayout(false);
+            this.tab_departmanIslemleri.PerformLayout();
             this.tbc_admin.ResumeLayout(false);
+            this.tab_amirIslemleri.ResumeLayout(false);
+            this.tab_amirIslemleri.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabPage tab_eklenecekSirketAdi;
+        private System.Windows.Forms.TabPage tab_sirketIslemleri;
         private System.Windows.Forms.Button btn_sirketSil;
         private System.Windows.Forms.ComboBox cbx_silinecekSirketAdi;
         private System.Windows.Forms.Button btn_sirketEkle;
         private System.Windows.Forms.TextBox tbx_eklenecekSirketAdi;
         private System.Windows.Forms.Label lbl_eklenecekSirketAdi;
-        private System.Windows.Forms.TabPage tab_departman;
+        private System.Windows.Forms.TabPage tab_departmanIslemleri;
         private System.Windows.Forms.Label lbl_sirketAdi2;
         private System.Windows.Forms.Label lbl_departmanAdi2;
         private System.Windows.Forms.Label lbl_sirketAdi1;
@@ -299,5 +375,11 @@ namespace Dijital_Revir
         private System.Windows.Forms.Label lbl_departmanAdi1;
         private System.Windows.Forms.TabControl tbc_admin;
         private System.Windows.Forms.Label lbl_silinecekSirketAdi;
+        private System.Windows.Forms.TabPage tab_amirIslemleri;
+        private System.Windows.Forms.Button btn_amirOlarakAta;
+        private System.Windows.Forms.Button btn_personelSorgula;
+        private System.Windows.Forms.Label lbl_personelAdi;
+        private System.Windows.Forms.TextBox tbx_sicilNo;
+        private System.Windows.Forms.Label lbl_sicilNo;
     }
 }

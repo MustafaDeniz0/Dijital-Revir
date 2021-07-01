@@ -12,11 +12,11 @@ namespace Dijital_Revir
 {
     public partial class ekran_PoliklinikDefteriGoruntuleme : Form
     {
-        int sıraNo;
-        public ekran_PoliklinikDefteriGoruntuleme(int sıraNo)
+        int sıraId;
+        public ekran_PoliklinikDefteriGoruntuleme(int sıraId)
         {
             InitializeComponent();
-            this.sıraNo = sıraNo;
+            this.sıraId = sıraId;
         }
 
         private void ekran_PoliklinikDefteriGoruntuleme_Load(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace Dijital_Revir
             "INNER JOIN Departman ON Departman.id = Personel.departmanId " +
             "INNER JOIN Sirket ON Sirket.id = Departman.sirketId " +
             "INNER JOIN Poliklinik ON Poliklinik.personelId = Personel.id " + 
-            "WHERE Poliklinik.sıraNo = " + sıraNo;
+            "WHERE Poliklinik.id = " + sıraId;
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
             tbx_PoliklinikGoruntuleme.Text = "Sicil Numarası : " + dt.Rows[0]["sicilNo"].ToString() + Environment.NewLine +

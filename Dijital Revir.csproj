@@ -215,6 +215,7 @@
       <DependentUpon>SevkEtmeEkrani.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlOps.cs" />
+    <Compile Include="TakipServisleri.cs" />
     <Compile Include="TestEklemeEkrani.cs">
       <SubType>Form</SubType>
     </Compile>

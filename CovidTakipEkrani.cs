@@ -29,9 +29,20 @@ namespace Dijital_Revir
             InitializeComponent();
             this.sicil = sicil;
 
-            sqlText = "SELECT Covid.id FROM Personel INNER JOIN Covid ON Covid.personelId = Personel.id AND Personel.sicilNo = " + sicil;
+            sqlText = "SELECT Covid.id " + 
+            "FROM Personel " + 
+            "INNER JOIN Covid ON Covid.personelId = Personel.id AND Personel.sicilNo = " + sicil;
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
-            this.indexCovidId = (int)dt.Rows[0]["id"];
+
+            try
+            {
+                this.indexCovidId = (int)dt.Rows[0]["id"];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Listelenecek Personel Bulunamadı.");
+            }
+            
         }
 
         private void CovidTakipEkrani_Load(object sender, EventArgs e)

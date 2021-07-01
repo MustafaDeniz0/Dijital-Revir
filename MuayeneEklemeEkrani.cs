@@ -23,6 +23,17 @@ namespace Dijital_Revir
 
         private void btn_MuayeneEkleme_Click(object sender, EventArgs e)
         {
+            InsertMuayene();   
+        }
+
+        private void btn_SevkEt_Click(object sender, EventArgs e)
+        {
+            Form form = new ekran_SevkEtme(sicilNo);
+            form.ShowDialog();
+            InsertMuayene();           
+        }
+        private void InsertMuayene()
+        {
             string sqlText;
             DateTime date = DateTime.Today;
 
@@ -39,14 +50,11 @@ namespace Dijital_Revir
             sqlText = "INSERT INTO ISB (PersonelId, muayeneId) " +
             "VALUES (" + dtPersonel.Rows[0]["id"] + "," + dtMuayene.Rows[0]["id"] + ")";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            this.Close();
-        }
-
-        private void btn_SevkEt_Click(object sender, EventArgs e)
-        {
-            Form form = new ekran_SevkEtme(sicilNo);
+           
+            Form form = new ekran_PoliklinikEkleme();
             form.ShowDialog();
+            this.Close();
+
         }
     }
 }

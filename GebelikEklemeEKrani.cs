@@ -23,8 +23,8 @@ namespace Dijital_Revir
         {
             String sqlText;
 
-            sqlText = "INSERT INTO Gebelik (sonAdetTarihi, personelId) " +
-            "VALUES ('" + tbx_sonReglTarihi.Text + "', (SELECT Personel.id FROM Personel WHERE Personel.sicilNo = '" + tbx_sicilNo.Text + "'))";
+            sqlText = "INSERT INTO Gebelik (sonAdetTarihi, personelId, Gebemi) " +
+            "VALUES ('" + tbx_sonReglTarihi.Text + "', (SELECT Personel.id FROM Personel WHERE Personel.sicilNo = '" + tbx_sicilNo.Text + "'), 1)";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
             
             this.Close();

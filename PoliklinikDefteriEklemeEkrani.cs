@@ -19,10 +19,9 @@ namespace Dijital_Revir
 
         private void btn_Ekle_Click(object sender, EventArgs e)
         {
-            String sqlText = "INSERT INTO Poliklinik (sıraNo, personelId, tanıGrubu, tanı, tarih, acıklama, sonuc) " + 
-            "VALUES (" + 
-            tbx_siraNo.Text + ", " +
-            "SELECT Personel.id FROM Personel WHERE Personel.sicilNo = '" + tbx_sicilNo.Text + "', '" +
+            String sqlText = "INSERT INTO Poliklinik (personelId, tanıGrubu, tanı, tarih, acıklama, sonuc) " + 
+            "VALUES ( " +
+            "(SELECT Personel.id FROM Personel WHERE Personel.sicilNo = '" + tbx_sicilNo.Text + "'), '" +
             tbx_tanıGrubu.Text + "', '" +
             tbx_Tanı.Text + "', " +
             "getdate(), '" + 

@@ -32,6 +32,7 @@ namespace Dijital_Revir
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_sonAdetTarihi = new System.Windows.Forms.Label();
             this.btn_degerEkle = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_gebelikTablosu = new System.Windows.Forms.DataGridView();
@@ -62,6 +63,7 @@ namespace Dijital_Revir
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Controls.Add(this.lbl_sonAdetTarihi);
             this.panel3.Controls.Add(this.btn_degerEkle);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.dgv_gebelikTablosu);
@@ -73,16 +75,29 @@ namespace Dijital_Revir
             this.panel3.Size = new System.Drawing.Size(929, 726);
             this.panel3.TabIndex = 8;
             // 
+            // lbl_sonAdetTarihi
+            // 
+            this.lbl_sonAdetTarihi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_sonAdetTarihi.AutoSize = true;
+            this.lbl_sonAdetTarihi.BackColor = System.Drawing.Color.LightGray;
+            this.lbl_sonAdetTarihi.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbl_sonAdetTarihi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_sonAdetTarihi.Location = new System.Drawing.Point(173, 115);
+            this.lbl_sonAdetTarihi.Name = "lbl_sonAdetTarihi";
+            this.lbl_sonAdetTarihi.Size = new System.Drawing.Size(0, 28);
+            this.lbl_sonAdetTarihi.TabIndex = 22;
+            // 
             // btn_degerEkle
             // 
-            this.btn_degerEkle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_degerEkle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_degerEkle.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_degerEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btn_degerEkle.Cursor = System.Windows.Forms.Cursors.Default;
             this.btn_degerEkle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_degerEkle.Location = new System.Drawing.Point(6, 83);
+            this.btn_degerEkle.Location = new System.Drawing.Point(366, 360);
             this.btn_degerEkle.Name = "btn_degerEkle";
-            this.btn_degerEkle.Size = new System.Drawing.Size(179, 58);
+            this.btn_degerEkle.Size = new System.Drawing.Size(179, 49);
             this.btn_degerEkle.TabIndex = 21;
             this.btn_degerEkle.Text = "Değer Ekle";
             this.btn_degerEkle.UseVisualStyleBackColor = false;
@@ -94,7 +109,7 @@ namespace Dijital_Revir
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(6, 39);
+            this.label2.Location = new System.Drawing.Point(6, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 28);
             this.label2.TabIndex = 20;
@@ -102,7 +117,8 @@ namespace Dijital_Revir
             // 
             // dgv_gebelikTablosu
             // 
-            this.dgv_gebelikTablosu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgv_gebelikTablosu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_gebelikTablosu.BackgroundColor = System.Drawing.Color.LightSalmon;
             this.dgv_gebelikTablosu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_gebelikTablosu.Cursor = System.Windows.Forms.Cursors.Default;
@@ -126,7 +142,6 @@ namespace Dijital_Revir
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ekran_GebelikTakip";
             this.Text = "Gebelik Takibi";
-            this.UseWaitCursor = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ekran_GebelikTakip_Load);
             this.panel3.ResumeLayout(false);
@@ -143,5 +158,6 @@ namespace Dijital_Revir
         private System.Windows.Forms.Button btn_degerEkle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgv_gebelikTablosu;
+        private System.Windows.Forms.Label lbl_sonAdetTarihi;
     }
 }

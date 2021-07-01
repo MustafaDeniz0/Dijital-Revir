@@ -47,52 +47,7 @@ namespace Dijital_Revir
 
         private void btn_Sil(object sender, EventArgs e)
         {
-            string sqlText = "DELETE FROM Personel WHERE Personel.id = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE OzlukBilgileri FROM OzlukBilgileri LEFT JOIN Personel ON Personel.ozlukId = OzlukBilgileri.id WHERE Personel.id = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE FROM HastaSevk WHERE personelId = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE FROM Poliklinik WHERE personelId = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE FROM Ek2 WHERE personelId = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE FROM Asi WHERE personelId = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE FROM Etiket WHERE personalId = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE FROM IsKazası WHERE personelId = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE FROM Ek2 WHERE personelId = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE Ates FROM Ates LEFT JOIN Covid ON Covid.id = Ates.covidId WHERE Covid.personelId = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE Test FROM Test LEFT JOIN Covid ON Covid.id = Test.covidId WHERE Covid.personelId = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE FROM Covid WHERE personelId = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE GebelikFormDegeri FROM GebelikFormDegeri LEFT JOIN Gebelik ON Gebelik.id = GebelikFormDegeri.gebelikId WHERE Gebelik.personelId = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE FROM Gebelik WHERE personelId = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE Muayene FROM Muayene LEFT JOIN ISB on Muayene.id = ISB.muayeneId WHERE ISB.PersonelId = " + indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-
-            sqlText = "DELETE FROM ISB WHERE PersonelId = " + indexId;
+            String sqlText = "Exec Personel_SIL " + indexId;
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
 
             MessageBox.Show("Personel Silindi.");

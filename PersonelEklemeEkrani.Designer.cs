@@ -52,6 +52,9 @@ namespace Dijital_Revir
             this.cbx_cinsiyet = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btn_PersonelEkle = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.rbn_engelli = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // lbl_sicilNo
@@ -289,11 +292,49 @@ namespace Dijital_Revir
             this.btn_PersonelEkle.UseVisualStyleBackColor = true;
             this.btn_PersonelEkle.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.Location = new System.Drawing.Point(154, 581);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(162, 27);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Engel Durumu : ";
+            // 
+            // rbn_engelli
+            // 
+            this.rbn_engelli.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rbn_engelli.AutoSize = true;
+            this.rbn_engelli.Location = new System.Drawing.Point(324, 587);
+            this.rbn_engelli.Name = "rbn_engelli";
+            this.rbn_engelli.Size = new System.Drawing.Size(71, 21);
+            this.rbn_engelli.TabIndex = 24;
+            this.rbn_engelli.TabStop = true;
+            this.rbn_engelli.Text = "Engelli";
+            this.rbn_engelli.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(401, 587);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(107, 21);
+            this.radioButton1.TabIndex = 25;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Engelli Değil";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // ekran_PersonelEkleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 588);
+            this.ClientSize = new System.Drawing.Size(834, 680);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rbn_engelli);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btn_PersonelEkle);
             this.Controls.Add(this.cbx_cinsiyet);
             this.Controls.Add(this.label10);
@@ -351,5 +392,8 @@ namespace Dijital_Revir
         private System.Windows.Forms.ComboBox cbx_cinsiyet;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btn_PersonelEkle;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.RadioButton rbn_engelli;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
