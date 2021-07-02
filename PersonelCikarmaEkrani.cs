@@ -41,7 +41,7 @@ namespace Dijital_Revir
             }
             catch (Exception ex)
             {
-                lbl_Sorgula.Text = "Personel Bulunamadı.";
+                MessageBox.Show(ex.Message);
             }
         }
 

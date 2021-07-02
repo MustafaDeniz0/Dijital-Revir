@@ -32,10 +32,10 @@ namespace Dijital_Revir
             this.btn_Ekle = new System.Windows.Forms.Button();
             this.tbx_sicilNo = new System.Windows.Forms.TextBox();
             this.lbl_AtesOlcumDegeri = new System.Windows.Forms.Label();
-            this.tbx_sonReglTarihi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_sicilNo = new System.Windows.Forms.Label();
             this.btn_Sorgula = new System.Windows.Forms.Button();
+            this.dtp_Regl = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // btn_Ekle
@@ -67,14 +67,6 @@ namespace Dijital_Revir
             this.lbl_AtesOlcumDegeri.TabIndex = 5;
             this.lbl_AtesOlcumDegeri.Text = "Sicil No :";
             // 
-            // tbx_sonReglTarihi
-            // 
-            this.tbx_sonReglTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbx_sonReglTarihi.Location = new System.Drawing.Point(271, 175);
-            this.tbx_sonReglTarihi.Name = "tbx_sonReglTarihi";
-            this.tbx_sonReglTarihi.Size = new System.Drawing.Size(239, 30);
-            this.tbx_sonReglTarihi.TabIndex = 9;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -104,14 +96,23 @@ namespace Dijital_Revir
             this.btn_Sorgula.UseVisualStyleBackColor = true;
             this.btn_Sorgula.Click += new System.EventHandler(this.btn_Sorgula_Click);
             // 
+            // dtp_Regl
+            // 
+            this.dtp_Regl.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtp_Regl.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_Regl.Location = new System.Drawing.Point(273, 183);
+            this.dtp_Regl.Name = "dtp_Regl";
+            this.dtp_Regl.Size = new System.Drawing.Size(237, 22);
+            this.dtp_Regl.TabIndex = 24;
+            // 
             // ekran_GebelikEklemeEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(643, 363);
+            this.Controls.Add(this.dtp_Regl);
             this.Controls.Add(this.btn_Sorgula);
             this.Controls.Add(this.lbl_sicilNo);
-            this.Controls.Add(this.tbx_sonReglTarihi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Ekle);
             this.Controls.Add(this.tbx_sicilNo);
@@ -121,6 +122,7 @@ namespace Dijital_Revir
             this.Text = "Gebelik Ekleme Ekranı";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -128,9 +130,9 @@ namespace Dijital_Revir
         private System.Windows.Forms.Button btn_Ekle;
         private System.Windows.Forms.TextBox tbx_sicilNo;
         private System.Windows.Forms.Label lbl_AtesOlcumDegeri;
-        private System.Windows.Forms.TextBox tbx_sonReglTarihi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_sicilNo;
         private System.Windows.Forms.Button btn_Sorgula;
+        private System.Windows.Forms.DateTimePicker dtp_Regl;
     }
 }

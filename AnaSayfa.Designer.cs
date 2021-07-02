@@ -35,12 +35,12 @@ namespace Dijital_Revir
             this.btn_IsKazasi = new System.Windows.Forms.Button();
             this.btn_Gebelik = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_Admin = new System.Windows.Forms.Button();
             this.btn_personelIslemleri = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbx_Bildirimler = new System.Windows.Forms.ListBox();
             this.btn_AraButonu = new System.Windows.Forms.Button();
             this.tbx_AramaCubugu = new System.Windows.Forms.TextBox();
-            this.btn_Admin = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -118,6 +118,18 @@ namespace Dijital_Revir
             this.panel4.Size = new System.Drawing.Size(258, 538);
             this.panel4.TabIndex = 4;
             // 
+            // btn_Admin
+            // 
+            this.btn_Admin.BackColor = System.Drawing.Color.LightGray;
+            this.btn_Admin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_Admin.Location = new System.Drawing.Point(0, 340);
+            this.btn_Admin.Name = "btn_Admin";
+            this.btn_Admin.Size = new System.Drawing.Size(258, 70);
+            this.btn_Admin.TabIndex = 7;
+            this.btn_Admin.Text = "Admin";
+            this.btn_Admin.UseVisualStyleBackColor = false;
+            this.btn_Admin.Click += new System.EventHandler(this.btn_Admin_Click);
+            // 
             // btn_personelIslemleri
             // 
             this.btn_personelIslemleri.BackColor = System.Drawing.Color.LightGray;
@@ -145,12 +157,13 @@ namespace Dijital_Revir
             // lbx_Bildirimler
             // 
             this.lbx_Bildirimler.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbx_Bildirimler.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbx_Bildirimler.FormattingEnabled = true;
-            this.lbx_Bildirimler.ItemHeight = 16;
+            this.lbx_Bildirimler.ItemHeight = 27;
             this.lbx_Bildirimler.Location = new System.Drawing.Point(24, 142);
             this.lbx_Bildirimler.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbx_Bildirimler.Name = "lbx_Bildirimler";
-            this.lbx_Bildirimler.Size = new System.Drawing.Size(707, 372);
+            this.lbx_Bildirimler.Size = new System.Drawing.Size(707, 355);
             this.lbx_Bildirimler.TabIndex = 9;
             // 
             // btn_AraButonu
@@ -170,6 +183,7 @@ namespace Dijital_Revir
             // tbx_AramaCubugu
             // 
             this.tbx_AramaCubugu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_AramaCubugu.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbx_AramaCubugu.Location = new System.Drawing.Point(24, 30);
             this.tbx_AramaCubugu.Multiline = true;
             this.tbx_AramaCubugu.Name = "tbx_AramaCubugu";
@@ -178,18 +192,6 @@ namespace Dijital_Revir
             this.tbx_AramaCubugu.Text = "Sicil No ya da İsim Giriniz.";
             this.tbx_AramaCubugu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbx_AramaCubugu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbx_AramaCubugu_MouseClick);
-            // 
-            // btn_Admin
-            // 
-            this.btn_Admin.BackColor = System.Drawing.Color.LightGray;
-            this.btn_Admin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_Admin.Location = new System.Drawing.Point(0, 340);
-            this.btn_Admin.Name = "btn_Admin";
-            this.btn_Admin.Size = new System.Drawing.Size(258, 70);
-            this.btn_Admin.TabIndex = 7;
-            this.btn_Admin.Text = "Admin";
-            this.btn_Admin.UseVisualStyleBackColor = false;
-            this.btn_Admin.Click += new System.EventHandler(this.btn_Admin_Click);
             // 
             // ekran_AnaSayfa
             // 
@@ -207,6 +209,7 @@ namespace Dijital_Revir
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dijital Revir";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ekran_AnaSayfa_Load);
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

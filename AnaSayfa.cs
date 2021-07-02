@@ -64,5 +64,13 @@ namespace Dijital_Revir
 			Form form = new ekran_Admin();
 			form.ShowDialog();
         }
+
+        private void ekran_AnaSayfa_Load(object sender, EventArgs e)
+        {
+			TakipServisleri.gebelikUpdate();
+			TakipServisleri.gebelikTakip(lbx_Bildirimler);
+
+        }
+
     }
 }

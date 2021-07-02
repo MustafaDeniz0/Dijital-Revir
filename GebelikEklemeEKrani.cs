@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,11 +23,11 @@ namespace Dijital_Revir
         private void btn_Ekle_Click(object sender, EventArgs e)
         {
             String sqlText;
-
             sqlText = "INSERT INTO Gebelik (sonAdetTarihi, personelId, Gebemi) " +
-            "VALUES ('" + tbx_sonReglTarihi.Text + "', (SELECT Personel.id FROM Personel WHERE Personel.sicilNo = '" + tbx_sicilNo.Text + "'), 1)";
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-            
+             "VALUES ('" + SqlOps.SqlDateInsert(dtp_Regl.Value,"00:00") + "', (SELECT Personel.id FROM Personel WHERE Personel.sicilNo = '" + tbx_sicilNo.Text + "'), 1)";
+             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+             MessageBox.Show("Gebelik Eklendi");
+   
             this.Close();
         }
 
@@ -34,22 +35,31 @@ namespace Dijital_Revir
         {
             String sqlText;
             DataTable dt;
+            //try { 
+            sqlText = "SELECT * FROM (Personel INNER JOIN OzlukBilgileri ON OzlukBilgileri.id = Personel.ozlukId) " +
+            "WHERE Personel.sicilNo = " + tbx_sicilNo.Text;
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
-            try
-            {
-                sqlText = "SELECT * FROM (Personel INNER JOIN OzlukBilgileri ON OzlukBilgileri.id = Personel.ozlukId) " +
-                "WHERE Personel.sicilNo = " + tbx_sicilNo.Text;
-                dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            lbl_sicilNo.Text = dt.Rows[0]["ad"] + " " + dt.Rows[0]["soyAd"];
+            sicilNo = tbx_sicilNo.Text;
 
-                lbl_sicilNo.Text = dt.Rows[0]["ad"] + " " + dt.Rows[0]["soyAd"];
-                sicilNo = tbx_sicilNo.Text;
-
-                this.Update();
-            }
-            catch (Exception ex)
-            {
-                lbl_sicilNo.Text = "Personel Bulunamadı.";
-            }
+                //sqlText = "Select @param1 = OzlukBilgileri.cinsiyet From OzlukBilgileri inner join Personel on Personel.ozlukId = OzlukBilgileri.id Where Personel.sicilNo ='" + sicilNo + "'";
+                //if ((bool)(SqlOps.SqlExecute(sqlText, "param1", SqlOps.GetSqlConnection()).Value))
+                //{
+                //    btn_Ekle.Enabled = false;
+                //}
+                //else
+                //{
+                //    btn_Ekle.Enabled = true;
+                //}
+            sqlText = "Select  OzlukBilgileri.cinsiyet From OzlukBilgileri inner join Personel on Personel.ozlukId = OzlukBilgileri.id Where Personel.sicilNo ='" + sicilNo + "'";             
+            if ((bool)SqlOps.CreateDataTableBySqlQuery(sqlText).Rows[0]["cinsiyet"]) { btn_Ekle.Enabled = false; }
+            else { btn_Ekle.Enabled = true; }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
     }
 }
