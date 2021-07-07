@@ -86,6 +86,8 @@ namespace Dijital_Revir
             // 
             // dgv_gebelikListesi
             // 
+            this.dgv_gebelikListesi.AllowUserToAddRows = false;
+            this.dgv_gebelikListesi.AllowUserToDeleteRows = false;
             this.dgv_gebelikListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_gebelikListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_gebelikListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

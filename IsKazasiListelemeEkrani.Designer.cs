@@ -40,6 +40,7 @@ namespace Dijital_Revir
             this.tbx_sicilNo = new System.Windows.Forms.TextBox();
             this.dgv_isKazaListesi = new System.Windows.Forms.DataGridView();
             this.button = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btn_temizle = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_isKazaListesi)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +57,7 @@ namespace Dijital_Revir
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.btn_temizle);
             this.panel2.Controls.Add(this.tbx_KazaSaati);
             this.panel2.Controls.Add(this.tbx_sirket);
             this.panel2.Controls.Add(this.btn_listele);
@@ -103,7 +105,7 @@ namespace Dijital_Revir
             this.btn_listele.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_listele.Location = new System.Drawing.Point(25, 292);
             this.btn_listele.Name = "btn_listele";
-            this.btn_listele.Size = new System.Drawing.Size(220, 52);
+            this.btn_listele.Size = new System.Drawing.Size(109, 52);
             this.btn_listele.TabIndex = 6;
             this.btn_listele.TabStop = false;
             this.btn_listele.Text = "Listele";
@@ -192,6 +194,19 @@ namespace Dijital_Revir
             this.button.ReadOnly = true;
             this.button.Width = 125;
             // 
+            // btn_temizle
+            // 
+            this.btn_temizle.AutoEllipsis = true;
+            this.btn_temizle.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_temizle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_temizle.Location = new System.Drawing.Point(140, 292);
+            this.btn_temizle.Name = "btn_temizle";
+            this.btn_temizle.Size = new System.Drawing.Size(109, 52);
+            this.btn_temizle.TabIndex = 11;
+            this.btn_temizle.Text = "Temizle";
+            this.btn_temizle.UseVisualStyleBackColor = false;
+            this.btn_temizle.Click += new System.EventHandler(this.btn_temizle_Click);
+            // 
             // ekran_IsKazasiListeleme
             // 
             this.AllowDrop = true;
@@ -230,5 +245,6 @@ namespace Dijital_Revir
         private System.Windows.Forms.TextBox tbx_sirket;
         private System.Windows.Forms.DataGridViewButtonColumn button;
         private System.Windows.Forms.TextBox tbx_KazaSaati;
+        private System.Windows.Forms.Button btn_temizle;
     }
 }

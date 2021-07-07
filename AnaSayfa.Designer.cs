@@ -58,6 +58,8 @@ namespace Dijital_Revir
             // 
             this.btn_PoliklinikDefteri.AutoEllipsis = true;
             this.btn_PoliklinikDefteri.BackColor = System.Drawing.Color.LightGray;
+            this.btn_PoliklinikDefteri.FlatAppearance.BorderSize = 2;
+            this.btn_PoliklinikDefteri.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_PoliklinikDefteri.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_PoliklinikDefteri.Location = new System.Drawing.Point(0, 0);
             this.btn_PoliklinikDefteri.Name = "btn_PoliklinikDefteri";
@@ -71,6 +73,8 @@ namespace Dijital_Revir
             // btn_Covid
             // 
             this.btn_Covid.BackColor = System.Drawing.Color.LightGray;
+            this.btn_Covid.FlatAppearance.BorderSize = 2;
+            this.btn_Covid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Covid.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_Covid.Location = new System.Drawing.Point(0, 69);
             this.btn_Covid.Name = "btn_Covid";
@@ -84,6 +88,8 @@ namespace Dijital_Revir
             // btn_IsKazasi
             // 
             this.btn_IsKazasi.BackColor = System.Drawing.Color.LightGray;
+            this.btn_IsKazasi.FlatAppearance.BorderSize = 2;
+            this.btn_IsKazasi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_IsKazasi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_IsKazasi.Location = new System.Drawing.Point(0, 138);
             this.btn_IsKazasi.Name = "btn_IsKazasi";
@@ -97,6 +103,8 @@ namespace Dijital_Revir
             // btn_Gebelik
             // 
             this.btn_Gebelik.BackColor = System.Drawing.Color.LightGray;
+            this.btn_Gebelik.FlatAppearance.BorderSize = 2;
+            this.btn_Gebelik.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Gebelik.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_Gebelik.Location = new System.Drawing.Point(0, 207);
             this.btn_Gebelik.Name = "btn_Gebelik";
@@ -125,6 +133,8 @@ namespace Dijital_Revir
             // btn_Admin
             // 
             this.btn_Admin.BackColor = System.Drawing.Color.LightGray;
+            this.btn_Admin.FlatAppearance.BorderSize = 2;
+            this.btn_Admin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Admin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_Admin.Location = new System.Drawing.Point(0, 340);
             this.btn_Admin.Name = "btn_Admin";
@@ -138,6 +148,8 @@ namespace Dijital_Revir
             // btn_personelIslemleri
             // 
             this.btn_personelIslemleri.BackColor = System.Drawing.Color.LightGray;
+            this.btn_personelIslemleri.FlatAppearance.BorderSize = 2;
+            this.btn_personelIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_personelIslemleri.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_personelIslemleri.Location = new System.Drawing.Point(0, 274);
             this.btn_personelIslemleri.Name = "btn_personelIslemleri";
@@ -169,7 +181,7 @@ namespace Dijital_Revir
             this.lbx_Bildirimler.Location = new System.Drawing.Point(24, 142);
             this.lbx_Bildirimler.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbx_Bildirimler.Name = "lbx_Bildirimler";
-            this.lbx_Bildirimler.Size = new System.Drawing.Size(707, 355);
+            this.lbx_Bildirimler.Size = new System.Drawing.Size(696, 355);
             this.lbx_Bildirimler.TabIndex = 9;
             this.lbx_Bildirimler.TabStop = false;
             // 
@@ -181,7 +193,7 @@ namespace Dijital_Revir
             this.btn_AraButonu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_AraButonu.Location = new System.Drawing.Point(592, 30);
             this.btn_AraButonu.Name = "btn_AraButonu";
-            this.btn_AraButonu.Size = new System.Drawing.Size(139, 40);
+            this.btn_AraButonu.Size = new System.Drawing.Size(128, 40);
             this.btn_AraButonu.TabIndex = 8;
             this.btn_AraButonu.TabStop = false;
             this.btn_AraButonu.Text = "Personel Ara";

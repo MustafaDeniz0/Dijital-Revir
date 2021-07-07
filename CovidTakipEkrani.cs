@@ -113,5 +113,15 @@ namespace Dijital_Revir
                 MessageBox.Show("Listelenecek Personel Bulunamadı. ");
             }
         }
+
+        private void btn_sil_Click(object sender, EventArgs e)
+        {
+            String sqlText = "Delete From Ates Where covidId = " + indexCovidId +
+                             "Delete From Test Where covidId = " + indexCovidId +
+                             "Delete From Covid Where id = " + indexCovidId;
+            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+            MessageBox.Show("Covid Bilgileri Silindi ");
+            this.Close();
+        }
     }
 }

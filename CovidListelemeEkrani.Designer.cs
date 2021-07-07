@@ -31,6 +31,7 @@ namespace Dijital_Revir
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_temizle = new System.Windows.Forms.Button();
             this.btn_covidEkle = new System.Windows.Forms.Button();
             this.txb_covidDurumu = new System.Windows.Forms.TextBox();
             this.txb_sirket = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@ namespace Dijital_Revir
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_covidListesi = new System.Windows.Forms.DataGridView();
             this.button = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btn_temizle = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_covidListesi)).BeginInit();
@@ -72,6 +72,19 @@ namespace Dijital_Revir
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(258, 538);
             this.panel2.TabIndex = 8;
+            // 
+            // btn_temizle
+            // 
+            this.btn_temizle.AutoEllipsis = true;
+            this.btn_temizle.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_temizle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_temizle.Location = new System.Drawing.Point(137, 271);
+            this.btn_temizle.Name = "btn_temizle";
+            this.btn_temizle.Size = new System.Drawing.Size(109, 52);
+            this.btn_temizle.TabIndex = 10;
+            this.btn_temizle.Text = "Temizle";
+            this.btn_temizle.UseVisualStyleBackColor = false;
+            this.btn_temizle.Click += new System.EventHandler(this.btn_temizle_Click);
             // 
             // btn_covidEkle
             // 
@@ -171,6 +184,8 @@ namespace Dijital_Revir
             // 
             // dgv_covidListesi
             // 
+            this.dgv_covidListesi.AllowUserToAddRows = false;
+            this.dgv_covidListesi.AllowUserToDeleteRows = false;
             this.dgv_covidListesi.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_covidListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_covidListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -195,19 +210,6 @@ namespace Dijital_Revir
             this.button.Name = "button";
             this.button.ReadOnly = true;
             this.button.Width = 187;
-            // 
-            // btn_temizle
-            // 
-            this.btn_temizle.AutoEllipsis = true;
-            this.btn_temizle.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_temizle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_temizle.Location = new System.Drawing.Point(137, 271);
-            this.btn_temizle.Name = "btn_temizle";
-            this.btn_temizle.Size = new System.Drawing.Size(109, 52);
-            this.btn_temizle.TabIndex = 10;
-            this.btn_temizle.Text = "Temizle";
-            this.btn_temizle.UseVisualStyleBackColor = false;
-            this.btn_temizle.Click += new System.EventHandler(this.btn_temizle_Click);
             // 
             // ekran_CovidListeleme
             // 
@@ -245,8 +247,8 @@ namespace Dijital_Revir
         private System.Windows.Forms.TextBox txb_covidDurumu;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgv_covidListesi;
-        private System.Windows.Forms.DataGridViewButtonColumn button;
         private System.Windows.Forms.Button btn_covidEkle;
         private System.Windows.Forms.Button btn_temizle;
+        private System.Windows.Forms.DataGridViewButtonColumn button;
     }
 }

@@ -30,6 +30,7 @@ namespace Dijital_Revir
 
             form = new ekran_CovidTakipEkrani(indexId);
             form.ShowDialog();
+            updateDataGridView();
         }
 
         private void ekran_CovidListeleme_Load(object sender, EventArgs e)

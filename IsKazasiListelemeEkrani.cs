@@ -93,5 +93,24 @@ namespace Dijital_Revir
         {
             tbx_KazaSaati.Clear();
         }
+
+        private void btn_temizle_Click(object sender, EventArgs e)
+        {
+            tbx_sicilNo.Clear();
+            tbx_sicilNo.Text = "Sicil No";
+
+            tbx_ad.Clear();
+            tbx_ad.Text = "Ad";
+
+            tbx_soyad.Clear();
+            tbx_soyad.Text = "Soyad";
+
+            tbx_sirket.Clear();
+            tbx_sirket.Text = "Sirket";
+
+            tbx_KazaSaati.Clear();
+            tbx_KazaSaati.Text = "00:00";
+            SqlDgridUpdate();
+        }
     }
 }

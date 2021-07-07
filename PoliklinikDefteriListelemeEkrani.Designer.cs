@@ -182,6 +182,8 @@ namespace Dijital_Revir
             // 
             // dgv_PoliklinikListeleme
             // 
+            this.dgv_PoliklinikListeleme.AllowUserToAddRows = false;
+            this.dgv_PoliklinikListeleme.AllowUserToDeleteRows = false;
             this.dgv_PoliklinikListeleme.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_PoliklinikListeleme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_PoliklinikListeleme.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

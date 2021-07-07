@@ -56,6 +56,8 @@ namespace Dijital_Revir
             // 
             // dgrid_PersonelBilgileri
             // 
+            this.dgrid_PersonelBilgileri.AllowUserToAddRows = false;
+            this.dgrid_PersonelBilgileri.AllowUserToDeleteRows = false;
             this.dgrid_PersonelBilgileri.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgrid_PersonelBilgileri.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgrid_PersonelBilgileri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
