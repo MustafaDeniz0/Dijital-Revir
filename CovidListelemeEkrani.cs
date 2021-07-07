@@ -36,29 +36,35 @@ namespace Dijital_Revir
         {
             try
             {
-                String sqlText;
-
-                sqlText = "SELECT Covid.id, Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Sirket.sirketAdi, Covid.vakaDurumu " +
-                "FROM ((((Personel INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id)" +
-                "INNER JOIN Departman ON Departman.id = Personel.departmanId)" +
-                "INNER JOIN Sirket ON Sirket.id = Departman.sirketId)" +
-                "INNER JOIN Covid ON Covid.personelId = Personel.id)" +
-                "ORDER BY OzlukBilgileri.ad, OzlukBilgileri.soyAd DESC";
-
-                dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
-                dgv_covidListesi.DataSource = dt;
+                updateDataGridView();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Listelenecek Personel Bulunmamaktadır. ");
+                MessageBox.Show("Listelenecek Personel Bulunmamaktadır.");
                 this.Close();
             }
+        }
+
+        private void updateDataGridView()
+        {
+            String sqlText = "SELECT Covid.id, Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Sirket.sirketAdi, Covid.vakaDurumu " +
+            "FROM Personel " + 
+            "INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id " +
+            "INNER JOIN Departman ON Departman.id = Personel.departmanId " +
+            "INNER JOIN Sirket ON Sirket.id = Departman.sirketId " +
+            "INNER JOIN Covid ON Covid.personelId = Personel.id " +
+            "ORDER BY OzlukBilgileri.ad, OzlukBilgileri.soyAd DESC";
+
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            dgv_covidListesi.DataSource = dt;
         }
 
         private void btn_covidEkle_Click(object sender, EventArgs e)
         {
             Form form = new ekran_CovidEkleme();
             form.ShowDialog();
+
+            updateDataGridView();
         }
 
         private void btn_covidListele_Click(object sender, EventArgs e)
@@ -67,11 +73,13 @@ namespace Dijital_Revir
             {
                 String sqlText;
 
-                sqlText = "SELECT Covid.id, Personel.sicilNo,OzlukBilgileri.ad, OzlukBilgileri.soyAd, Sirket.sirketAdi, Covid.vakaDurumu " +
-                "FROM ((((Personel Inner join OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id) " +
-                "INNER JOIN Departman ON Departman.id = Personel.departmanId) " +
-                "INNER JOIN Sirket ON Sirket.id = Departman.sirketId) " +
-                "INNER JOIN Covid ON Covid.personelId = Personel.id AND (Personel.sicilNo ='" + txb_sicilNo.Text + "' OR OzlukBilgileri.ad = '" + txb_ad.Text + "' OR OzlukBilgileri.soyAd = '" + txb_soyad.Text + "' OR Sirket.sirketAdi='" + txb_sirket.Text + "' OR Covid.vakaDurumu = '" + txb_covidDurumu.Text + "'))";
+                sqlText = "SELECT Covid.id, Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Sirket.sirketAdi, Covid.vakaDurumu " +
+                "FROM Personel " + 
+                "INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id " +
+                "INNER JOIN Departman ON Departman.id = Personel.departmanId " +
+                "INNER JOIN Sirket ON Sirket.id = Departman.sirketId " +
+                "INNER JOIN Covid ON Covid.personelId = Personel.id " + 
+                "WHERE Personel.sicilNo ='" + txb_sicilNo.Text + "' OR OzlukBilgileri.ad = '" + txb_ad.Text + "' OR OzlukBilgileri.soyAd = '" + txb_soyad.Text + "' OR Sirket.sirketAdi='" + txb_sirket.Text + "' OR Covid.vakaDurumu = '" + txb_covidDurumu.Text + "'";
                 
                 dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
                 dgv_covidListesi.DataSource = dt;
@@ -106,6 +114,26 @@ namespace Dijital_Revir
         private void txb_covidDurumu_MouseClick(object sender, MouseEventArgs e)
         {
             txb_covidDurumu.Clear();
+        }
+
+        private void btn_temizle_Click(object sender, EventArgs e)
+        {
+            txb_sicilNo.Clear();
+            txb_sicilNo.Text = "Sicil No";
+
+            txb_ad.Clear();
+            txb_ad.Text = "Ad";
+
+            txb_soyad.Clear();
+            txb_soyad.Text = "Soyad";
+
+            txb_sirket.Clear();
+            txb_sirket.Text = "Sirket";
+
+            txb_covidDurumu.Clear();
+            txb_covidDurumu.Text = "Covid Durumu";
+
+            updateDataGridView();
         }
     }
 }

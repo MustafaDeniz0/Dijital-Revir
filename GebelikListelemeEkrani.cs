@@ -12,7 +12,7 @@ namespace Dijital_Revir
 {
     public partial class ekran_GebelikListeleme : Form
     {
-        String sicil;
+        String indexId;
         DataTable dt;
         
         public ekran_GebelikListeleme()
@@ -26,10 +26,12 @@ namespace Dijital_Revir
             Form form;
 
             index = SqlOps.GetDataGridViewRowIndex(dgv_gebelikListesi, "sicilNo");
-            sicil = dt.Rows[index]["sicilNo"].ToString();
+            indexId = dt.Rows[index]["id"].ToString();
 
-            form = new ekran_GebelikTakip(sicil);
+            form = new ekran_GebelikTakip(indexId);
             form.ShowDialog();
+            SqlDgvUpdate();
+
         }
 
         private void ekran_GebelikListeleme_Load(object sender, EventArgs e)
@@ -39,6 +41,7 @@ namespace Dijital_Revir
 
         private void btn_GebelikEkle_Click(object sender, EventArgs e)
         {
+
             Form form = new ekran_GebelikEklemeEkrani();
             form.ShowDialog();
 
@@ -51,9 +54,9 @@ namespace Dijital_Revir
             {
                 String sqlText;
 
-                sqlText = "SELECT Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Gebelik.sonAdetTarihi " +
+                sqlText = "SELECT Gebelik.id , Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Gebelik.sonAdetTarihi " +
                 "FROM Gebelik LEFT JOIN Personel ON Gebelik.personelId = Personel.id LEFT JOIN OzlukBilgileri ON OzlukBilgileri.id = Personel.ozlukId " +
-                "ORDER BY Gebelik.id DESC";
+                "Where Gebelik.Gebemi = 1 ORDER BY Gebelik.id DESC";
                 
                 dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
                 dgv_gebelikListesi.DataSource = dt;

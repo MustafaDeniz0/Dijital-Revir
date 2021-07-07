@@ -12,9 +12,19 @@ namespace Dijital_Revir
 {
     public partial class ekran_PoliklinikEkleme : Form
     {
+        String sicilNo;
+        String sikayet;
+
         public ekran_PoliklinikEkleme()
         {
             InitializeComponent();
+        }
+
+        public ekran_PoliklinikEkleme(String sicilNo, String sikayet)
+        {
+            InitializeComponent();
+            this.sicilNo = sicilNo;
+            this.sikayet = sikayet;
         }
 
         private void btn_Ekle_Click(object sender, EventArgs e)
@@ -31,6 +41,12 @@ namespace Dijital_Revir
             
             MessageBox.Show("Ekleme işlemi Başarılı.");
             this.Close();
+        }
+
+        private void ekran_PoliklinikEkleme_Load(object sender, EventArgs e)
+        {
+            tbx_Tanı.Text = sikayet;
+            tbx_sicilNo.Text = sicilNo;
         }
     }
 }

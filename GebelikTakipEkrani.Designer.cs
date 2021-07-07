@@ -36,6 +36,7 @@ namespace Dijital_Revir
             this.btn_degerEkle = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_gebelikTablosu = new System.Windows.Forms.DataGridView();
+            this.btn_gebelikSonlandır = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_gebelikTablosu)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +64,7 @@ namespace Dijital_Revir
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Controls.Add(this.btn_gebelikSonlandır);
             this.panel3.Controls.Add(this.lbl_sonAdetTarihi);
             this.panel3.Controls.Add(this.btn_degerEkle);
             this.panel3.Controls.Add(this.label2);
@@ -129,6 +131,22 @@ namespace Dijital_Revir
             this.dgv_gebelikTablosu.Size = new System.Drawing.Size(913, 185);
             this.dgv_gebelikTablosu.TabIndex = 19;
             // 
+            // btn_gebelikSonlandır
+            // 
+            this.btn_gebelikSonlandır.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_gebelikSonlandır.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_gebelikSonlandır.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_gebelikSonlandır.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btn_gebelikSonlandır.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_gebelikSonlandır.Location = new System.Drawing.Point(366, 431);
+            this.btn_gebelikSonlandır.Name = "btn_gebelikSonlandır";
+            this.btn_gebelikSonlandır.Size = new System.Drawing.Size(179, 49);
+            this.btn_gebelikSonlandır.TabIndex = 23;
+            this.btn_gebelikSonlandır.Text = "Gebelik Sonlandır";
+            this.btn_gebelikSonlandır.UseVisualStyleBackColor = false;
+            this.btn_gebelikSonlandır.Click += new System.EventHandler(this.btn_gebelikSonlandır_Click);
+            // 
             // ekran_GebelikTakip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -159,5 +177,6 @@ namespace Dijital_Revir
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgv_gebelikTablosu;
         private System.Windows.Forms.Label lbl_sonAdetTarihi;
+        private System.Windows.Forms.Button btn_gebelikSonlandır;
     }
 }

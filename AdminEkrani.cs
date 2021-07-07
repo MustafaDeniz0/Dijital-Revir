@@ -127,10 +127,12 @@ namespace Dijital_Revir
 
         private void btn_amirOlarakAta_Click(object sender, EventArgs e)
         {
-            String sqlText = "Update Personel Set amir=(Select Personel.id From Personel Where Personel.sicilNo = '"+tbx_sicilNo.Text+"')";
+            String sqlText = "UPDATE Personel " +
+            "SET amir = (Select Personel.id FROM Personel WHERE Personel.sicilNo = '" + tbx_sicilNo.Text + "') " + 
+            "WHERE Personel.sicilNo = '" + tbx_sicilNo.Text + "'";
+
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-            MessageBox.Show("Amir olarak eklendi.");
-            
+            MessageBox.Show("Amir olarak eklendi.");     
         }
     }
 }

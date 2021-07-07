@@ -6,21 +6,23 @@ namespace Dijital_Revir
 {
     public partial class ekran_GebelikDegerleriEkleme : Form
     {
-        String sicilNo;
-        int indexId;
+        
+        String indexId;
 
-        public ekran_GebelikDegerleriEkleme(string sicilNo)
+        public ekran_GebelikDegerleriEkleme(String indexId)
         {
             InitializeComponent();
-            this.sicilNo = sicilNo;
+            this.indexId = indexId;
 
-            String sqltext = "SELECT Gebelik.id FROM Gebelik " + 
-            "INNER JOIN Personel ON Gebelik.personelId = Personel.id " + 
-            "WHERE Personel.sicilNo = " + sicilNo + " " + 
-            "ORDER BY id DESC";
-            DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqltext);
+            //this.sicilNo = sicilNo;
+
+            //String sqltext = "SELECT Gebelik.id FROM Gebelik " + 
+            //"INNER JOIN Personel ON Gebelik.personelId = Personel.id " + 
+            //"WHERE Personel.sicilNo = " + sicilNo + " " + 
+            //"ORDER BY id DESC";
+            //DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqltext);
             
-            this.indexId = (int)dt.Rows[0]["id"];
+            //this.indexId = (int)dt.Rows[0]["id"];
         }
 
         private void btn_GebelikDegerEkleme_Click(object sender, EventArgs e)

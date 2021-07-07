@@ -23,8 +23,14 @@ namespace Dijital_Revir
 
         private void btn_CovidFormu_Click(object sender, EventArgs e)
         {
-            Form form = new ekran_CovidTakipEkrani(sicilNo);
-            form.ShowDialog();
+            try {
+                Form form = new ekran_CovidTakipEkrani(sicilNo);
+                form.ShowDialog();
+            }
+            catch(Exception ex)
+            {
+
+            }
         }
         public void ekran_PersonelSayfasi_Load(object sender, EventArgs e)
         {

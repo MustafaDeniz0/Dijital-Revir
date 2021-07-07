@@ -122,6 +122,7 @@ namespace Dijital_Revir
             this.tbx_tc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbx_tc.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbx_tc.Location = new System.Drawing.Point(324, 168);
+            this.tbx_tc.MaxLength = 11;
             this.tbx_tc.Name = "tbx_tc";
             this.tbx_tc.Size = new System.Drawing.Size(267, 34);
             this.tbx_tc.TabIndex = 7;
@@ -162,6 +163,7 @@ namespace Dijital_Revir
             this.tbx_telefonNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbx_telefonNo.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbx_telefonNo.Location = new System.Drawing.Point(324, 523);
+            this.tbx_telefonNo.MaxLength = 13;
             this.tbx_telefonNo.Name = "tbx_telefonNo";
             this.tbx_telefonNo.Size = new System.Drawing.Size(267, 34);
             this.tbx_telefonNo.TabIndex = 11;
@@ -359,7 +361,7 @@ namespace Dijital_Revir
             this.Controls.Add(this.tbx_sicil);
             this.Controls.Add(this.lbl_sicilNo);
             this.Name = "ekran_PersonelEkleme";
-            this.Text = "PersonelEklemeEkrani";
+            this.Text = "Personel Ekleme";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PersonelEklemeEkrani_Load);
             this.ResumeLayout(false);

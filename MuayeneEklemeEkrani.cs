@@ -51,10 +51,9 @@ namespace Dijital_Revir
             "VALUES (" + dtPersonel.Rows[0]["id"] + "," + dtMuayene.Rows[0]["id"] + ")";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
            
-            Form form = new ekran_PoliklinikEkleme();
+            Form form = new ekran_PoliklinikEkleme(sicilNo, tbx_sikayet.Text);
             form.ShowDialog();
             this.Close();
-
         }
     }
 }

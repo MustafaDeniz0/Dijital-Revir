@@ -224,6 +224,7 @@ namespace Dijital_Revir
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Poliklinik Defterine Kayıt Ekleme";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ekran_PoliklinikEkleme_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

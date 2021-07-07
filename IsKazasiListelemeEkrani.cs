@@ -58,10 +58,12 @@ namespace Dijital_Revir
             String sqlText;
 
             sqlText = "SELECT IsKazası.id, Personel.sicilNo,OzlukBilgileri.ad, OzlukBilgileri.soyAd, Sirket.sirketAdi, IsKazası.kazaZamanı " +
-            "FROM ((((Personel Inner join OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id) " +
-            "INNER JOIN Departman ON Departman.id = Personel.departmanId) " +
-            "INNER JOIN Sirket ON Sirket.id = Departman.sirketId) " +
-            " INNER JOIN IsKazası ON IsKazası.personelId = Personel.id AND (Personel.sicilNo ='"+tbx_sicilNo.Text+"' OR OzlukBilgileri.ad = '"+tbx_ad.Text+"' OR OzlukBilgileri.soyAd = '" + tbx_soyad.Text + "' OR Sirket.sirketAdi='" + tbx_sirket.Text + SqlOps.SqlDateInsert(dtp_isKazasi.Value.Date, tbx_KazaSaati.Text) + "' ))";
+            "FROM Personel " +
+            "INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id " +
+            "INNER JOIN Departman ON Departman.id = Personel.departmanId " +
+            "INNER JOIN Sirket ON Sirket.id = Departman.sirketId " +
+            "INNER JOIN IsKazası ON IsKazası.personelId = Personel.id " + 
+            "WHERE Personel.sicilNo = '" + tbx_sicilNo.Text + "' OR OzlukBilgileri.ad = '" + tbx_ad.Text + "' OR OzlukBilgileri.soyAd = '" + tbx_soyad.Text + "' OR Sirket.sirketAdi = '" + tbx_sirket.Text + "' OR IsKazası.kazaZamanı = '" + SqlOps.SqlDateInsert(dtp_isKazasi.Value.Date, tbx_KazaSaati.Text) + "'";
 
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
             dgv_isKazaListesi.DataSource = dt;
@@ -85,6 +87,11 @@ namespace Dijital_Revir
         private void tbx_sirket_MouseClick(object sender, MouseEventArgs e)
         {
             tbx_sirket.Clear();
+        }
+
+        private void tbx_KazaSaati_MouseClick(object sender, MouseEventArgs e)
+        {
+            tbx_KazaSaati.Clear();
         }
     }
 }

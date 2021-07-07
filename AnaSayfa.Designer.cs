@@ -63,6 +63,7 @@ namespace Dijital_Revir
             this.btn_PoliklinikDefteri.Name = "btn_PoliklinikDefteri";
             this.btn_PoliklinikDefteri.Size = new System.Drawing.Size(258, 70);
             this.btn_PoliklinikDefteri.TabIndex = 2;
+            this.btn_PoliklinikDefteri.TabStop = false;
             this.btn_PoliklinikDefteri.Text = "Poliklinik Defteri";
             this.btn_PoliklinikDefteri.UseVisualStyleBackColor = false;
             this.btn_PoliklinikDefteri.Click += new System.EventHandler(this.btn_PoliklinikDefteri_Click);
@@ -75,6 +76,7 @@ namespace Dijital_Revir
             this.btn_Covid.Name = "btn_Covid";
             this.btn_Covid.Size = new System.Drawing.Size(258, 70);
             this.btn_Covid.TabIndex = 3;
+            this.btn_Covid.TabStop = false;
             this.btn_Covid.Text = "Covid";
             this.btn_Covid.UseVisualStyleBackColor = false;
             this.btn_Covid.Click += new System.EventHandler(this.btn_Covid_Click);
@@ -87,6 +89,7 @@ namespace Dijital_Revir
             this.btn_IsKazasi.Name = "btn_IsKazasi";
             this.btn_IsKazasi.Size = new System.Drawing.Size(258, 70);
             this.btn_IsKazasi.TabIndex = 4;
+            this.btn_IsKazasi.TabStop = false;
             this.btn_IsKazasi.Text = "İş Kazası";
             this.btn_IsKazasi.UseVisualStyleBackColor = false;
             this.btn_IsKazasi.Click += new System.EventHandler(this.btn_IsKazasi_Click);
@@ -99,6 +102,7 @@ namespace Dijital_Revir
             this.btn_Gebelik.Name = "btn_Gebelik";
             this.btn_Gebelik.Size = new System.Drawing.Size(258, 70);
             this.btn_Gebelik.TabIndex = 5;
+            this.btn_Gebelik.TabStop = false;
             this.btn_Gebelik.Text = "Gebelik";
             this.btn_Gebelik.UseVisualStyleBackColor = false;
             this.btn_Gebelik.Click += new System.EventHandler(this.btn_Gebelik_Click);
@@ -126,6 +130,7 @@ namespace Dijital_Revir
             this.btn_Admin.Name = "btn_Admin";
             this.btn_Admin.Size = new System.Drawing.Size(258, 70);
             this.btn_Admin.TabIndex = 7;
+            this.btn_Admin.TabStop = false;
             this.btn_Admin.Text = "Admin";
             this.btn_Admin.UseVisualStyleBackColor = false;
             this.btn_Admin.Click += new System.EventHandler(this.btn_Admin_Click);
@@ -138,6 +143,7 @@ namespace Dijital_Revir
             this.btn_personelIslemleri.Name = "btn_personelIslemleri";
             this.btn_personelIslemleri.Size = new System.Drawing.Size(258, 70);
             this.btn_personelIslemleri.TabIndex = 6;
+            this.btn_personelIslemleri.TabStop = false;
             this.btn_personelIslemleri.Text = "Personel İşlemleri";
             this.btn_personelIslemleri.UseVisualStyleBackColor = false;
             this.btn_personelIslemleri.Click += new System.EventHandler(this.btn_personelIslemleri_Click);
@@ -165,6 +171,7 @@ namespace Dijital_Revir
             this.lbx_Bildirimler.Name = "lbx_Bildirimler";
             this.lbx_Bildirimler.Size = new System.Drawing.Size(707, 355);
             this.lbx_Bildirimler.TabIndex = 9;
+            this.lbx_Bildirimler.TabStop = false;
             // 
             // btn_AraButonu
             // 
@@ -176,6 +183,7 @@ namespace Dijital_Revir
             this.btn_AraButonu.Name = "btn_AraButonu";
             this.btn_AraButonu.Size = new System.Drawing.Size(139, 40);
             this.btn_AraButonu.TabIndex = 8;
+            this.btn_AraButonu.TabStop = false;
             this.btn_AraButonu.Text = "Personel Ara";
             this.btn_AraButonu.UseVisualStyleBackColor = false;
             this.btn_AraButonu.Click += new System.EventHandler(this.btn_AraButonu_Click);
@@ -189,6 +197,7 @@ namespace Dijital_Revir
             this.tbx_AramaCubugu.Name = "tbx_AramaCubugu";
             this.tbx_AramaCubugu.Size = new System.Drawing.Size(562, 40);
             this.tbx_AramaCubugu.TabIndex = 7;
+            this.tbx_AramaCubugu.TabStop = false;
             this.tbx_AramaCubugu.Text = "Sicil No ya da İsim Giriniz.";
             this.tbx_AramaCubugu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbx_AramaCubugu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbx_AramaCubugu_MouseClick);

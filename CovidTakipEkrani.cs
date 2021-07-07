@@ -40,7 +40,17 @@ namespace Dijital_Revir
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Listelenecek Personel Bulunamadı.");
+                if(!(ex.GetType().ToString() == "System.IndexOutOfRangeException"))
+                {
+                    MessageBox.Show("Ups Bir sorun çıktı.");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen Covid Kaydı Açınız.");
+                    this.Close();
+                }
+                
             }
             
         }

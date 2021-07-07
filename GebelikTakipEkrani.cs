@@ -12,32 +12,34 @@ namespace Dijital_Revir
 {
     public partial class ekran_GebelikTakip : Form
     {
-        String sicilNo;
-        int indexId;
+        
+       String indexId;
 
-        public ekran_GebelikTakip(String sicilNo)
+        public ekran_GebelikTakip(String indexId)
         {
             InitializeComponent();
 
-            this.sicilNo = sicilNo;
+            //this.sicilNo = sicilNo;
 
-            String sqltext = "SELECT Gebelik.id, Gebelik.sonAdetTarihi " + 
-            "FROM Gebelik " + 
-            "INNER JOIN Personel ON Gebelik.personelId = Personel.id " +
-            "WHERE Personel.sicilNo = " + sicilNo + " " +
-            "ORDER BY id DESC";
+            //String sqltext = "SELECT Gebelik.id, Gebelik.sonAdetTarihi " + 
+            //"FROM Gebelik " + 
+            //"INNER JOIN Personel ON Gebelik.personelId = Personel.id " +
+            //"WHERE Personel.sicilNo = " + sicilNo + " " +
+            //"ORDER BY id DESC";
+            this.indexId = indexId;
 
-            DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqltext);
+            //DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqltext);
 
-            try
-            {
-                indexId = (int)dt.Rows[0]["id"];
-                this.lbl_sonAdetTarihi.Text = dt.Rows[0]["sonAdetTarihi"].ToString();
-            }
-            catch (Exception ex)
-            {
-                btn_degerEkle.Enabled = false;
-            }
+            //try
+            //{
+            //    indexId = (int)dt.Rows[0]["id"];
+            //    this.lbl_sonAdetTarihi.Text = dt.Rows[0]["sonAdetTarihi"].ToString();
+            //}
+            //catch (Exception ex)
+            //{
+            //    btn_degerEkle.Enabled = false;
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void ekran_GebelikTakip_Load(object sender, EventArgs e)
@@ -61,9 +63,19 @@ namespace Dijital_Revir
 
         private void btn_degerEkle_Click(object sender, EventArgs e)
         {
-            Form form = new ekran_GebelikDegerleriEkleme(sicilNo);
+            Form form = new ekran_GebelikDegerleriEkleme(indexId);
             form.ShowDialog();
             updateDataGridView();
+        }
+
+        private void btn_gebelikSonlandır_Click(object sender, EventArgs e)
+        {
+            String sqlText = "Update Gebelik Set Gebemi = 0 Where Gebelik.id = "+ indexId;
+            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+            sqlText = "Delete From GebelikFormDegeri Where GebelikFormDegeri.gebelikId in (Select Gebelik.id From Gebelik Where Gebelik.Gebemi = 0) " +
+                      "Delete From Gebelik Where Gebelik.Gebemi = 0";
+            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+            this.Close();
         }
     }
 }

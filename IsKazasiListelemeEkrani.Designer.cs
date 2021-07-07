@@ -80,6 +80,7 @@ namespace Dijital_Revir
             this.tbx_KazaSaati.TabStop = false;
             this.tbx_KazaSaati.Text = "00:00";
             this.tbx_KazaSaati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbx_KazaSaati.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbx_KazaSaati_MouseClick);
             // 
             // tbx_sirket
             // 
