@@ -69,6 +69,7 @@ namespace Dijital_Revir
         {
 			TakipServisleri.gebelikUpdate();
 			TakipServisleri.gebelikTakip(lbx_Bildirimler);
+			TakipServisleri.periyodikMuayeneTakip(lbx_Bildirimler);
 
         }
 

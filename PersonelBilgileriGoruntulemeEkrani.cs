@@ -13,7 +13,7 @@ namespace Dijital_Revir
     
     public partial class ekran_PersonelBilgileriGoruntuleme : Form
     {
-
+        int indexId;
         string sicilNo;
         public ekran_PersonelBilgileriGoruntuleme(string sicilNo)
         {
@@ -35,7 +35,7 @@ namespace Dijital_Revir
         public void ekran_PersonelSayfasi_Load(object sender, EventArgs e)
         {
             String sqlText;
-            int indexId;
+            
             DataTable dt;
             DataTable dt2;
             DataTable dt3;
@@ -72,6 +72,15 @@ namespace Dijital_Revir
             "Departman Adı : " + dt3.Rows[0]["departmanAdi"] + Environment.NewLine +
             "Şirket Adı :  " + dt3.Rows[0]["sirketAdi"] + Environment.NewLine +
             "Cinsiyet : " + cinsiyet;
+
+            btn_Gebe.Visible = false;
+            btn_Engelli.Visible = false;
+
+            sqlText = "SELECT Etiket.engellilik , Etiket.gebemi FROM Etiket WHERE Etiket.personalId = " + indexId;
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            if ((bool)dt.Rows[0]["engellilik"]) { btn_Engelli.Visible = true; }
+            if ((bool)dt.Rows[0]["gebemi"]) { btn_Gebe.Visible = true; }
+            TakipServisleri.periyodikMuayeneTarihHesaplama(lbl_periyodikMuayene, indexId);
         }
 
         private void btn_ISBMuayene_Click(object sender, EventArgs e)
@@ -103,6 +112,14 @@ namespace Dijital_Revir
             Form form = new ekran_Ek2EklemeVeGoruntuleme(sicilNo);
             form.ShowDialog();
             
+        }
+
+        private void btn_PeriyodikMuayene_Click(object sender, EventArgs e)
+        {
+            String sqlText = "Update Personel Set sıradakiPerMuayene =DATEADD(MONTH," + TakipServisleri.periyodikMuayene(indexId) + ",GetDate()) Where Personel.id = "+indexId;
+            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+            TakipServisleri.periyodikMuayeneTarihHesaplama(lbl_periyodikMuayene, indexId);
+
         }
     }
 }

@@ -29,6 +29,7 @@ namespace Dijital_Revir
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_asiEkleme = new System.Windows.Forms.Button();
@@ -38,7 +39,13 @@ namespace Dijital_Revir
             this.btn_ISBMuayene = new System.Windows.Forms.Button();
             this.btn_Ek2Ekle = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_periyodikMuayene = new System.Windows.Forms.Label();
+            this.btn_Engelli = new System.Windows.Forms.Button();
+            this.btn_Gebe = new System.Windows.Forms.Button();
             this.tbx_PersonelBilgileriGoruntuleme = new System.Windows.Forms.TextBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btn_PeriyodikMuayene = new System.Windows.Forms.Button();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +53,7 @@ namespace Dijital_Revir
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.btn_PeriyodikMuayene);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1002, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -156,6 +164,9 @@ namespace Dijital_Revir
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Controls.Add(this.lbl_periyodikMuayene);
+            this.panel3.Controls.Add(this.btn_Engelli);
+            this.panel3.Controls.Add(this.btn_Gebe);
             this.panel3.Controls.Add(this.tbx_PersonelBilgileriGoruntuleme);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(259, 0);
@@ -163,6 +174,35 @@ namespace Dijital_Revir
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(743, 662);
             this.panel3.TabIndex = 4;
+            // 
+            // lbl_periyodikMuayene
+            // 
+            this.lbl_periyodikMuayene.AutoSize = true;
+            this.lbl_periyodikMuayene.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_periyodikMuayene.Location = new System.Drawing.Point(122, 365);
+            this.lbl_periyodikMuayene.Name = "lbl_periyodikMuayene";
+            this.lbl_periyodikMuayene.Size = new System.Drawing.Size(0, 23);
+            this.lbl_periyodikMuayene.TabIndex = 3;
+            // 
+            // btn_Engelli
+            // 
+            this.btn_Engelli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Engelli.Location = new System.Drawing.Point(302, 275);
+            this.btn_Engelli.Name = "btn_Engelli";
+            this.btn_Engelli.Size = new System.Drawing.Size(136, 46);
+            this.btn_Engelli.TabIndex = 2;
+            this.btn_Engelli.Text = "Engelli";
+            this.btn_Engelli.UseVisualStyleBackColor = true;
+            // 
+            // btn_Gebe
+            // 
+            this.btn_Gebe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Gebe.Location = new System.Drawing.Point(122, 275);
+            this.btn_Gebe.Name = "btn_Gebe";
+            this.btn_Gebe.Size = new System.Drawing.Size(136, 46);
+            this.btn_Gebe.TabIndex = 1;
+            this.btn_Gebe.Text = "Gebe";
+            this.btn_Gebe.UseVisualStyleBackColor = true;
             // 
             // tbx_PersonelBilgileriGoruntuleme
             // 
@@ -175,6 +215,22 @@ namespace Dijital_Revir
             this.tbx_PersonelBilgileriGoruntuleme.Name = "tbx_PersonelBilgileriGoruntuleme";
             this.tbx_PersonelBilgileriGoruntuleme.Size = new System.Drawing.Size(535, 189);
             this.tbx_PersonelBilgileriGoruntuleme.TabIndex = 0;
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // btn_PeriyodikMuayene
+            // 
+            this.btn_PeriyodikMuayene.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_PeriyodikMuayene.Location = new System.Drawing.Point(20, 580);
+            this.btn_PeriyodikMuayene.Name = "btn_PeriyodikMuayene";
+            this.btn_PeriyodikMuayene.Size = new System.Drawing.Size(227, 43);
+            this.btn_PeriyodikMuayene.TabIndex = 2;
+            this.btn_PeriyodikMuayene.Text = "Periyodik Muayene";
+            this.btn_PeriyodikMuayene.UseVisualStyleBackColor = true;
+            this.btn_PeriyodikMuayene.Click += new System.EventHandler(this.btn_PeriyodikMuayene_Click);
             // 
             // ekran_PersonelBilgileriGoruntuleme
             // 
@@ -192,6 +248,7 @@ namespace Dijital_Revir
             this.Text = "Personel Bilgileri Görüntüleme";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ekran_PersonelSayfasi_Load);
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -211,5 +268,10 @@ namespace Dijital_Revir
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox tbx_PersonelBilgileriGoruntuleme;
         private System.Windows.Forms.Button btn_asiEkleme;
+        private System.Windows.Forms.Button btn_Engelli;
+        private System.Windows.Forms.Button btn_Gebe;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Label lbl_periyodikMuayene;
+        private System.Windows.Forms.Button btn_PeriyodikMuayene;
     }
 }

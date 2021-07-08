@@ -39,6 +39,8 @@ namespace Dijital_Revir
             cbx_amir.SelectedValue + ", '" + 
             SqlOps.SqlDateInsert(dtp_iseGiris.Value.Date, "00:00") + "')";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+            sqlText = "Update Personel Set sonPeriyodikMuayene = iseGiris Where Personel.id = (SELECT TOP 1 OzlukBilgileri.id FROM OzlukBilgileri ORDER BY OzlukBilgileri.id DESC)";
+            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
 
             int engellimi = 0;
             if (rbn_engelli.Checked)
@@ -86,7 +88,8 @@ namespace Dijital_Revir
 
             cbx_Sirket.DisplayMember = "Key";
             cbx_Sirket.ValueMember = "Value";
-            cbx_Sirket.DataSource = cbx_Sirket.Items;       
+            cbx_Sirket.DataSource = cbx_Sirket.Items;  
+            
         }
 
         private void cbx_Sirket_SelectedIndexChanged(object sender, EventArgs e)
