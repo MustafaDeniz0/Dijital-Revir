@@ -31,23 +31,29 @@ namespace Dijital_Revir
             tbx_telefonNo.Text + "')";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
             
-            sqlText = "INSERT INTO Personel (sicilNo, ozlukId, departmanId, amir, iseGiris) " + 
+            sqlText = "INSERT INTO Personel (sicilNo, ozlukId, departmanId, amir, iseGiris,sonPeriyodikMuayene) " + 
             "VALUES ('" +
             tbx_sicil.Text + "', " + 
             "(SELECT TOP 1 OzlukBilgileri.id FROM OzlukBilgileri ORDER BY OzlukBilgileri.id DESC)" + ", " +
             cbx_departman.SelectedValue + ", " + 
             cbx_amir.SelectedValue + ", '" + 
-            SqlOps.SqlDateInsert(dtp_iseGiris.Value.Date, "00:00") + "')";
+            SqlOps.SqlDateInsert(dtp_iseGiris.Value.Date, "00:00") + "','"+ SqlOps.SqlDateInsert(dtp_iseGiris.Value.Date, "00:00") + "')";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-            sqlText = "Update Personel Set sonPeriyodikMuayene = iseGiris Where Personel.id = (SELECT TOP 1 OzlukBilgileri.id FROM OzlukBilgileri ORDER BY OzlukBilgileri.id DESC)";
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+            
 
             int engellimi = 0;
             if (rbn_engelli.Checked)
             { 
                 engellimi = 1; 
             }
-            sqlText = "Insert into Etiket (engellilik,personalId) Values ("+engellimi+",(Select Top 1 Personel.id From Personel Order by Personel.id DESC)) ";
+            sqlText = "Insert into Etiket (engellilik,personalId,gebemi) Values ("+engellimi+",(Select Top 1 Personel.id From Personel Order by Personel.id DESC),0) ";
+            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+
+            int indexId;
+            sqlText = "Select Top 1 Personel.id from Personel Order by Personel.id DESC ";
+            indexId = (int)SqlOps.CreateDataTableBySqlQuery(sqlText).Rows[0][0];
+
+            sqlText = "Update Personel Set sıradakiPerMuayene = DATEADD(month," + TakipServisleri.periyodikMuayene(indexId) + ",sonPeriyodikMuayene) ";
             SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
 
             MessageBox.Show("Personel Eklendi ");

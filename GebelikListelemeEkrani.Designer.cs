@@ -65,12 +65,12 @@ namespace Dijital_Revir
             // 
             this.btn_GebelikEkle.AutoEllipsis = true;
             this.btn_GebelikEkle.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_GebelikEkle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_GebelikEkle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btn_GebelikEkle.Location = new System.Drawing.Point(25, 343);
             this.btn_GebelikEkle.Name = "btn_GebelikEkle";
             this.btn_GebelikEkle.Size = new System.Drawing.Size(220, 52);
             this.btn_GebelikEkle.TabIndex = 10;
-            this.btn_GebelikEkle.Text = "Ekle";
+            this.btn_GebelikEkle.Text = "GEBE KİŞİ EKLE";
             this.btn_GebelikEkle.UseVisualStyleBackColor = false;
             this.btn_GebelikEkle.Click += new System.EventHandler(this.btn_GebelikEkle_Click);
             // 
@@ -111,6 +111,8 @@ namespace Dijital_Revir
             this.button.MinimumWidth = 6;
             this.button.Name = "button";
             this.button.ReadOnly = true;
+            this.button.Text = "DETAY GÖRÜNTÜLE";
+            this.button.UseColumnTextForButtonValue = true;
             this.button.Width = 125;
             // 
             // ekran_GebelikListeleme
@@ -142,7 +144,7 @@ namespace Dijital_Revir
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgv_gebelikListesi;
-        private System.Windows.Forms.DataGridViewButtonColumn button;
         private System.Windows.Forms.Button btn_GebelikEkle;
+        private System.Windows.Forms.DataGridViewButtonColumn button;
     }
 }

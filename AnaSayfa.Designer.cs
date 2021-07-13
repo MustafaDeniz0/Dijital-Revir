@@ -35,11 +35,10 @@ namespace Dijital_Revir
             this.btn_IsKazasi = new System.Windows.Forms.Button();
             this.btn_Gebelik = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_Admin = new System.Windows.Forms.Button();
             this.btn_personelIslemleri = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_personelArama = new System.Windows.Forms.Button();
             this.lbx_Bildirimler = new System.Windows.Forms.ListBox();
-            this.btn_AraButonu = new System.Windows.Forms.Button();
             this.tbx_AramaCubugu = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -49,10 +48,11 @@ namespace Dijital_Revir
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1004, 0);
+            this.panel2.Location = new System.Drawing.Point(1118, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(258, 538);
+            this.panel2.Size = new System.Drawing.Size(258, 647);
             this.panel2.TabIndex = 1;
+            this.panel2.DoubleClick += new System.EventHandler(this.panel2_DoubleClick);
             // 
             // btn_PoliklinikDefteri
             // 
@@ -66,7 +66,7 @@ namespace Dijital_Revir
             this.btn_PoliklinikDefteri.Size = new System.Drawing.Size(258, 70);
             this.btn_PoliklinikDefteri.TabIndex = 2;
             this.btn_PoliklinikDefteri.TabStop = false;
-            this.btn_PoliklinikDefteri.Text = "Poliklinik Defteri";
+            this.btn_PoliklinikDefteri.Text = "POLİKLİNİK DEFTERİ";
             this.btn_PoliklinikDefteri.UseVisualStyleBackColor = false;
             this.btn_PoliklinikDefteri.Click += new System.EventHandler(this.btn_PoliklinikDefteri_Click);
             // 
@@ -81,7 +81,7 @@ namespace Dijital_Revir
             this.btn_Covid.Size = new System.Drawing.Size(258, 70);
             this.btn_Covid.TabIndex = 3;
             this.btn_Covid.TabStop = false;
-            this.btn_Covid.Text = "Covid";
+            this.btn_Covid.Text = "COVİD";
             this.btn_Covid.UseVisualStyleBackColor = false;
             this.btn_Covid.Click += new System.EventHandler(this.btn_Covid_Click);
             // 
@@ -96,7 +96,7 @@ namespace Dijital_Revir
             this.btn_IsKazasi.Size = new System.Drawing.Size(258, 70);
             this.btn_IsKazasi.TabIndex = 4;
             this.btn_IsKazasi.TabStop = false;
-            this.btn_IsKazasi.Text = "İş Kazası";
+            this.btn_IsKazasi.Text = "İŞ KAZASI";
             this.btn_IsKazasi.UseVisualStyleBackColor = false;
             this.btn_IsKazasi.Click += new System.EventHandler(this.btn_IsKazasi_Click);
             // 
@@ -111,14 +111,13 @@ namespace Dijital_Revir
             this.btn_Gebelik.Size = new System.Drawing.Size(258, 70);
             this.btn_Gebelik.TabIndex = 5;
             this.btn_Gebelik.TabStop = false;
-            this.btn_Gebelik.Text = "Gebelik";
+            this.btn_Gebelik.Text = "GEBELİK";
             this.btn_Gebelik.UseVisualStyleBackColor = false;
             this.btn_Gebelik.Click += new System.EventHandler(this.btn_Gebelik_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Controls.Add(this.btn_Admin);
             this.panel4.Controls.Add(this.btn_personelIslemleri);
             this.panel4.Controls.Add(this.btn_PoliklinikDefteri);
             this.panel4.Controls.Add(this.btn_Covid);
@@ -127,23 +126,8 @@ namespace Dijital_Revir
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(258, 538);
+            this.panel4.Size = new System.Drawing.Size(258, 647);
             this.panel4.TabIndex = 4;
-            // 
-            // btn_Admin
-            // 
-            this.btn_Admin.BackColor = System.Drawing.Color.LightGray;
-            this.btn_Admin.FlatAppearance.BorderSize = 2;
-            this.btn_Admin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Admin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_Admin.Location = new System.Drawing.Point(0, 340);
-            this.btn_Admin.Name = "btn_Admin";
-            this.btn_Admin.Size = new System.Drawing.Size(258, 70);
-            this.btn_Admin.TabIndex = 7;
-            this.btn_Admin.TabStop = false;
-            this.btn_Admin.Text = "Admin";
-            this.btn_Admin.UseVisualStyleBackColor = false;
-            this.btn_Admin.Click += new System.EventHandler(this.btn_Admin_Click);
             // 
             // btn_personelIslemleri
             // 
@@ -156,61 +140,65 @@ namespace Dijital_Revir
             this.btn_personelIslemleri.Size = new System.Drawing.Size(258, 70);
             this.btn_personelIslemleri.TabIndex = 6;
             this.btn_personelIslemleri.TabStop = false;
-            this.btn_personelIslemleri.Text = "Personel İşlemleri";
+            this.btn_personelIslemleri.Text = "PERSONEL İŞLEMLERİ";
             this.btn_personelIslemleri.UseVisualStyleBackColor = false;
             this.btn_personelIslemleri.Click += new System.EventHandler(this.btn_personelIslemleri_Click);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_personelArama);
             this.panel1.Controls.Add(this.lbx_Bildirimler);
-            this.panel1.Controls.Add(this.btn_AraButonu);
             this.panel1.Controls.Add(this.tbx_AramaCubugu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(258, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(746, 538);
+            this.panel1.Size = new System.Drawing.Size(860, 647);
             this.panel1.TabIndex = 5;
+            // 
+            // btn_personelArama
+            // 
+            this.btn_personelArama.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_personelArama.AutoSize = true;
+            this.btn_personelArama.BackColor = System.Drawing.Color.White;
+            this.btn_personelArama.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_personelArama.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btn_personelArama.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_personelArama.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_personelArama.Location = new System.Drawing.Point(607, 30);
+            this.btn_personelArama.Name = "btn_personelArama";
+            this.btn_personelArama.Size = new System.Drawing.Size(174, 40);
+            this.btn_personelArama.TabIndex = 22;
+            this.btn_personelArama.Text = "PERSONEL ARA";
+            this.btn_personelArama.UseVisualStyleBackColor = false;
+            this.btn_personelArama.Click += new System.EventHandler(this.btn_personelArama_Click);
             // 
             // lbx_Bildirimler
             // 
-            this.lbx_Bildirimler.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbx_Bildirimler.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbx_Bildirimler.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbx_Bildirimler.FormattingEnabled = true;
             this.lbx_Bildirimler.ItemHeight = 27;
-            this.lbx_Bildirimler.Location = new System.Drawing.Point(24, 142);
+            this.lbx_Bildirimler.Location = new System.Drawing.Point(81, 87);
             this.lbx_Bildirimler.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbx_Bildirimler.Name = "lbx_Bildirimler";
-            this.lbx_Bildirimler.Size = new System.Drawing.Size(696, 355);
+            this.lbx_Bildirimler.Size = new System.Drawing.Size(700, 355);
             this.lbx_Bildirimler.TabIndex = 9;
             this.lbx_Bildirimler.TabStop = false;
             // 
-            // btn_AraButonu
-            // 
-            this.btn_AraButonu.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_AraButonu.AutoEllipsis = true;
-            this.btn_AraButonu.BackColor = System.Drawing.Color.White;
-            this.btn_AraButonu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_AraButonu.Location = new System.Drawing.Point(592, 30);
-            this.btn_AraButonu.Name = "btn_AraButonu";
-            this.btn_AraButonu.Size = new System.Drawing.Size(128, 40);
-            this.btn_AraButonu.TabIndex = 8;
-            this.btn_AraButonu.TabStop = false;
-            this.btn_AraButonu.Text = "Personel Ara";
-            this.btn_AraButonu.UseVisualStyleBackColor = false;
-            this.btn_AraButonu.Click += new System.EventHandler(this.btn_AraButonu_Click);
-            // 
             // tbx_AramaCubugu
             // 
-            this.tbx_AramaCubugu.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbx_AramaCubugu.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbx_AramaCubugu.Location = new System.Drawing.Point(24, 30);
+            this.tbx_AramaCubugu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbx_AramaCubugu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.tbx_AramaCubugu.Location = new System.Drawing.Point(81, 30);
             this.tbx_AramaCubugu.Multiline = true;
             this.tbx_AramaCubugu.Name = "tbx_AramaCubugu";
-            this.tbx_AramaCubugu.Size = new System.Drawing.Size(562, 40);
+            this.tbx_AramaCubugu.Size = new System.Drawing.Size(520, 40);
             this.tbx_AramaCubugu.TabIndex = 7;
             this.tbx_AramaCubugu.TabStop = false;
-            this.tbx_AramaCubugu.Text = "Sicil No ya da İsim Giriniz.";
+            this.tbx_AramaCubugu.Text = "Sicil No ya da İsim Giriniz";
             this.tbx_AramaCubugu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbx_AramaCubugu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbx_AramaCubugu_MouseClick);
             // 
@@ -220,7 +208,7 @@ namespace Dijital_Revir
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1262, 538);
+            this.ClientSize = new System.Drawing.Size(1376, 647);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
@@ -247,10 +235,9 @@ namespace Dijital_Revir
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox lbx_Bildirimler;
-        private System.Windows.Forms.Button btn_AraButonu;
         private System.Windows.Forms.TextBox tbx_AramaCubugu;
         private System.Windows.Forms.Button btn_personelIslemleri;
-        private System.Windows.Forms.Button btn_Admin;
+        private System.Windows.Forms.Button btn_personelArama;
     }
 }
 

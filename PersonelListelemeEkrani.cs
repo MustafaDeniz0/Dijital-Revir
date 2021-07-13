@@ -38,10 +38,8 @@ namespace Dijital_Revir
         private void ekran_PersonelListele_Load(object sender, EventArgs e)
         {
             String sqlText;
-            
-
-            
-            if(arananKelime == "Sicil No ya da İsim Giriniz." || arananKelime == "") {
+                    
+            if(arananKelime == "Sicil No ya da İsim Giriniz" || arananKelime == "") {
                 sqlText = "SELECT Personel.sicilNo, OzlukBilgileri.ad, OzlukBilgileri.soyAd, Sirket.sirketAdi " +
                 "FROM (((Personel INNER JOIN OzlukBilgileri ON Personel.ozlukId = OzlukBilgileri.id) " +
                 "INNER JOIN Departman ON Departman.id = Personel.departmanId) " +

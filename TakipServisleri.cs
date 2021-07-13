@@ -84,27 +84,25 @@ namespace Dijital_Revir
         
         public static void periyodikMuayeneTarihHesaplama(Label label,int indexId)
         {
-            String sqlText = "Select sıradakiPerMuayene From Personel Where Personel.id = "+ indexId;
-            DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+            String sqlText = "Update Personel Set sıradakiPerMuayene = DATEADD(month," + periyodikMuayene(indexId) + ",sonPeriyodikMuayene) ";
+            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
             
-            if (dt.Rows[0][0].Equals(null)) {
-                sqlText = "Update Personel Set sıradakiPerMuayene = DATEADD(month," + periyodikMuayene(indexId) + ",sonPeriyodikMuayene) ";
-                SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-            }
-            label.Text = "Sıradaki Periyodik Tarih zamanı : " + dt.Rows[0][0].ToString();
-
+            sqlText = "Select sıradakiPerMuayene From Personel Where Personel.id = "+ indexId;
+            DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqlText);           
+                       
+            label.Text = dt.Rows[0][0].ToString();
         }
 
         public static void periyodikMuayeneTakip(ListBox lbx)
         {
-            String sqlText = "Select Personel.id, DATEDIFF(day,GETDATE(),Personel.sıradakiPerMuayene) as tarih From Personel Where sonPeriyodikMuayene IS NOT NULL";
+            String sqlText = "Select Personel.id, DATEDIFF(day,GETDATE(),Personel.sıradakiPerMuayene)  From Personel Where DATEDIFF(day,GETDATE(),Personel.sıradakiPerMuayene) IS NOT NULL";
             DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
 
             foreach (DataRow dr in dt.Rows)
             {
                 // periyodik muayenede sıradaki hesaplaması anasayfada yapman lazım
 
-               if((int)dr[1]<10) 
+               if(Convert.ToInt32(dr[1])<10) 
                {
                     sqlText = " Select Personel.sicilNo From Personel Where Personel.id = " + dr[0].ToString();
                     DataTable dt1 = SqlOps.CreateDataTableBySqlQuery(sqlText);

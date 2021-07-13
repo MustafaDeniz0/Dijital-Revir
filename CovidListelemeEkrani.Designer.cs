@@ -82,7 +82,8 @@ namespace Dijital_Revir
             this.btn_temizle.Name = "btn_temizle";
             this.btn_temizle.Size = new System.Drawing.Size(109, 52);
             this.btn_temizle.TabIndex = 10;
-            this.btn_temizle.Text = "Temizle";
+            this.btn_temizle.TabStop = false;
+            this.btn_temizle.Text = "TEMİZLE";
             this.btn_temizle.UseVisualStyleBackColor = false;
             this.btn_temizle.Click += new System.EventHandler(this.btn_temizle_Click);
             // 
@@ -95,31 +96,36 @@ namespace Dijital_Revir
             this.btn_covidEkle.Name = "btn_covidEkle";
             this.btn_covidEkle.Size = new System.Drawing.Size(229, 52);
             this.btn_covidEkle.TabIndex = 9;
-            this.btn_covidEkle.Text = "Ekle";
+            this.btn_covidEkle.TabStop = false;
+            this.btn_covidEkle.Text = "YENİ KAYIT EKLE";
             this.btn_covidEkle.UseVisualStyleBackColor = false;
             this.btn_covidEkle.Click += new System.EventHandler(this.btn_covidEkle_Click);
             // 
             // txb_covidDurumu
             // 
+            this.txb_covidDurumu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_covidDurumu.Location = new System.Drawing.Point(17, 226);
             this.txb_covidDurumu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_covidDurumu.Multiline = true;
             this.txb_covidDurumu.Name = "txb_covidDurumu";
             this.txb_covidDurumu.Size = new System.Drawing.Size(229, 26);
             this.txb_covidDurumu.TabIndex = 8;
-            this.txb_covidDurumu.Text = "Covid Durumu";
+            this.txb_covidDurumu.TabStop = false;
+            this.txb_covidDurumu.Text = "COVİD TEST SONUCU";
             this.txb_covidDurumu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txb_covidDurumu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_covidDurumu_MouseClick);
             // 
             // txb_sirket
             // 
+            this.txb_sirket.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_sirket.Location = new System.Drawing.Point(17, 181);
             this.txb_sirket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_sirket.Multiline = true;
             this.txb_sirket.Name = "txb_sirket";
             this.txb_sirket.Size = new System.Drawing.Size(229, 26);
             this.txb_sirket.TabIndex = 7;
-            this.txb_sirket.Text = "Şirket";
+            this.txb_sirket.TabStop = false;
+            this.txb_sirket.Text = "ŞİRKET";
             this.txb_sirket.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txb_sirket.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_sirket_MouseClick);
             // 
@@ -132,48 +138,58 @@ namespace Dijital_Revir
             this.btn_covidListele.Name = "btn_covidListele";
             this.btn_covidListele.Size = new System.Drawing.Size(114, 52);
             this.btn_covidListele.TabIndex = 6;
-            this.btn_covidListele.Text = "Listele";
+            this.btn_covidListele.TabStop = false;
+            this.btn_covidListele.Text = "FİLTRELE";
             this.btn_covidListele.UseVisualStyleBackColor = false;
             this.btn_covidListele.Click += new System.EventHandler(this.btn_covidListele_Click);
             // 
             // txb_soyad
             // 
+            this.txb_soyad.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_soyad.Location = new System.Drawing.Point(17, 132);
             this.txb_soyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_soyad.Multiline = true;
             this.txb_soyad.Name = "txb_soyad";
             this.txb_soyad.Size = new System.Drawing.Size(229, 26);
             this.txb_soyad.TabIndex = 2;
-            this.txb_soyad.Text = "Soyad";
+            this.txb_soyad.TabStop = false;
+            this.txb_soyad.Text = "SOYAD";
             this.txb_soyad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txb_soyad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_soyad_MouseClick);
             // 
             // txb_ad
             // 
+            this.txb_ad.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_ad.Location = new System.Drawing.Point(17, 81);
             this.txb_ad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_ad.Multiline = true;
             this.txb_ad.Name = "txb_ad";
             this.txb_ad.Size = new System.Drawing.Size(229, 26);
             this.txb_ad.TabIndex = 1;
-            this.txb_ad.Text = "Ad";
+            this.txb_ad.TabStop = false;
+            this.txb_ad.Text = "AD";
             this.txb_ad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txb_ad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_ad_MouseClick);
             // 
             // txb_sicilNo
             // 
+            this.txb_sicilNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txb_sicilNo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_sicilNo.Location = new System.Drawing.Point(17, 29);
             this.txb_sicilNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_sicilNo.Multiline = true;
             this.txb_sicilNo.Name = "txb_sicilNo";
             this.txb_sicilNo.Size = new System.Drawing.Size(229, 26);
             this.txb_sicilNo.TabIndex = 0;
-            this.txb_sicilNo.Text = "Sicil No";
+            this.txb_sicilNo.TabStop = false;
+            this.txb_sicilNo.Text = "SİCİL NO";
             this.txb_sicilNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txb_sicilNo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_sicilNo_MouseClick);
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.dgv_covidListesi);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(258, 0);
@@ -186,6 +202,8 @@ namespace Dijital_Revir
             // 
             this.dgv_covidListesi.AllowUserToAddRows = false;
             this.dgv_covidListesi.AllowUserToDeleteRows = false;
+            this.dgv_covidListesi.AllowUserToResizeColumns = false;
+            this.dgv_covidListesi.AllowUserToResizeRows = false;
             this.dgv_covidListesi.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_covidListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_covidListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -200,6 +218,7 @@ namespace Dijital_Revir
             this.dgv_covidListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_covidListesi.Size = new System.Drawing.Size(746, 538);
             this.dgv_covidListesi.TabIndex = 11;
+            this.dgv_covidListesi.TabStop = false;
             this.dgv_covidListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_covidListesi_CellContentClick_1);
             // 
             // button

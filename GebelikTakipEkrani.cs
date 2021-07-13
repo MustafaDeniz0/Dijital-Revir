@@ -18,28 +18,7 @@ namespace Dijital_Revir
         public ekran_GebelikTakip(String indexId)
         {
             InitializeComponent();
-
-            //this.sicilNo = sicilNo;
-
-            //String sqltext = "SELECT Gebelik.id, Gebelik.sonAdetTarihi " + 
-            //"FROM Gebelik " + 
-            //"INNER JOIN Personel ON Gebelik.personelId = Personel.id " +
-            //"WHERE Personel.sicilNo = " + sicilNo + " " +
-            //"ORDER BY id DESC";
             this.indexId = indexId;
-
-            //DataTable dt = SqlOps.CreateDataTableBySqlQuery(sqltext);
-
-            //try
-            //{
-            //    indexId = (int)dt.Rows[0]["id"];
-            //    this.lbl_sonAdetTarihi.Text = dt.Rows[0]["sonAdetTarihi"].ToString();
-            //}
-            //catch (Exception ex)
-            //{
-            //    btn_degerEkle.Enabled = false;
-            //    MessageBox.Show(ex.Message);
-            //}
         }
 
         private void ekran_GebelikTakip_Load(object sender, EventArgs e)
@@ -59,6 +38,14 @@ namespace Dijital_Revir
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
             
             dgv_gebelikTablosu.DataSource = dt;
+
+            sqlText = "SELECT Gebelik.sonAdetTarihi " +
+            "FROM Gebelik " +
+            "INNER JOIN Personel ON Gebelik.personelId = Personel.id " +
+            "WHERE Gebelik.id = " + indexId;
+            dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+
+            this.lbl_sonAdetTarihi.Text = dt.Rows[0]["sonAdetTarihi"].ToString().Substring(0,10);
         }
 
         private void btn_degerEkle_Click(object sender, EventArgs e)
@@ -70,12 +57,25 @@ namespace Dijital_Revir
 
         private void btn_gebelikSonlandır_Click(object sender, EventArgs e)
         {
-            String sqlText = "Update Gebelik Set Gebemi = 0 Where Gebelik.id = "+ indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-            sqlText = "Delete From GebelikFormDegeri Where GebelikFormDegeri.gebelikId in (Select Gebelik.id From Gebelik Where Gebelik.Gebemi = 0) " +
-                      "Delete From Gebelik Where Gebelik.Gebemi = 0";
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-            this.Close();
+            String mesaj = "Gebelik Sonlandırılsın mı?";
+            String baslik = "";
+            MessageBoxButtons butonlar = MessageBoxButtons.YesNo;
+            DialogResult sonuc = MessageBox.Show(mesaj, baslik, butonlar);
+
+            if (sonuc == DialogResult.Yes)
+            {
+                String sqlText = "Update Gebelik Set Gebemi = 0 " +
+                "Where Gebelik.id = " + indexId;
+                SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+
+                sqlText = "Delete From GebelikFormDegeri " +
+                "Where GebelikFormDegeri.gebelikId in (Select Gebelik.id From Gebelik Where Gebelik.Gebemi = 0) " +
+                "Delete From Gebelik " +
+                "Where Gebelik.Gebemi = 0";
+                SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
+
+                this.Close();
+            }
         }
     }
 }

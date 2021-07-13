@@ -71,7 +71,7 @@ namespace Dijital_Revir
             this.btn_Muayene.Name = "btn_Muayene";
             this.btn_Muayene.Size = new System.Drawing.Size(146, 53);
             this.btn_Muayene.TabIndex = 11;
-            this.btn_Muayene.Text = "Muayene Ekle";
+            this.btn_Muayene.Text = "MUAYENE EKLE";
             this.btn_Muayene.UseVisualStyleBackColor = false;
             this.btn_Muayene.Click += new System.EventHandler(this.btn_Muayene_Click_1);
             // 

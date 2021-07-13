@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Dijital_Revir
 {
-    
     public partial class ekran_PersonelBilgileriGoruntuleme : Form
     {
         int indexId;
         string sicilNo;
+
         public ekran_PersonelBilgileriGoruntuleme(string sicilNo)
         {
             InitializeComponent();
@@ -23,7 +23,8 @@ namespace Dijital_Revir
 
         private void btn_CovidFormu_Click(object sender, EventArgs e)
         {
-            try {
+            try 
+            {
                 Form form = new ekran_CovidTakipEkrani(sicilNo);
                 form.ShowDialog();
             }
@@ -33,7 +34,7 @@ namespace Dijital_Revir
             }
         }
         public void ekran_PersonelSayfasi_Load(object sender, EventArgs e)
-        {
+        {            
             String sqlText;
             
             DataTable dt;
@@ -42,7 +43,7 @@ namespace Dijital_Revir
             String cinsiyet;
 
             sqlText = "SELECT Personel.id FROM Personel WHERE Personel.sicilNo = " + sicilNo;
-            indexId = (int)SqlOps.CreateDataTableBySqlQuery(sqlText).Rows[0]["id"];
+            indexId = (int)SqlOps.CreateDataTableBySqlQuery(sqlText).Rows[0]["id"];          
 
             sqlText = "SELECT * FROM Personel WHERE Personel.id = " + indexId;
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
@@ -67,20 +68,30 @@ namespace Dijital_Revir
                 cinsiyet = "Kadın";   
             }
 
+            TakipServisleri.periyodikMuayeneTarihHesaplama(lbl_periyodikMuayene, indexId);
+
             this.tbx_PersonelBilgileriGoruntuleme.Text = "Sicil No : " + dt.Rows[0]["sicilNo"].ToString() + Environment.NewLine +
             "Personel Adı : " + dt2.Rows[0]["ad"] + " " + dt2.Rows[0]["soyAd"] + Environment.NewLine +
             "Departman Adı : " + dt3.Rows[0]["departmanAdi"] + Environment.NewLine +
             "Şirket Adı :  " + dt3.Rows[0]["sirketAdi"] + Environment.NewLine +
-            "Cinsiyet : " + cinsiyet;
+            "Cinsiyet : " + cinsiyet + Environment.NewLine +
+            "Sıradaki Periyodik Tarih zamanı : " + lbl_periyodikMuayene.Text;
 
+            lbl_periyodikMuayene.Visible = false;
             btn_Gebe.Visible = false;
             btn_Engelli.Visible = false;
 
-            sqlText = "SELECT Etiket.engellilik , Etiket.gebemi FROM Etiket WHERE Etiket.personalId = " + indexId;
+            sqlText = "SELECT Etiket.engellilik, Etiket.gebemi " + 
+            "FROM Etiket " + 
+            "WHERE Etiket.personalId = " + indexId;
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
-            if ((bool)dt.Rows[0]["engellilik"]) { btn_Engelli.Visible = true; }
-            if ((bool)dt.Rows[0]["gebemi"]) { btn_Gebe.Visible = true; }
-            TakipServisleri.periyodikMuayeneTarihHesaplama(lbl_periyodikMuayene, indexId);
+
+            if ((bool)dt.Rows[0]["engellilik"]) { 
+                btn_Engelli.Visible = true; 
+            }
+            if ((bool)dt.Rows[0]["gebemi"]) { 
+                btn_Gebe.Visible = true; 
+            }
         }
 
         private void btn_ISBMuayene_Click(object sender, EventArgs e)
@@ -110,16 +121,16 @@ namespace Dijital_Revir
         private void btn_Ek2Ekle_Click(object sender, EventArgs e)
         {
             Form form = new ekran_Ek2EklemeVeGoruntuleme(sicilNo);
-            form.ShowDialog();
-            
+            form.ShowDialog();        
         }
 
         private void btn_PeriyodikMuayene_Click(object sender, EventArgs e)
         {
-            String sqlText = "Update Personel Set sıradakiPerMuayene =DATEADD(MONTH," + TakipServisleri.periyodikMuayene(indexId) + ",GetDate()) Where Personel.id = "+indexId;
-            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());
-            TakipServisleri.periyodikMuayeneTarihHesaplama(lbl_periyodikMuayene, indexId);
+            String sqlText = "UPDATE Personel " + 
+            "SET sonPeriyodikMuayene = GETDATE()";
+            SqlOps.SqlExecute(sqlText, null, SqlOps.GetSqlConnection());  
 
+            TakipServisleri.periyodikMuayeneTarihHesaplama(lbl_periyodikMuayene, indexId);
         }
     }
 }

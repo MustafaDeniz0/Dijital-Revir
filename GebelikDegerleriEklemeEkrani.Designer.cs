@@ -86,7 +86,7 @@ namespace Dijital_Revir
             this.btn_GebelikDegerEkleme.Name = "btn_GebelikDegerEkleme";
             this.btn_GebelikDegerEkleme.Size = new System.Drawing.Size(195, 52);
             this.btn_GebelikDegerEkleme.TabIndex = 6;
-            this.btn_GebelikDegerEkleme.Text = "Ekle";
+            this.btn_GebelikDegerEkleme.Text = "DEĞERLERİ EKLE";
             this.btn_GebelikDegerEkleme.UseVisualStyleBackColor = false;
             this.btn_GebelikDegerEkleme.Click += new System.EventHandler(this.btn_GebelikDegerEkleme_Click);
             // 
@@ -123,81 +123,90 @@ namespace Dijital_Revir
             // 
             this.tbx_verilenİlac.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbx_verilenİlac.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tbx_verilenİlac.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbx_verilenİlac.Location = new System.Drawing.Point(452, 466);
             this.tbx_verilenİlac.Name = "tbx_verilenİlac";
-            this.tbx_verilenİlac.Size = new System.Drawing.Size(231, 22);
+            this.tbx_verilenİlac.Size = new System.Drawing.Size(231, 27);
             this.tbx_verilenİlac.TabIndex = 48;
             // 
             // tbx_ekTetkik
             // 
             this.tbx_ekTetkik.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbx_ekTetkik.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbx_ekTetkik.Location = new System.Drawing.Point(452, 420);
+            this.tbx_ekTetkik.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbx_ekTetkik.Location = new System.Drawing.Point(452, 426);
             this.tbx_ekTetkik.Name = "tbx_ekTetkik";
-            this.tbx_ekTetkik.Size = new System.Drawing.Size(231, 22);
+            this.tbx_ekTetkik.Size = new System.Drawing.Size(231, 27);
             this.tbx_ekTetkik.TabIndex = 47;
             // 
             // tbx_asi
             // 
             this.tbx_asi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbx_asi.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbx_asi.Location = new System.Drawing.Point(452, 380);
+            this.tbx_asi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbx_asi.Location = new System.Drawing.Point(452, 386);
             this.tbx_asi.Name = "tbx_asi";
-            this.tbx_asi.Size = new System.Drawing.Size(231, 22);
+            this.tbx_asi.Size = new System.Drawing.Size(231, 27);
             this.tbx_asi.TabIndex = 46;
             // 
             // tbx_odem
             // 
             this.tbx_odem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbx_odem.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbx_odem.Location = new System.Drawing.Point(452, 339);
+            this.tbx_odem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbx_odem.Location = new System.Drawing.Point(452, 347);
             this.tbx_odem.Name = "tbx_odem";
-            this.tbx_odem.Size = new System.Drawing.Size(231, 22);
+            this.tbx_odem.Size = new System.Drawing.Size(231, 27);
             this.tbx_odem.TabIndex = 45;
             // 
             // tbx_tit
             // 
             this.tbx_tit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbx_tit.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbx_tit.Location = new System.Drawing.Point(452, 293);
+            this.tbx_tit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbx_tit.Location = new System.Drawing.Point(452, 306);
             this.tbx_tit.Name = "tbx_tit";
-            this.tbx_tit.Size = new System.Drawing.Size(231, 22);
+            this.tbx_tit.Size = new System.Drawing.Size(231, 27);
             this.tbx_tit.TabIndex = 44;
             // 
             // tbx_hmg
             // 
             this.tbx_hmg.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbx_hmg.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbx_hmg.Location = new System.Drawing.Point(452, 255);
+            this.tbx_hmg.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbx_hmg.Location = new System.Drawing.Point(452, 269);
             this.tbx_hmg.Name = "tbx_hmg";
-            this.tbx_hmg.Size = new System.Drawing.Size(231, 22);
+            this.tbx_hmg.Size = new System.Drawing.Size(231, 27);
             this.tbx_hmg.TabIndex = 43;
             // 
             // tbx_nabız
             // 
             this.tbx_nabız.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbx_nabız.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbx_nabız.Location = new System.Drawing.Point(452, 211);
+            this.tbx_nabız.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbx_nabız.Location = new System.Drawing.Point(452, 225);
             this.tbx_nabız.Name = "tbx_nabız";
-            this.tbx_nabız.Size = new System.Drawing.Size(231, 22);
+            this.tbx_nabız.Size = new System.Drawing.Size(231, 27);
             this.tbx_nabız.TabIndex = 42;
             // 
             // tbx_ta
             // 
             this.tbx_ta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbx_ta.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbx_ta.Location = new System.Drawing.Point(452, 170);
+            this.tbx_ta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbx_ta.Location = new System.Drawing.Point(452, 184);
             this.tbx_ta.Name = "tbx_ta";
-            this.tbx_ta.Size = new System.Drawing.Size(231, 22);
+            this.tbx_ta.Size = new System.Drawing.Size(231, 27);
             this.tbx_ta.TabIndex = 41;
             // 
             // tbx_kilo
             // 
             this.tbx_kilo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbx_kilo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbx_kilo.Location = new System.Drawing.Point(452, 135);
+            this.tbx_kilo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbx_kilo.Location = new System.Drawing.Point(452, 143);
             this.tbx_kilo.Name = "tbx_kilo";
-            this.tbx_kilo.Size = new System.Drawing.Size(231, 22);
+            this.tbx_kilo.Size = new System.Drawing.Size(231, 27);
             this.tbx_kilo.TabIndex = 40;
             // 
             // label9
@@ -205,10 +214,10 @@ namespace Dijital_Revir
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(327, 460);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(327, 466);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 28);
+            this.label9.Size = new System.Drawing.Size(93, 20);
             this.label9.TabIndex = 39;
             this.label9.Text = "Verilen İlaç :";
             // 
@@ -217,10 +226,10 @@ namespace Dijital_Revir
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(279, 414);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(294, 426);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(170, 28);
+            this.label8.Size = new System.Drawing.Size(129, 20);
             this.label8.TabIndex = 38;
             this.label8.Text = "Ek Tetkik Değeri :";
             // 
@@ -229,10 +238,10 @@ namespace Dijital_Revir
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(333, 374);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(334, 386);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 28);
+            this.label7.Size = new System.Drawing.Size(89, 20);
             this.label7.TabIndex = 37;
             this.label7.Text = "Aşı Değeri :";
             // 
@@ -241,10 +250,10 @@ namespace Dijital_Revir
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(224, 332);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(252, 347);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(225, 28);
+            this.label6.Size = new System.Drawing.Size(171, 20);
             this.label6.TabIndex = 36;
             this.label6.Text = "Pretibial Ödem Değeri :";
             // 
@@ -253,10 +262,10 @@ namespace Dijital_Revir
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(332, 286);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(330, 306);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 28);
+            this.label5.Size = new System.Drawing.Size(90, 20);
             this.label5.TabIndex = 35;
             this.label5.Text = "TİT Değeri :";
             // 
@@ -265,10 +274,10 @@ namespace Dijital_Revir
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(313, 249);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(317, 269);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 28);
+            this.label4.Size = new System.Drawing.Size(103, 20);
             this.label4.TabIndex = 34;
             this.label4.Text = "HMG Değeri :";
             // 
@@ -277,10 +286,10 @@ namespace Dijital_Revir
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(309, 205);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(316, 225);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 28);
+            this.label3.Size = new System.Drawing.Size(107, 20);
             this.label3.TabIndex = 33;
             this.label3.Text = "Nabız Değeri :";
             this.label3.UseWaitCursor = true;
@@ -290,10 +299,10 @@ namespace Dijital_Revir
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(337, 164);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(337, 178);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 28);
+            this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 32;
             this.label1.Text = "TA Değeri :";
             this.label1.UseWaitCursor = true;
@@ -303,10 +312,10 @@ namespace Dijital_Revir
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(392, 129);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(376, 143);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 28);
+            this.label2.Size = new System.Drawing.Size(44, 20);
             this.label2.TabIndex = 31;
             this.label2.Text = "Kilo :";
             this.label2.UseWaitCursor = true;

@@ -41,8 +41,10 @@ namespace Dijital_Revir
             // 
             // dgv_pdf
             // 
-            this.dgv_pdf.AllowDrop = true;
             this.dgv_pdf.AllowUserToAddRows = false;
+            this.dgv_pdf.AllowUserToDeleteRows = false;
+            this.dgv_pdf.AllowUserToResizeColumns = false;
+            this.dgv_pdf.AllowUserToResizeRows = false;
             this.dgv_pdf.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_pdf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_pdf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -93,12 +95,12 @@ namespace Dijital_Revir
             this.btn_pdfEkle.AutoEllipsis = true;
             this.btn_pdfEkle.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_pdfEkle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_pdfEkle.Location = new System.Drawing.Point(25, 292);
+            this.btn_pdfEkle.Location = new System.Drawing.Point(15, 327);
             this.btn_pdfEkle.Name = "btn_pdfEkle";
             this.btn_pdfEkle.Size = new System.Drawing.Size(220, 52);
             this.btn_pdfEkle.TabIndex = 6;
             this.btn_pdfEkle.TabStop = false;
-            this.btn_pdfEkle.Text = "PDF Ekle";
+            this.btn_pdfEkle.Text = "PDF EKLE";
             this.btn_pdfEkle.UseVisualStyleBackColor = false;
             this.btn_pdfEkle.Click += new System.EventHandler(this.btn_pdfEkle_Click);
             // 
@@ -110,12 +112,18 @@ namespace Dijital_Revir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1233, 661);
             this.Controls.Add(this.dgv_pdf);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MinimizeBox = false;
             this.Name = "ekran_Ek2EklemeVeGoruntuleme";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ek2EklemeVeGoruntuleme";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Ek2EklemeVeGoruntuleme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pdf)).EndInit();

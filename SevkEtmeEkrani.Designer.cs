@@ -77,7 +77,7 @@ namespace Dijital_Revir
             this.btn_excelAktar.Name = "btn_excelAktar";
             this.btn_excelAktar.Size = new System.Drawing.Size(177, 52);
             this.btn_excelAktar.TabIndex = 7;
-            this.btn_excelAktar.Text = "Excel\'e Aktar";
+            this.btn_excelAktar.Text = "EXCEL\'E AKTAR";
             this.btn_excelAktar.UseVisualStyleBackColor = false;
             this.btn_excelAktar.Click += new System.EventHandler(this.btn_excelAktar_Click);
             // 
@@ -105,6 +105,7 @@ namespace Dijital_Revir
             // tbx_onTanı
             // 
             this.tbx_onTanı.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_onTanı.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbx_onTanı.Location = new System.Drawing.Point(323, 362);
             this.tbx_onTanı.Multiline = true;
             this.tbx_onTanı.Name = "tbx_onTanı";
@@ -114,6 +115,7 @@ namespace Dijital_Revir
             // tbx_sevkEdilenBolum
             // 
             this.tbx_sevkEdilenBolum.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_sevkEdilenBolum.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbx_sevkEdilenBolum.Location = new System.Drawing.Point(323, 289);
             this.tbx_sevkEdilenBolum.Multiline = true;
             this.tbx_sevkEdilenBolum.Name = "tbx_sevkEdilenBolum";
@@ -123,27 +125,29 @@ namespace Dijital_Revir
             // tbx_calisilanBolumOzelligi
             // 
             this.tbx_calisilanBolumOzelligi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_calisilanBolumOzelligi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbx_calisilanBolumOzelligi.Location = new System.Drawing.Point(323, 187);
             this.tbx_calisilanBolumOzelligi.Name = "tbx_calisilanBolumOzelligi";
-            this.tbx_calisilanBolumOzelligi.Size = new System.Drawing.Size(403, 22);
+            this.tbx_calisilanBolumOzelligi.Size = new System.Drawing.Size(403, 27);
             this.tbx_calisilanBolumOzelligi.TabIndex = 26;
             // 
             // tbx_ozgecmis
             // 
             this.tbx_ozgecmis.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_ozgecmis.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbx_ozgecmis.Location = new System.Drawing.Point(323, 137);
             this.tbx_ozgecmis.Name = "tbx_ozgecmis";
-            this.tbx_ozgecmis.Size = new System.Drawing.Size(403, 22);
+            this.tbx_ozgecmis.Size = new System.Drawing.Size(403, 27);
             this.tbx_ozgecmis.TabIndex = 25;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(209, 359);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(209, 362);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 28);
+            this.label5.Size = new System.Drawing.Size(68, 20);
             this.label5.TabIndex = 24;
             this.label5.Text = "Ön tanı :";
             // 
@@ -151,10 +155,10 @@ namespace Dijital_Revir
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(116, 283);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(132, 289);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(192, 28);
+            this.label4.Size = new System.Drawing.Size(145, 20);
             this.label4.TabIndex = 23;
             this.label4.Text = "Sevk Edilen Bölüm :";
             // 
@@ -162,10 +166,10 @@ namespace Dijital_Revir
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(64, 184);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(98, 187);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(234, 28);
+            this.label3.Size = new System.Drawing.Size(179, 20);
             this.label3.TabIndex = 22;
             this.label3.Text = "Çalışılan Bölüm Özelliği :";
             // 
@@ -173,38 +177,40 @@ namespace Dijital_Revir
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(187, 134);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(193, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 28);
+            this.label2.Size = new System.Drawing.Size(84, 20);
             this.label2.TabIndex = 21;
             this.label2.Text = "Özgeçmiş :";
             // 
             // tbx_protokolNo
             // 
             this.tbx_protokolNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbx_protokolNo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbx_protokolNo.Location = new System.Drawing.Point(605, 89);
             this.tbx_protokolNo.Name = "tbx_protokolNo";
-            this.tbx_protokolNo.Size = new System.Drawing.Size(121, 22);
+            this.tbx_protokolNo.Size = new System.Drawing.Size(121, 27);
             this.tbx_protokolNo.TabIndex = 20;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(498, 91);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(497, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 20);
+            this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 19;
             this.label1.Text = "Protokol No :";
             // 
             // dtp_sevk
             // 
             this.dtp_sevk.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtp_sevk.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtp_sevk.Location = new System.Drawing.Point(605, 52);
             this.dtp_sevk.Name = "dtp_sevk";
-            this.dtp_sevk.Size = new System.Drawing.Size(121, 22);
+            this.dtp_sevk.Size = new System.Drawing.Size(121, 27);
             this.dtp_sevk.TabIndex = 18;
             // 
             // ekran_SevkEtme

@@ -83,12 +83,13 @@ namespace Dijital_Revir
             this.btn_temizle.Size = new System.Drawing.Size(112, 52);
             this.btn_temizle.TabIndex = 17;
             this.btn_temizle.TabStop = false;
-            this.btn_temizle.Text = "Temizle";
+            this.btn_temizle.Text = "TEMİZLE";
             this.btn_temizle.UseVisualStyleBackColor = false;
             this.btn_temizle.Click += new System.EventHandler(this.btn_temizle_Click);
             // 
             // txb_sirketAdi
             // 
+            this.txb_sirketAdi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_sirketAdi.Location = new System.Drawing.Point(14, 200);
             this.txb_sirketAdi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_sirketAdi.Multiline = true;
@@ -96,7 +97,7 @@ namespace Dijital_Revir
             this.txb_sirketAdi.Size = new System.Drawing.Size(231, 26);
             this.txb_sirketAdi.TabIndex = 15;
             this.txb_sirketAdi.TabStop = false;
-            this.txb_sirketAdi.Text = "Şirket Adı";
+            this.txb_sirketAdi.Text = "ŞİRKET ADI";
             this.txb_sirketAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txb_sirketAdi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_taniGrubu_MouseClick);
             // 
@@ -110,12 +111,13 @@ namespace Dijital_Revir
             this.btn_ekle.Size = new System.Drawing.Size(232, 52);
             this.btn_ekle.TabIndex = 8;
             this.btn_ekle.TabStop = false;
-            this.btn_ekle.Text = "Ekle";
+            this.btn_ekle.Text = "EKLE";
             this.btn_ekle.UseVisualStyleBackColor = false;
             this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
             // txb_soyad
             // 
+            this.txb_soyad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_soyad.Location = new System.Drawing.Point(14, 161);
             this.txb_soyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_soyad.Multiline = true;
@@ -123,12 +125,13 @@ namespace Dijital_Revir
             this.txb_soyad.Size = new System.Drawing.Size(231, 26);
             this.txb_soyad.TabIndex = 13;
             this.txb_soyad.TabStop = false;
-            this.txb_soyad.Text = "Soyad";
+            this.txb_soyad.Text = "SOYAD";
             this.txb_soyad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txb_soyad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_soyad_MouseClick);
             // 
             // txb_ad
             // 
+            this.txb_ad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_ad.Location = new System.Drawing.Point(14, 122);
             this.txb_ad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_ad.Multiline = true;
@@ -136,7 +139,7 @@ namespace Dijital_Revir
             this.txb_ad.Size = new System.Drawing.Size(232, 26);
             this.txb_ad.TabIndex = 12;
             this.txb_ad.TabStop = false;
-            this.txb_ad.Text = "Ad";
+            this.txb_ad.Text = "AD";
             this.txb_ad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txb_ad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_ad_MouseClick);
             // 
@@ -150,12 +153,13 @@ namespace Dijital_Revir
             this.btn_poliklinikDefteriListele.Size = new System.Drawing.Size(114, 52);
             this.btn_poliklinikDefteriListele.TabIndex = 14;
             this.btn_poliklinikDefteriListele.TabStop = false;
-            this.btn_poliklinikDefteriListele.Text = "Listele";
+            this.btn_poliklinikDefteriListele.Text = "LİSTELE";
             this.btn_poliklinikDefteriListele.UseVisualStyleBackColor = false;
             this.btn_poliklinikDefteriListele.Click += new System.EventHandler(this.btn_poliklinikDefteriListele_Click);
             // 
             // txb_sicilNo
             // 
+            this.txb_sicilNo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_sicilNo.Location = new System.Drawing.Point(14, 81);
             this.txb_sicilNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_sicilNo.Multiline = true;
@@ -163,12 +167,13 @@ namespace Dijital_Revir
             this.txb_sicilNo.Size = new System.Drawing.Size(232, 26);
             this.txb_sicilNo.TabIndex = 11;
             this.txb_sicilNo.TabStop = false;
-            this.txb_sicilNo.Text = "Sicil No";
+            this.txb_sicilNo.Text = "SİCİL NO";
             this.txb_sicilNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txb_sicilNo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_sicilNo_MouseClick);
             // 
             // txb_siraNo
             // 
+            this.txb_siraNo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_siraNo.Location = new System.Drawing.Point(14, 39);
             this.txb_siraNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txb_siraNo.Multiline = true;
@@ -176,7 +181,7 @@ namespace Dijital_Revir
             this.txb_siraNo.Size = new System.Drawing.Size(232, 26);
             this.txb_siraNo.TabIndex = 0;
             this.txb_siraNo.TabStop = false;
-            this.txb_siraNo.Text = "Sıra No";
+            this.txb_siraNo.Text = "SIRA NO";
             this.txb_siraNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txb_siraNo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_siraNo_MouseClick);
             // 

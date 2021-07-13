@@ -19,8 +19,7 @@ namespace Dijital_Revir
         public ekran_Ek2EklemeVeGoruntuleme(string sicil)
         {
             InitializeComponent();
-            this.sicil = sicil; 
-              
+            this.sicil = sicil;     
         }
 
         private void Ek2EklemeVeGoruntuleme_Load(object sender, EventArgs e)
@@ -32,46 +31,59 @@ namespace Dijital_Revir
         {
             string sqlText;
             
-            sqlText = " select Ek2.id ,  Ek2.eklendiğiTarih  from Ek2 inner join Personel on Personel.id = Ek2.personelId where Personel.id = (select Personel.id from Personel where Personel.sicilNo = '" + sicil +"')";
+            sqlText = "SELECT Ek2.id, Ek2.eklendiğiTarih " + 
+            "FROM Ek2 " + 
+            "INNER JOIN Personel on Personel.id = Ek2.personelId " + 
+            "WHERE Personel.id = (SELECT Personel.id FROM Personel WHERE Personel.sicilNo = '" + sicil + "')";
 
             dgv_pdf.DataSource = SqlOps.CreateDataTableBySqlQuery(sqlText);
-            
-
         }
 
         private void btn_pdfEkle_Click(object sender, EventArgs e)
         {
+            String path;
+            Byte[] bytes;
+            SqlParameter prm;
+            String sqlText;
+
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog1.ShowDialog();
 
-            String path = this.openFileDialog1.FileName;
+            path = this.openFileDialog1.FileName;
             
-            Byte[] bytes = System.IO.File.ReadAllBytes(path);
+            bytes = System.IO.File.ReadAllBytes(path);
 
-            String sqlText = "Insert into Ek2 (pdf, eklendiğiTarih, personelId) Values (@ParameterName,GETDATE(),(Select Personel.id From Personel Where Personel.sicilNo = '" + sicil + "')) ";
-            SqlParameter prm = new SqlParameter("@ParameterName", SqlDbType.VarBinary);
+            sqlText = "INSERT INTO Ek2 (pdf, eklendiğiTarih, personelId) " + 
+            "VALUES (@ParameterName, GETDATE(), (SELECT Personel.id FROM Personel WHERE Personel.sicilNo = '" + sicil + "'))";
+            prm = new SqlParameter("@ParameterName", SqlDbType.VarBinary);
             prm.Value = bytes;
 
-            SqlOps.SetParam(sqlText, prm);
-            
+            SqlOps.SetParam(sqlText, prm);            
         }
 
         private void dgv_pdf_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            String sqlText = " select Ek2.id , Ek2.pdf , Ek2.eklendiğiTarih  from Ek2 inner join Personel on Personel.id = Ek2.personelId where Personel.id = (select Personel.id from Personel where Personel.sicilNo = '" + sicil + "')";
+            String sqlText = "SELECT Ek2.id, Ek2.pdf, Ek2.eklendiğiTarih " + 
+            "FROM Ek2 " + 
+            "INNER JOIN Personel ON Personel.id = Ek2.personelId " +
+            "WHERE Personel.id = (SELECT Personel.id FROM Personel WHERE Personel.sicilNo = '" + sicil + "')";
             dt = SqlOps.CreateDataTableBySqlQuery(sqlText);
+
             int index = SqlOps.GetDataGridViewRowIndex(dgv_pdf, "id");            
             Byte[] bytes = (Byte[])dt.Rows[index]["pdf"];
-            System.IO.File.WriteAllBytes("hello.pdf", bytes);
-            //System.IO.File.OpenRead("hello.pdf");
-            Process ps = Process.Start("hello.pdf");
-            ps.WaitForExit();
-             System.IO.File.Delete("hello.pdf"); 
+            System.IO.File.WriteAllBytes("temp.pdf", bytes);
 
-            
-            
-            
+            String mesaj = "PDF Açılsın mı?";
+            String baslik = "";
+            MessageBoxButtons butonlar = MessageBoxButtons.YesNo;
+            DialogResult sonuc = MessageBox.Show(mesaj, baslik, butonlar);
 
+            if (sonuc == DialogResult.Yes)
+            {
+                Process ps = Process.Start("temp.pdf");
+                ps.WaitForExit();
+                System.IO.File.Delete("temp.pdf");
+            }
         }
     }
 }
